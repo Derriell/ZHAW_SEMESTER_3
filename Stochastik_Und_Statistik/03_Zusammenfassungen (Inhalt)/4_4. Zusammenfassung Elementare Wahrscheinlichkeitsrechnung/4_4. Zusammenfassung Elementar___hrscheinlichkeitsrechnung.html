@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <title>4_4. Zusammenfassung: Elementare Wahrscheinlichkeitsrechnung</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<h4>Diskrete Wahrscheinlichkeitsräume</h4>
+
+<h5><strong>Definition <br></strong></h5>
+<p></p>
+<p><span lang="DE">Der <i>Ergebnisraum</i>&nbsp;\(\Omega\) ist die Menge aller
+möglichen <i>Ergebnisse</i> des betrachteten
+<i>Zufallsexperiments</i>.</span></p>
+
+<p><span lang="DE">Die <i>Zähldichte</i>
+ist eine Funktion \(\rho:\Omega\to\left[0,1\right]\), die jedem Ergebnis seine Wahrscheinlichkeit zuordnet. Sie
+wird graphisch als <i>Stabdiagramm</i>
+dargestellt. Es gilt: \(1=\sum\limits_{\omega\in\Omega}\rho(\omega)\).</span></p>
+
+<p><span lang="DE">Ein <i>Ereignis</i>
+ist eine Teilmenge von \(\Omega\); der <i>Ereignisraum</i>&nbsp;\(2^\Omega\) ist die Menge aller
+Teilmengen von \(\Omega\).</span></p>
+
+<p><span lang="DE">Jede Zähldichte bestimmt ein <i>diskretes Wahrscheinlichkeitsmass</i>&nbsp;\(P:2^\Omega\to\left[0,1\right]\), \(P(M)=\sum\limits_{\omega\in M}\rho(\omega)\)&nbsp;für \(M \subseteq\Omega\);&nbsp;dieses ordnet jedem Ereignis seine Wahrscheinlichkeit zu.</span></p>
+
+<p><span lang="DE">Der Ergebnisraum \(\Omega\) versehen mit dem
+Wahrscheinlichkeitsmass \(P\)&nbsp;heisst dann <i>diskreter Wahrscheinlichkeitsraum</i> und
+wird mit \((\Omega,P)\)&nbsp;bezeichnet.&nbsp;</span></p>
+
+<p><span lang="DE">Falls jedes Ergebnis aus \(\Omega\) gleichwahrscheinlich
+ist, wird \((\Omega,P)\) \<i>Laplace-Raum</i> genannt. Für diesen Spezialfall gilt: \(P(M)=\frac{\vert M\vert}{\vert\Omega\vert}\).</span><br><br></p>
+
+<h5>Wichtige Eigenschaften diskreter Wahrscheinlichkeitsräume \( (\Omega ,P) \)</h5>
+<p>(A1) (Unmögliches Ereignis) &nbsp;\( P(\{ \} ) = 0 \)</p>
+<p>(A2) (Sicheres Ereignis)&nbsp;\( P(\Omega ) = 1 \)</p>
+<p>(A3) (Komplementäres Ereignis) &nbsp;\( P(\Omega \backslash A) = 1 - P(A) \)</p>
+<p>(A4) (Vereinigung) &nbsp;\( P(A \cup B) = P(A) + P(B) - P(A \cap B) \)</p>
+<p>(A5) (Sigma-Additivität) &nbsp;\( P({A_1} \cup {A_2} \cup {A_3} \cup ....) = P({A_1}) + P({A_2}) + P({A_3}) + \ldots \)</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; falls die Ereignisse \( {A_1},{A_2},{A_3}, \ldots \)&nbsp;paarweise disjunkt sind.<br><br></p>
+
+<h4>Zufallsvariablen</h4>
+
+<h5>Definitionen</h5>
+<p>Sei \( (\Omega ,P) \) ein diskreter Wahrscheinlichkeitsraum.</p>
+<p>Jede Funktion \( X:\Omega \to \mathbb R \), <span lang="DE">welche auf dem Ergebnisraum
+definiert ist und reelle Werte hat, </span>heisst <i>Zufallsvariable</i>. </p>
+
+<p>Die reelle Funktion \( f: \mathbb R \to [0,1] \, , \, f(x) = P(X = x) \) heisst <i>Wahrscheinlichkeitsdichte</i>&nbsp;oder kurz <i>Dichtefunktion</i> (<i>PMF</i>) von \(X\). </p>
+
+<p>Die reelle Funktion \( F: \mathbb R \to [0,1] \, , \, F(x) = P(X \leq x) \) heisst <i>kumulative Verteilungsfunktion</i> (<i>CDF</i>) von \(X\).<br><br></p>
+
+<h5>Wichtige Eigenschaften von PMF und CDF <br></h5>
+
+<p>
+</p>
+<p>(1) \( \sum\limits_{x = - \infty }^\infty {f(x)} = 1 \,\)&nbsp;und \(\, F(z) = \sum\limits_{x = - \infty }^z {f(x)} \)<br></p>
+<p>(2) \( \mathop {\lim }\limits_{x \to \infty } F(x) = 1\, \) und \(\, \mathop {\lim }\limits_{x \to - \infty } F(x) = 0 \)<br></p>
+<p>(3) Monotonie: Aus \(\,x \le y \,\) folgt \(\, F(x) \le F(y) \)<br></p>
+<p>(4) \( f(x) = F(x) - \mathop {\lim}\limits_{y \to {x^ - }} F(y) \)</p>
+<p>(5) \( P(a &lt; X \le b) = F(b) - F(a) \,\) und \(\, P(a \le X \le b) = F(b) - \mathop {\lim }\limits_{x \to {a^ - }} F(x) \)<br></p>
+<p>(6) \( P(X &gt; b) = 1 - F(b)\, \) und&nbsp; \(\, P(X \ge b) = 1 - \mathop {\lim }\limits_{x \to {b^ - }} F(x) \)<br><br></p>
+
+<h4>Kenngrössen</h4>
+
+<p>Um Verteilungen vergleichen zu können bedient man sich einiger weniger charakteristischer Merkmale, sogenannter Kenngrössen. Wir betrachten <i>Lagemasse</i> und <i>Streumasse</i>. Lagemasse beschreiben das Zentrum der Verteilung und Streumasse charakterisieren
+    die Abweichung vom Zentrum.<br><br></p>
+
+<h5>Definitionen</h5>
+<p>Seien \( (\Omega,P) \) ein diskreter Wahrscheinlichkeitsraum und \( X:\Omega \to \mathbb R \) eine Zufallsvariable.</p>
+
+<p>(1) Der <i>Erwartungswert</i> \( E(X) = \sum\limits_{x \in \mathbb R } {P(X = x) \cdot x} = \sum\limits_{\omega \in \Omega } {P(\{ \omega \} ) \cdot X(} \omega ) \) ist ein Lagemass der Verteilung von \(X \). Der Erwartungswert existiert nicht für jede
+    Verteilung.
+</p>
+
+<p>(2) Die <i>Varianz</i> \( V(X) = E({[X - E(X)]^2}) = \sum\limits_{x \in\mathbb R }^{} {P(X = x) \cdot [x} - E(X){]^2} = \sum\limits_{\omega \in \Omega }^{} {P(\{ \omega \} ) \cdot [X(} \omega ) - E(X){]^2}\) und die Standardabweichung \( S(X) = \sqrt
+    {V(X)}\) sind Streumasse der Verteilung von \(X \). Varianz und Standardabweichung existieren nicht für jede Verteilung.<br><br></p>
+
+<h5>Wichtige Eigenschaften der Kenngrössen</h5>
+
+<p>(1) <b>Linearität</b>: \( E(X + Y) = E(X) + E(Y) \) und \( E(\alpha X) = \alpha E(X) \),&nbsp; mit \(\alpha X \in \mathbb R \).</p>
+
+<p>(2) <b>Verschiebungssatz für die Varianz</b>: \( V(X) = E({X^2}) - E{(X)^2} = [\sum\limits_{x \in \mathbb R}^{} {P(X = x) \cdot {x^2}} ] - E{(X)^2} \).</p>
+
+<p>(3) \( V(\alpha X + \beta ) = {\alpha ^2} \cdot V(X) \) mit \( \alpha ,\beta \in \mathbb R \).</p>
+
+<p>Im Allgemeinen gilt für die Verteilung einer Zufallsvariablen \(X \) nach der Tschebyscheff’schen Ungleichung, dass immer mindestens 75% der Werte im Bereich \( E(X) \pm 2 \cdot S(X) \) liegen.</p>
+<p>Viele Zufallsvariablen sind annähernd nach einer Gauss’schen Normalverteilung verteilt. Bei einer normalverteilten Zufallsvariable liegen etwa 68% der Werte im Bereich \( E(X) \pm S(X) \) und bereits etwa 95% im Bereich \( E(X) \pm 2 \cdot S(X) \).<br><br></p>
+
+<h4>Bedingte Wahrscheinlichkeiten</h4>
+
+<h5>Definition</h5>
+<p>Seien \((\Omega , P) \) ein diskreter Wahrscheinlichkeitsraum und \( A \) und \( B \) zwei Ereignisse.</p>
+
+<p>Die Wahrscheinlichkeit, dass \(A\) eintritt, unter der Annahme, dass Ereignis \(B\) eingetreten ist, nennt man die <i>bedingte Wahrscheinlichkeit</i> \( P(A|B) \) von \( A \) unter der Bedingung \( B \). Falls \( P(B) &gt; 0 \), so gilt: </p>
+<p>\(\quad\quad\quad\quad P(A|B) = \dfrac{{P(A \cap B)}}{{P(B)}} \)<br><br></p>
+
+<h5>Wichtige Eigenschaften der bedingten Wahrscheinlichkeiten</h5>
+<p>(1) <b>Multiplikationssatz</b> – <i>Pfadwahrscheinlichkeit</i>: \( P(A \cap B) = P(A|B) \cdot P(B) = P(B|A) \cdot P(A) \)</p>
+<p>(2) <b>Satz von der Totalen Wahrscheinlichkeit</b>: \( P(A) = P(A|B) \cdot P(B) + P(A|\bar B) \cdot P(\bar B) \) mit dem Komplement \( \bar B = \Omega \backslash B \) von \(B \) in \(\Omega \).</p>
+<p>(3) <b>Satz von Bayes</b>: \( P(A|B) = \dfrac{{P(B|A) \cdot P(A)}}{{P(B)}} \)</p>
+<table>
+    <tbody>
+        <tr>
+            <td><img role="presentation" alt="" src="data/Wahrscheinlichkeitsbaum.PNG?time=1567410568173" width="629" height="158" align="left"></td>
+        </tr>
+    </tbody>
+</table><br>
+
+<h4>Stochastische Unabhängigkeit</h4>
+
+<h5>Definition</h5>
+
+<p>Sei \( (\Omega ,P) \) ein diskreter Wahrscheinlichkeitsraum.</p>
+
+<p>Zwei Ereignisse \(A\) und \(B\) heissen <i>stochastisch unabhängig</i>, falls gilt:</p>
+<p>\(\quad\quad\quad\quad P(A \cap B) = P(A) \cdot P(B) \)</p>
+<p>Andernfalls heissen \(A\) und \(B\) <i>stochastisch abhängig</i>. </p>
+
+<p>Zwei Zufallsvariablen \( X:\Omega \to \mathbb R \) und &nbsp;\( Y:\Omega \to \mathbb R \) heissen <i>stochastisch unabhängig</i>, falls gilt: </p>
+<p>\(\quad\quad\quad\quad P(X = x,Y = y) = P(X = x) \cdot P(Y = y) \,\) für alle \(\, x,y \in \mathbb R \)</p>
+<p>Andernfalls heissen die Zufallsvariablen <i>stochastisch abhängig</i>. </p>
+<p>Die Funktion \( f(x,y) = P(X = x,Y = y) \) heisst die <i>gemeinsame Verteilung</i> (<i>Verbundverteilung</i>) von \( X \) und \( Y \).<br><br></p>
+
+<h5>Satz (Stochastische Unabhängigkeit)</h5>
+<p>Sei \((\Omega,P)\) ein diskreter Wahrscheinlichkeitsraum.</p>
+<ul>
+    <li>Folgende Eigenschaften sind äquivalent:</li>
+</ul>
+<div class="editor-indent" style="margin-left: 30px;">
+    <p>(i) \( A\) und&nbsp;\( B \) sind stochastisch unabhängig. <br></p>
+    <p>(ii) \( A\) und \( \Omega \backslash B \) sind stochastisch unabhängig. <br></p>
+    <p>(iii) \( \Omega \backslash A \) und&nbsp;\( \Omega \backslash B \) sind stochastisch unabhängig.<br></p>
+</div>
+
+<ul>
+    <li>Wenn \( A\) und \( B \) stochastisch unabhängig sind, beeinflusst das Eintreten des einen Ereignisses das Eintreten des anderen Ereignisses nicht. <br>Denn falls \( P(B) \ne 0 \), so gilt \( P(A|B) = P(A) \) <br>und falls \( P(A) \ne 0 \), so gilt
+        \( P(B|A) = P(B) \). <br><br></li>
+
+    <li>Für stochastisch unabhängige Zufallsvariablen \( X\) und \( Y \) gilt:</li>
+</ul>
+<p>\(\quad\quad\quad\quad E(X \cdot Y) = E(X) \cdot E(Y)\, \) und \( \,V(X + Y) = V(X) + V(Y) \).<br></p>
+</body>
+</html>

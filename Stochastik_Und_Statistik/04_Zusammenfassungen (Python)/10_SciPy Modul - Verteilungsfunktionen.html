@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <title>10_SciPy Modul - Verteilungsfunktionen</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<p>Verteilungsfunktionen können mit dem stats-Modul von SciPy-Modul genutzt werden.</p><p>Durchgängig können die PDF und CDF über die folgenden Abkürzungen aufgerufen werden:<br>pmf: Probability Mass Function (bei den diskreten Verteilungsfunktionen)<br>pdf:&nbsp;Probability Density Function (bei den stetigen Verteilungsfunktionen)<br>cdf:
+    Cummulative Density Function&nbsp;</p>
+<p>Nutzt man mehrere Verteilungen, kann man das Modul stats gesamthaft importieren und dann die einzelnen Verteilungsfunktionen abrufen</p>
+<p><i><span lang="EN-US"><span style="color: rgb(1, 100, 167);">from scipy import </span><span style="color: rgb(1, 100, 167);">stats as ss</span><br></span><span lang="EN-US" style="color: rgb(1, 100, 167);">hg=ss.hypergeom(M, n, N)</span></i></p>
+<p>oder die Verteilungen können einzelnen importiert werden, wie im Folgenden jeweils dargestellt.</p>
+
+<h5>Hypergeometrische Verteilung</h5>
+<p><i><span lang="EN-US"><span style="color: rgb(1, 100, 167);">from scipy.stats import hypergeom</span><br></span><span class="" style="color: rgb(1, 100, 167);">hypergeom.pmf(x, M, n, N)</span><br><span class="" style="color: rgb(1, 100, 167);">Out: PMF computed
+at x</span><br>bzw.<br><span lang="EN-US"><span style="color: rgb(1, 100, 167);">hypergeom.cdf(x, M, n, N)<br></span>
+    </span><span lang="EN-US"><span style="color: rgb(1, 100, 167);">Out: CDF computed
+at x</span>&nbsp;<br></span><span lang="EN-US">mit:&nbsp;<br></span><span lang="EN-US">M: Grundgesamtheit (bei uns N)<br></span><span lang="EN-US">n: Merkmalsträger (bei uns M)<br></span><span lang="EN-US">N: Stichprobengrösse (bei uns n)<br></span>
+    <span lang="EN-US">x: Anzahl Merkmalsträger in der Stichprobe</span>
+</i></p>
+
+<h5><span lang="EN-US">Binomialverteilung</span></h5>
+<p><i><span lang="EN-US"><span style="color: rgb(1, 100, 167);">from scipy.stats import binom</span><br></span><span style="color: rgb(1, 100, 167);">binom.pmf(x, n, p)</span><br><span style="color: rgb(1, 100, 167);">Out: PMF computed
+at x<br></span>bzw.<br><span lang="EN-US"><span style="color: rgb(1, 100, 167);">binom.cdf(x, n, p)<br></span>
+    </span><span lang="EN-US"><span style="color: rgb(1, 100, 167);">Out: CDF computed
+at x</span>&nbsp;<br>mit:<br></span><span lang="EN-US">n: Stichprobengrösse<br></span><span lang="EN-US">p</span><span lang="EN-US">: Erfolgswahrscheinlichkeit</span></i></p>
+
+<h5><span lang="EN-US">Poissonverteilung</span></h5>
+<p><i><span lang="EN-US"><span style="color: rgb(1, 100, 167);">from scipy.stats import poisson</span><br></span><span style="color: rgb(1, 100, 167);">poisson.pmf(x, mu)</span><br><span style="color: rgb(1, 100, 167);">Out: PMF computed
+at x</span><br>bzw.<br><span lang="EN-US"><span style="color: rgb(1, 100, 167);">poisson.cdf(x, mu)</span><br>
+    
+    </span><span lang="EN-US"><span style="color: rgb(1, 100, 167);">Out: CDF computed
+at x</span>&nbsp;<br>m</span><span lang="EN-US">it:&nbsp;<br></span><span lang="EN-US">mu: </span><span lang="EN-US">Rate</span></i></p>
+<h5>Exponentialverteilung</h5>
+<p><i><span lang="EN-US"><span style="color: rgb(1, 100, 167);">from scipy.stats import expon</span><br></span><span style="color: rgb(1, 100, 167);">expon.pdf(x, 1/lambda)</span><br><span style="color: rgb(1, 100, 167);">Out: PMF computed
+at x</span><br>bzw.<br><span lang="EN-US"><span style="color: rgb(1, 100, 167);">expon.cdf(x, 1/lambda)</span><br>
+    
+    </span><span lang="EN-US"><span style="color: rgb(1, 100, 167);">Out: CDF computed
+at x</span>&nbsp;<br>m</span><span lang="EN-US">it:&nbsp;<br></span><span lang="EN-US">lambda: </span><span lang="EN-US">Rate</span></i><br></p>
+<p></p>
+<h5>Normalverteilung</h5>
+<p><i><span lang="EN-US"><span style="color: rgb(1, 100, 167);">from scipy.stats import norm</span><br></span><span style="color: rgb(1, 100, 167);">norm.pdf(x, mu, sigma)</span><br><span style="color: rgb(1, 100, 167);">Out: PMF computed
+at x</span><br>bzw.<br><span lang="EN-US"><span style="color: rgb(1, 100, 167);">norm.cdf(x, <i><span>mu, sigma</span></i>)</span><br>
+    
+    </span><span lang="EN-US"><span>Out: CDF computed
+at x&nbsp;</span><br>m</span><span lang="EN-US">it:&nbsp;<br></span><span lang="EN-US">mu: </span><span lang="EN-US">Mittelwert<br>sigma: Standardabweichung</span></i><br></p>
+<p></p>
+<h5>Weitere Methoden des Moduls</h5>
+<p><i>stats: statistischen Kenngrössen der Verteilung: Mean(‘m’), variance(‘v’), skew(‘s’), and/or kurtosis(‘k’), z.B.&nbsp;<br><span style="color: rgb(1, 100, 167);">(m,v,s,k)=binom.stats(n,p,moments='mvsk')</span></i><br></p>
+<p><i>ppf: q-Quantil der Verteilung (Inverse der CDF), z.B.<br>
+    <span style="color: rgb(1, 100, 167);">binom.ppf(q,n,p)</span></i><br></p>
+<p><i>median: Median der Verteilung<br><span style="color: rgb(1, 100, 167);">binom.median(n,p)</span></i><br></p>
+<p><i>mean: Mittelwert der Verteilung<br><span style="color: rgb(1, 100, 167);">binom.mean(n,p)</span></i><br></p>
+<p><i>var: Varianz der Verteilung<br><span style="color: rgb(1, 100, 167);">binom.var(n,p)</span></i><br></p>
+<p><i>std: Standardabweichung der Verteilung<br><span style="color: rgb(1, 100, 167);">binom.std(n,p)</span></i><br></p>
+<p><i>interval: liefert die Intervallgrenzen, des Intervalls das alpha% der Werte enthält<br><span style="color: rgb(1, 100, 167);">binom.interval(alpha,n,p)</span></i><br></p><i></i><br>
+
+<p></p>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+    <title>3_Visualisierung zur Binomialverteilung</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<p></p>
+<p>Wir betrachten eine Urne mit
+    <!--[if !vml]-->\(N \)
+    <!--[endif]-->
+    <!--[if !vml]-->&nbsp;Objekten. Darunter sind&nbsp; \(M \)
+    <!--[if !vml]-->Objekte einer bestimmten Sorte, wir nennen sie Sorte \(M \)
+    <!--[if !vml]-->, die Merkmalsträger, und \(N-M \)
+    <!--[if !vml]-->andersartige Objekte. Es wird zufällig eine Stichprobe von \(n \) Objekten aus der Urne entnommen. Das Ziehen passiert nacheinander <b>mit Zurücklegen</b> des jeweils gezogenen Objekts. Die Zufallsvariable \(X \)
+    <!--[endif]-->
+    <!--[if !vml]-->&nbsp;gebe die Anzahl der Merkmalsträger in der Stichprobe an. Die Verteilung von \(X \) heisst <b>Binomialverteilung</b>
+    <!--[if !vml]-->. Mit Hilfe der Binomialkoeffizienten lässt sich die Anzahl der relevanten Ergebnisse abzählen und die Zähldichte (PDF) der Zufallsvariablen \(X \)
+    <!--[if !vml]-->elegant aufschreiben. Bei jeder Ziehung ist es möglich (weil mit Zurücklegen gezogen wird) einen der \(M \)
+    <!--[if !vml]-->verschiedenen Merkmalsträger zu ziehen. Um genau \(k \)
+    <!--[if !vml]-->Merkmalsträger bei \(n \)
+    <!--[if !vml]-->Ziehungen zu ziehen gibt es \(M^k \)
+    <!--[if !vml]-->Möglichkeiten. Für die verbleibenden \(n-k \)
+    <!--[if !vml]-->andersartigen Objekte in der Ziehung gibt es \((N-M)^{n-k} \) Möglichkeiten. Insgesamt ergibt das <br></p>
+<p>\( {M^k} \cdot {(N - M)^{n - k}} \)<br></p>
+<p>
+    <!--[if !vml]-->verschiedene Möglichkeiten bei \(n \)
+    <!--[if !vml]-->Ziehungen mit \(M \)
+    <!--[if !vml]-->Merkmalsträgern und \(N-M \)
+    <!--[if !vml]-->andersartigen Objekten. Berücksichtigt man noch, dass es bei \( n \) Ziehungen <br></p>
+<p>\( \left( \begin{array}{l} n\\ k \end{array} \right) \)</p>
+<p></p>
+<p>
+    <!--[if !vml]-->verschiedene Reihenfolgen für \(k \) Treffer gibt, so erhält man insgesamt &nbsp;</p>\( \left( \begin{array}{l} n\\ k \end{array} \right) \cdot {M^k} \cdot {(N - M)^{n - k}} \)
+<p></p>
+<p></p>
+<p>
+    <!--[if !vml]-->Möglichkeiten für eine Stichprobe mit \(k \)
+    <!--[if !vml]-->Merkmalsträgern und \(n-k \)
+    <!--[if !vml]-->Objekten ohne das Merkmal. Die Wahrscheinlichkeit für genau \(k \)
+    <!--[if !vml]-->Merkmalsträger in der Stichprobe von \(n \) Objekten ist demnach: </p>\( P(X = k) = \frac{{\left( \begin{array}{l} n\\ k \end{array} \right) \cdot {M^k} \cdot {{(N - M)}^{n - k}}}}{{{N^n}}} \)<br>
+<p></p>
+<p>Wir formen diesen Bruch noch in die übliche Schreibweise für die <b>Binomialverteilung</b> um, und benützen die Abkürzung \( p = M/N \) für die Wahrscheinlichkeit bei einem Zug einen Merkmalsträger zu ziehen, die sogenannte <b>Trefferwahrscheinlichkeit</b>:
+    &nbsp;
+</p>\( P(X = k) = \left( \begin{array}{l} n\\ k \end{array} \right) \cdot {[\underbrace {\frac{M}{N}}_p]^k} \cdot {[\underbrace {\frac{{N - M}}{N}}_{1 - p}]^{n - k}} = \left( \begin{array}{l} n\\ k \end{array} \right) \cdot {p^k} \cdot {(1 - p)^{n - k}}
+\)
+<br>
+<p></p>
+<p></p>
+<p>
+    <!--[if !vml]-->Immer dann ist ein stochastisches Experiment binomialverteilt, wenn es sich dabei um die \(n \)-malige Wiederholung immer desselben Grundexperiments handelt, bei dem es immer nur auf Erfolg (mit Erfolgswahrscheinlichkeit
+    <!--[if !vml]-->\(p \))<b> </b>
+    <!--[if !vml]-->oder Misserfolg (mit Wahrscheinlichkeit \(1-p \)
+    <!--[if !vml]-->) ankommt. Wichtig ist, dass sich die Ergebnisse der \(n \)
+    <!--[if !vml]-->Wiederholungen nicht untereinander beeinflussen, d.h. sie erfolgen stochastisch unabhängig voneinander. Die Anzahl der Treffer ist binomialverteilt mit den Parametern \(p \)
+    <!--[if !vml]-->für die Trefferwahrscheinlichkeit und \(n \) für die Anzahl der Versuche. </p>
+<p><b>Beispie</b>l <br></p>
+<p>Die Wahrscheinlichkeit, dass ein bestimmter Gerätetyp einer Zuverlässigkeitsprüfung nicht standhält, beträgt <b><!--[if !vml]--></b>\(p=0.06 \). Es werden \( n=200 \) Geräte unabhängig voneinander dieser Prüfung unterzogen. Die Anzahl \( X \) der dabei
+    herausfallenden schlechten Geräte ist binomialverteilt mit Zähldichte (PDF) <br></p>
+<p>\( P(X = k) = \left( \begin{array}{l} 200\\ k \end{array} \right) \cdot {0.06^k} \cdot {0.94^{200 - k}} \).<br></p>
+<p></p>
+<p></p>
+<p>Die Wahrscheinlichkeit, dass von diesen Geräten mindestens 10 und höchstens 15 die&nbsp; Zuverlässigkeitsprüfung nicht bestehen, wird mit Hilfe der kumulativen Verteilungsfunktion (CDF) <b><!--[if !vml]--></b>\( F(k) = P(X \le k) \) ausgedrückt und zum
+    Beispiel mit Matlab folgendermassen berechnet: <br></p>
+<p>\( P(10 \le X \le 15) = P(X \le 15) - P(X \le 9) = F(15) - F(9) \approx {\rm{0}}{\rm{.6169}} \)<br></p>
+<p></p>
+<p></p>
+<p></p>
+<p>Der Matlabbefehl dazu wäre binocdf(15,200,0.06)-binocdf(9,200,0.06). </p>
+<p></p><img src="data/binopdf.png" alt="binopdf" class="img-responsive atto_image_button_text-bottom" width="650" height="632"><br>
+<p></p><br>
+<p></p>
+<p></p>
+<p>
+    <!--[if !vml]-->
+    <!--[if !vml]-->
+    <!--[if !vml]-->Ein abstrakterer Zugang zur Binomialverteilung ist es, wenn die \( B(n,p)\)-verteilte Zufallsvariable \(X\) als Summe \(n\)
+    <!--[if !vml]-->
+    <!--[if !vml]-->stochastisch unabhängiger, 0, 1-wertiger Zufallsvariablen \(X_i\) mit Trefferwahrscheinlichkeit \( P({X_i} = 1) = p \)
+    <!--[if !vml]-->und Nichttrefferw.keit \( P({X_i} = 0) = 1 - p \), sogenannter <b>Bernoulli
+Variablen</b>
+    <!--[if !vml]-->, zu modellieren. Die Variable \(X_i\)
+    <!--[if !vml]-->hat den Wert 1 bei einem Erfolg im \(i\)-ten Versuch und bei einem Misserfolg den Wert 0. Die Summe der \(X_i\) <br></p>
+<p>\( X = \sum\limits_{i = 1}^n {{X_i}} \)<br>
+    <!--[endif]-->
+</p>
+<p>
+    <!--[if !vml]-->zählt die Anzahl der Erfolge bei \(n\) unabhängigen Versuchen und ist somit \( B(n,p) \)
+    <!--[if !vml]-->-verteilt. Der Erwartungswert der Bernoulli Variable \(X_i\) ist \( E({X_i}) = p \) und die Varianz ist</p>
+<p>\( V({X_i}) = E({X_i}^2) - E{({X_i})^2} = p - {p^2} = p \cdot (1 - p) \)<br></p>
+<p></p>
+<p>
+    <!--[if !vml]-->Nach den Regeln für Kenngrössen von Zufallsvariablen, erhalten wir den Erwartungswert und die Varianz der \( B(n,p) \)
+    <!--[if !vml]-->-verteilten Zufallsvariable \(X\) folgendermassen: </p>\( E(X) = E(\sum\limits_{i = 1}^n {{X_i}} ) = \sum\limits_{i = 1}^n {E({X_i})} = n \cdot p \)
+<p></p>
+<p>und <br></p>\( V(X) = V(\sum\limits_{i = 1}^n {{X_i}} )\underbrace = _{{X_i}{\rm{ st}}{\rm{. unabhängig}}}\sum\limits_{i = 1}^n {V({X_i})} = n \cdot p \cdot (1 - p) \)<br>
+<p></p>
+<p><img src="data/binoVert.png?time=1567715487325" alt="binoVert" class="img-responsive atto_image_button_text-bottom" width="650" height="366"><br></p>
+
+<p><br></p>
+<p></p>
+<p>
+    <!--[if !vml]-->Unten im Bild ist als Beispiel die Approximation der Zähldichte (PDF) der hypergeometrischen Verteilung \( H(800,340,12) \)
+    <!--[if !vml]-->durch die Binomialverteilung \( B(12,340/800) \) zu sehen. </p><img src="data/BinoAp.png?time=1567549261265" alt="BinoAp" class="img-responsive atto_image_button_text-bottom" width="650" height="488"><br>
+<p></p>
+<p><br></p>
+<h4><a name="_Toc13237403"></a></h4>
+
+<p><b>Aufgabe 1</b> <br></p>
+<p>Die Wahrscheinlichkeit ein fehlerhaftes Maschinenteil zu erhalten sei 0.01. Bestimmen Sie die Wahrscheinlichkeit, dass unter 100 Stück höchstens drei fehlerhaft sind. Die Zufallsvariable \(X\) bezeichne die Anzahl der defekten Maschinenteile in einer
+    Stichprobe von 100 Stück. Bestimmen Sie den Erwartungswert und die Varianz von \(X\).&nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction1()">Lösung</button>
+</p>
+<div id="myDIV1"><br>\( P(X \le 3) = \sum\limits_{k = 0}^3 {\left( \begin{array}{l} 100\\ k \end{array} \right) \cdot {{0.01}^k} \cdot {{0.99}^{100 - k}}} \approx 0.981626 \). \( E(X)&nbsp; = 100\cdot 0.01 = 1 \), \( V(X)&nbsp; = 100\cdot 0.01 \cdot 0.99= 0.99 \). <br></div>
+<script>
+    x = document.getElementById("myDIV1");
+    x.style.display = "none";
+
+    function myFunction1() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+<p><b>Aufgabe 2</b> <br></p>
+<p>Fünf Arbeiter, die unabhängig arbeiten, benötigen elektrischen Strom, und zwar jeder mit Unterbrechungen durchschnittlich etwa 10 Minuten pro Stunde. Genügt es, die Stromversorgung so einzurichten, dass 3 Arbeiter gleichzeitig Strom entnehmen können,
+    oder entstehen dann erhebliche Wartezeiten, indem 4 oder 5 Arbeiter gleichzeitig Strom entnehmen wollen?&nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction2()">Lösung</button>
+</p>
+<div id="myDIV2"><br>Sei \(X\) die Anzahl der zur gleichen Zeit Strom entnehmenden Arbeiter. \(X\) ist binomialverteilt mit den Parametern \(n=5\), \(p=1/6\). \( P(X &gt; 3) = 1 - P(X \le 3) = 1 - {[\frac{5}{6}]^5} - 5 \cdot {[\frac{5}{6}]^4} \cdot \frac{1}{6} - 10 \cdot
+    {[\frac{5}{6}]^3} \cdot {[\frac{1}{6}]^2} - 10 \cdot {[\frac{5}{6}]^2} \cdot {[\frac{1}{6}]^3} \approx {\rm{0}}{\rm{.0033}} \). <br></div>
+<script>
+    x = document.getElementById("myDIV2");
+    x.style.display = "none";
+
+    function myFunction2() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+<p><b>Aufgabe 3</b> <br></p>
+<p>Herr Meier, der in seiner Firma für den Wareneinkauf zuständig ist, erhält eine Lieferung von 5000 elektronischen Bauteilen. Auf dem Transport wurden genau 10 Bauteile (von aussen nicht erkennbar) beschädigt. Herr Meier möchte die Qualität der erhaltenen
+    Ware überprüfen. Darum wählt er zufällig 100 verschiedene Bauteile aus und testet ihre Funktion. Berechnen Sie die Wahrscheinlichkeit dafür, dass genau eines der getesteten Bauteile fehlerhaft ist. Verwenden Sie eine geeignete Approximation.&nbsp;
+    &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction3()">Lösung</button>
+</p>
+<div id="myDIV3"><br>Sei \(X\) die Anzahl der fehlerhaften Bauteile in der Stichprobe von 100. \(X\)ist hypergeometrisch verteilt mit den Parametern \(N=5000\), \(M=10\), \(n=100\). \( P(X = 1) = \frac{{\left( \begin{array}{l} 10\\ 1 \end{array} \right) \cdot \left(
+    \begin{array}{l} 4990\\ 99 \end{array} \right)}}{{\left( \begin{array}{l} 5000\\ 100 \end{array} \right)}} \approx {\rm{ 0}}{\rm{.1670}} \). Approximiert wird mit der Binomialverteilung mit den Parametern \(n=100\) und \(p=M/N=1/500\): \( P(X = 1)
+    = \left( \begin{array}{l} 100\\ 1 \end{array} \right) \cdot 0.002 \cdot {0.998^{99}} \approx {\rm{ 0}}{\rm{.1640}} \). <br></div>
+<script>
+    x = document.getElementById("myDIV3");
+    x.style.display = "none";
+
+    function myFunction3() {
+        var x = document.getElementById("myDIV3");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+<iframe src="https://www.geogebra.org/m/ungfnm32" scrolling="no" allowfullscreen="" width="980" height="750" frameborder="0"></iframe>
+
+
+
+<a href="https://www.geogebra.org/m/ungfnm32" target="_blank">Extra Fenster</a>
+</body>
+</html>

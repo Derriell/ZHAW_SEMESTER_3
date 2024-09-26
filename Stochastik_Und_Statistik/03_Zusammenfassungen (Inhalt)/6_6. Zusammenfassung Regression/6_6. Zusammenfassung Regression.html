@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+    <title>6_6. Zusammenfassung: Regression</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<h4>Lineare Regression<br></h4>
+<h5><br></h5><h5>Definition</h5>
+<p></p>
+<p>
+    <!--[if !vml]--> <span lang="DE">Gegeben
+sind Datenpunkte <!--[if !vml]-->\( ({x_i};{y_i}) \) mit \( 1 \le i \le n \). <span lang="DE"></span></span><span lang="DE">Die <em>Residuen</em> oder <em>Fehler</em> <!--[if !vml]-->\( {\epsilon_i} = {y_i} - \underbrace{g({x_i}) }_{=\hat{y}_i}  \) dieser Datenpunkte sind
+die Abstände in <!--[if !vml]-->\( y \)-Richtung zwischen den <em>beobachteten Werten</em> <!--[if !vml]-->\( {y_i} \)<!--[endif]-->&nbsp;und den durch die lineare Regression <em>prognostizierten Werten</em> \( \hat{y}_i= g(x_i) \). </span><span lang="DE"></span><span lang="DE">Die <em>Ausgleichs</em>-
+oder <em>Regressionsgerade</em> \( g(x)=m\cdot x +d \) (in <!--[if !vml]-->\( y \)-Richtung) ist diejenige Gerade, für die die Summe der
+quadrierten Residuen \( \sum\limits_{i = 1}^n {{\epsilon_i}^2}  \) am kleinsten ist. <br></span></p><p><span lang="DE"><img src="data/LinRegBild.png?time=1662897577323" alt="LinRegBild" class="img-fluid atto_image_button_text-bottom" width="385" height="203"><br></span></p>
+<p></p><p></p><table width="612" cellspacing="0" cellpadding="0" border="1">
+ <tbody><tr>
+  <td width="612" valign="top">
+  <p><strong><span lang="DE">Zusammenfassung
+  Regressionsgerade:</span></strong></p>
+  <p><em><span lang="DE">Die Regressionsgerade
+  </span><span lang="DE">
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+   
+   
+  
+   
+  </span><span lang="DE">&nbsp;<span lang="DE">\( g(x)=m\cdot x +d \) </span>mit den Parametern </span><span lang="DE">
+   
+  </span><span lang="DE"> \(m\) und \(d\) </span><span lang="DE"></span><span lang="DE">ist die Gerade, für die die Residualvarianz </span><span lang="DE">
+   
+  </span><span lang="DE">&nbsp;\( \tilde{s}_{\epsilon}^2 \) </span><span lang="DE">minimal ist. </span></em><!--[if !msEquation]--><!--[endif]--><!--[if !msEquation]--><!--[endif]--><!--[if !msEquation]--><!--[endif]--></p><em>
+  
+  </em><p><em><span lang="DE">Die Regressionsgerade hat die Steigung &nbsp;&nbsp;\( m=\frac{\tilde{s}_{xy}}{\tilde{s}_x^2} \)&nbsp;&nbsp;&nbsp; <br>
+  </span><span lang="DE">
+   
+  </span><span lang="DE"></span></em><!--[if !msEquation]--><!--[endif]--></p><em>
+  </em><p><em><span lang="DE">und den \(y\)</span><span lang="DE">
+   
+  </span></em><!--[if !msEquation]--><!--[endif]--><span lang="DE"><em>-Achsenabschnitt&nbsp;&nbsp; </em>\( d= \overline{y}  - m \cdot \overline{x}  \)<br>
+  </span><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--></p>
+  
+  <p><span lang="DE">Für die
+  zugehörige (minimale) Residualvarianz gilt: \( \tilde{s}_{\epsilon}^2 = \tilde{s}_{y}^2 - \underbrace{\frac{ \tilde{s}_{xy}^2 }{ \tilde{s}_{x}^2 } }_{=\tilde{s}_{\hat y}^2 } \)<br></span></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><span lang="DE"></span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width="612" valign="top">
+  <p><span lang="DE">mit:</span></p>
+  <p><em>Varianz</em> der <!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]-->\( x_i \)-Werte:&nbsp; \( \tilde{s}_x^2 \)<br></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--></p>
+  <p><em>Varianz</em>. der \( y_i \)<!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]-->-Werte (Totale Varianz) : \( \tilde{s}_y^2 \)</p><p>Varianz der&nbsp;\( \hat{y}_i \)<span lang="DE">
+   
+  </span>-Werte (Prognostizierte Varianz):&nbsp; \( \tilde{s}_{\hat y}^2 \)&nbsp;<span lang="DE"> </span><br></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--></p>
+  <p><em>Kovarianz: \( \tilde{s}_{xy} \)</em>
+  <span lang="DE"></span></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><span lang="DE"></span></p>
+  <p><em>arithmetische</em> <em>Mittelwerte&nbsp;\( \overline{x} \) und&nbsp;<em>\( \overline{y} \)</em></em></p><p><em><em><em><em><strong>Hinweis</strong>: Die Berechnungen können alternativ auch mit den
+korrigierten Varianzen <em><em><em><em><em><span lang="DE">\( s_{\epsilon}^2 \) </span>, </em>\( s_x^2 \), \( s_y^2 \), \( s_{\hat y}^2 \)</em></em></em> </em>und der korrigierten Kovarianz <em>\( s_{xy} \)</em> erfolgen</em></em>!<br></em></em></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><strong><span lang="DE"></span></strong></p>
+  </td>
+ </tr>
+</tbody></table><br>
+
+<p></p><p></p><table width="614" cellspacing="0" cellpadding="0" border="1">
+ <tbody><tr>
+  <td width="614" valign="top">
+  <p><strong><span lang="DE">Zusammenfassung Bestimmtheitsmass:</span></strong></p>
+  <p><span lang="DE">Die Totale
+  Varianz setzt sich zusammen aus der Residualvarianz und der Varianz der
+  prognostizierten Werte (<em>Varianzzerlegung</em>): <br></span></p><p><span lang="DE"><span lang="DE">\[ \tilde{s}_{y}^2&nbsp; =&nbsp; \tilde{s}_{\epsilon}^2 +&nbsp; \underbrace{\tilde{s}_{\hat y}^2 }_{=\frac{ 
+\tilde{s}_{xy}^2 }{ \tilde{s}_{x}^2 } } \]</span> </span><span lang="DE">Das <em>Bestimmtheitsmass</em>
+  </span><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><sup><span lang="DE"> </span></sup><span lang="DE">\( R^2 \) beurteilt die globale
+  Anpassungsgüte einer Regression über den Anteil der </span><span lang="DE">prognostizierten (erklärten) Varianz </span><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><span lang="DE">&nbsp;\( \tilde{s}_{\hat y}^2 \)&nbsp; an der totalen Varianz </span><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><span lang="DE"><span lang="DE">\( \tilde{s}_{y}^2 \)</span>:&nbsp;&nbsp;&nbsp; <br></span></p><p><span lang="DE">&nbsp;&nbsp;&nbsp;\(  R^2= \frac{\tilde{s}_{\hat y}^2 }{\tilde{s}_{y}^2 }  \) bzw. \( R^2= \frac{{s}_{\hat y}^2 }{{s}_{y}^2 }  \)<br></span></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><span lang="DE"></span></p>
+  <p><span lang="DE">Das <em>Bestimmtheitsmass</em> <span lang="DE">  </span><span lang="DE">
+   
+  </span><sup><span lang="DE"> </span></sup><span lang="DE">\( R^2 \)</span></span><!--[if !msEquation]--><span lang="DE"> </span><span lang="DE">stimmt überein mit dem Quadrat<em> des Korrelations­koeffizienten</em></span><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><em><span lang="DE">(nach Bravais-Pearson): <br></span></em></p><p><em><span lang="DE">\( R^2= \frac{\tilde{s}_{x y}^2 }{\tilde{s}_{x}^2 \cdot \tilde{s}_{y}^2 } = r_{xy}^2  \) </span></em><span lang="DE">bzw.</span><em><span lang="DE"> <em><span lang="DE"></span></em>\( R^2= \frac{{s}_{x y}^2 }{{s}_{x}^2 \cdot {s}_{y}^2 } = r_{xy}^2  \)<br></span></em></p>
+  <p><!--[if !msEquation]--><span lang="DE">
+   
+  </span><!--[endif]--><span lang="DE"></span></p>
+  </td>
+ </tr>
+</tbody></table><br><p></p><p><br></p><h5><strong>Bestimmung der Regressionsgerade als Matrizenproblem: </strong><br></h5><p>Die Parameter \(m\) und \(d\) werden mit der Matrix \( A= \begin{pmatrix} x_1&amp;1\\ x_2&amp;1\\ \vdots &amp;\vdots\\ x_n &amp; 1
+\end{pmatrix} \) aus den folgenden Normalengleichungen berechnet:
+</p><p></p>
+
+<table>
+    <tbody>
+        <tr>
+            <td width="50">&nbsp;</td>
+            <td width="300">
+                <table cellpadding="10" border="1">
+                    <tbody>
+                        <tr>
+                            <td>
+                                \(  {A^T} \cdot A \cdot \binom {m} {q} = {A^T} \cdot \begin{pmatrix} y_1 \\ \vdots \\ y_n \end{pmatrix} \)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table><p><br></p><p><br></p>
+
+<table cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td>
+                <h5><strong><p>Die Methode der kleinsten Quadrate (KQM)</p></strong></h5><span lang="DE">Das lineare, inhomogene
+Gleichungssystem mit </span> \(m\) Gleichungen und <span lang="DE"></span> \(n\) Unbekannten \(x_1,\ldots , x_n\) <br><br>\( \left. {\begin{array}{*{20}{c}} {{a_{11}}{x_1}}&amp; + &amp;{{a_{12}}{x_2}}&amp; + &amp;{...}&amp; + &amp;{{a_{1n}}{x_n}}&amp;
+                = &amp;{{y_1} + {\epsilon_1}}\\ {{a_{21}}{x_1}}&amp; + &amp;{{a_{22}}{x_2}}&amp; + &amp;{...}&amp; + &amp;{{a_{2n}}{x_n}}&amp; = &amp;{{y_2} + {\epsilon_2}}\\ \vdots &amp;{}&amp; \vdots &amp;{}&amp;{}&amp;{}&amp; \vdots &amp;{}&amp; \vdots \\ {{a_{m1}}{x_1}}&amp;
+                + &amp;{{a_{m2}}{x_2}}&amp; + &amp;{...}&amp; + &amp;{{a_{mn}}{x_n}}&amp; = &amp;{{y_m} + {\epsilon_m}} \end{array}\;} \right\}\;\; \Leftrightarrow \;\; 
+\underbrace{\begin{pmatrix} a_{11}  &amp;  a_{12}  &amp; \ldots &amp; a_{1n} \\ a_{21}  &amp; a_{22} &amp; \ldots &amp; a_{2n}  \\ \vdots &amp; \vdots &amp; &amp; \vdots  \\   a_{m1}  &amp;  a_{m2}  &amp; \ldots &amp; a_{mn}  \end{pmatrix}}_{= A } \cdot \underbrace{\begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}}_{= \vec x} =  \underbrace{\begin{pmatrix} y_1 \\ y_2 \\ \vdots \\ y_m \end{pmatrix}}_{=\vec y} +  \underbrace{\begin{pmatrix} \epsilon_1 \\ \epsilon_2 \\ \vdots \\ \epsilon_m  \end{pmatrix}}_{=\vec \epsilon} \)<br> <span lang="DE"><br>hat immer (mind.) eine
+Lösung mit einem <em>Residuenvektor</em><!--[if !vml]--> \( \vec \epsilon  \) von minimalem Betrag.
+Diese Lösungen sind Lösungen der <em>Normalengleichungen&nbsp;\( {A^T} \cdot A \cdot \vec x = {A^T} \cdot \vec y \). <br></em><span lang="DE"><!--[if !vml]-->Hat die Matrix <span lang="DE"> \( A\) </span>den Rang
+                <!--[if !vml]--><span lang="DE"> \(n \)</span>
+                <!--[endif]-->, so ist die symmetrische
+                <!--[if !vml]--><span lang="DE"> \(n \times n \) </span>Matrix
+                <!--[if !vml]--><span lang="DE">&nbsp;\( {A^T} \cdot A\)</span> invertierbar und die einzige Lösung erhält man aus der Gleichung </span>\( \vec x = {({A^T} \cdot A)^{ - 1}}{\mkern 1mu} \cdot {A^T}\vec y \).<em><br><br></em>
+                <p><span lang="DE">Für die Lösungen<span lang="DE"> \( \vec x \) </span>gilt immer: <br></span>
+                </p>
+                <p><span lang="DE"></span></p>
+                <p>
+                    <!--[if !supportLists]-->-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span lang="DE"><span lang="DE"><span lang="DE">\(A \cdot \vec x \)</span></span>
+                    </span> und der Residuenvektor
+\(  \vec \epsilon = \vec y - A \cdot \vec x  \) sind orthogonal zueinander. <br></p>
+
+                <p>
+                    <!--[if !supportLists]-->-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <!--[endif]-->Es gilt der Satz von Pythagoras (Quadratsummenzerlegung):</p></span><p><span lang="DE">
+
+                <span lang="DE"><!--[if !vml]--></span>\[ {\left| {\vec y} \right|^2} = {\left| {A \cdot \vec x} \right|^2} + {
+\underbrace{\left| \vec y - A \cdot \vec x  \right|^2}_{=|\vec \epsilon |^2} } \]</span></p><p><span lang="DE"></span></p>
+                <p></p><em><br></em> </td>
+        </tr>
+    </tbody>
+</table><br><br>
+</body>
+</html>

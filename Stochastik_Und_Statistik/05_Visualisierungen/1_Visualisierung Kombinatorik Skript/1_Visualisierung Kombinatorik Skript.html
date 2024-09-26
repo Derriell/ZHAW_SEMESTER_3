@@ -1,0 +1,2794 @@
+<!doctype html>
+<html>
+<head>
+    <title>1_Visualisierung: Kombinatorik Skript</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<br>
+<div class="WordSection1">
+
+    <p class="MsoToc1" style="tab-stops:right dotted 495.3pt">
+        <!--[if supportFields]><span
+style='mso-element:field-begin'></span><span
+style='mso-spacerun:yes'> </span>TOC \o &quot;1-3&quot; \h \z \u <span
+style='mso-element:field-separator'></span><![endif]--><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507541"><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507541 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">1</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340031000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc1" style="tab-stops:24.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507542">I.<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Vier Grundlegende Methoden des Abzählens<span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507542 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">2</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340032000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc2" style="tab-stops:44.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507543">1.1<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Beispiele<span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507543 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">2</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340033000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc2" style="tab-stops:44.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507544">1.2<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Lösungen der Beispiele<span style="color:windowtext;display:none;mso-hide:screen;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507544 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">2</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340034000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc2" style="tab-stops:44.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507545">1.3<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Systematik<span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507545 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">8</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340035000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc1" style="tab-stops:24.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507546">II.<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">      </span></span>Binomialkoeffizienten<span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507546 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">9</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340036000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc2" style="tab-stops:44.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507547">2.1<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Definition<span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507547 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">9</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340037000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc2" style="tab-stops:44.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507548">2.2<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Beispiele<span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507548 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">9</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340038000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoToc2" style="tab-stops:44.0pt right dotted 495.3pt"><span class="MsoHyperlink"><span style="mso-no-proof:yes"><a href="#_Toc510507549">2.3<span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;color:windowtext;
+text-decoration:none;text-underline:none"><span style="mso-tab-count:1">       </span></span>Eigenschaften<span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none"><span style="mso-tab-count:1 dotted">. </span></span>
+        <!--[if supportFields]><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'><span style='mso-element:field-begin'></span></span><span
+style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none'> PAGEREF _Toc510507549 \h </span><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-separator'></span></span><![endif]--><span style="color:windowtext;display:none;mso-hide:screen;text-decoration:none;
+text-underline:none">10</span><span style="color:windowtext;display:none;
+mso-hide:screen;text-decoration:none;text-underline:none"><!--[if gte mso 9]><xml>
+ <w:data>08D0C9EA79F9BACE118C8200AA004BA90B02000000080000000E0000005F0054006F0063003500310030003500300037003500340039000000</w:data>
+</xml><![endif]--></span>
+        <!--[if supportFields]><span style='color:windowtext;
+display:none;mso-hide:screen;text-decoration:none;text-underline:none'><span
+style='mso-element:field-end'></span></span><![endif]--></a>
+        </span>
+        </span><span style="font-size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-fareast-font-family:
+&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-no-proof:yes"><o:p></o:p></span></p>
+
+    <p class="MsoNormal">
+        <!--[if supportFields]><b><span lang=DE style='mso-ansi-language:
+DE'><span style='mso-element:field-end'></span></span></b><![endif]-->
+        <o:p>&nbsp;</o:p>
+    </p>
+
+    <p class="MsoNormal">
+        <o:p>&nbsp;</o:p>
+    </p>
+    <o:p></o:p>
+    <o:p></o:p>
+    <o:p></o:p>&nbsp;
+    <p class="MsoNormal">
+        <o:p>&nbsp;</o:p>
+    </p>
+
+    <h1 style="margin-left:54.0pt;text-indent:-36.0pt;mso-list:l6 level1 lfo1">
+        <a name="_Toc510507542">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial;color:red"><span style="mso-list:Ignore">I.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+            </span>
+            <!--[endif]--><span style="color:red">Vier Grundlegende Methoden des Abzählens</span></a><span style="color:red"><o:p></o:p></span></h1>
+
+    <p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-family:&quot;Arial&quot;,sans-serif;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></b></p>
+
+    <h2 style="margin-left:19.8pt;text-indent:-19.8pt;mso-list:l17 level2 lfo2">
+        <a name="_Toc510507543">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial"><span style="mso-list:Ignore">1.1<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>
+            </span>
+            <!--[endif]--><u>Beispiele</u></a>
+    </h2>
+
+    <p class="MsoNormal" style="text-indent:35.45pt"><b style="mso-bidi-font-weight:
+normal"><span style="font-family:&quot;Arial&quot;,sans-serif;mso-bidi-font-family:&quot;Times New Roman&quot;"><o:p>&nbsp;</o:p></span></b></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(1)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span></span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Zahlenschlossproblem</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Sie haben den Zahlencode ihres
+Zahlenschlosses vergessen. Das Schloss besteht aus 6 Zahlenkränzen mit den
+Zahlen 0 bis 9. Wie viele Einstellungen müssen Sie im schlimmsten Fall
+probieren um ihren Zahlencode zu finden? <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(2)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;</span></span></span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Schwimmwettkampf</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Bei einem Schwimmwettbewerb starten 10
+Schwimmerinnen. Wie viele mögliche Platzierungen gibt es, wenn Sie nur die
+ersten drei Plätze betrachten und nicht zulassen, dass Schwimmerinnen
+zeitgleich im Ziel ankommen können? <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(3)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Lotto</span></b><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">: Wie gross sind die Chancen beim Lotto 6 aus 49 mit einem Versuch
+sechs richtige Zahlen vorauszusagen? <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(4)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Bitproblem</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Wie viele verschiedene Dezimalzahlen können
+mit 64 Bits dargestellt werden? <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(5)<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span></span></b><!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Zahnarztproblem</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Eine Zahnärztin erlaubt den Kindern nach der
+Behandlung zur Belohnung aus einem Sortiment von 5 Töpfen mit 5 verschiedenen Spielsachen
+(Gummiball, Spielfigur, Toyauto, Jojo, Kreisel) genau 3 Gegenstände herauszunehmen.
+Wie viele verschiedene Möglichkeiten hat ein Kind? <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(6)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Fussballmannschaft</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Aus einer Klasse mit 20 Studierenden soll eine
+Fussballmannschaft mit 11 Spielern zusammengestellt werden. (6a) Wie viele
+Möglichkeiten gibt es? (6b) Wie viele Möglichkeiten gibt es, wenn die
+Mannschaft genau aus 6 Frauen und 5 Männern bestehen soll und die Klasse aus 8
+Frauen und 12 Männern besteht. <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(7)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Buchstabenproblem</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Mit 10 verschiedenen Buchstaben sollen Worte
+von 5 Zeichen gebildet werden. (7a) Wie viele solche Worte gibt es, wenn dabei
+kein Buchstabe doppelt vorkommen darf. (7b) Wie viele verschiedene Worte gibt
+es, wenn Buchstaben mehrmals vorkommen können. <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(8)<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span></span></b><!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Tellschiessen</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: Wilhelm Tell schiesst mit drei Pfeilen auf
+eine Zielscheibe, welche in 10 ringförmige<span style="mso-spacerun:yes"> 
+</span>Bereiche unterteilt ist. Wie viele verschiedene Resultate gibt es für Willhelm?
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(9)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Napoleon</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"> schart seine 10 Generäle für eine Beratung um
+sich an einem kreisrunden Tisch mit 11 Plätzen. (9a) Wie viele verschiedene
+Sitzreihenfolgen gibt es? (9b) Wie viele verschiedene Sitzreihenfolgen gibt es,
+wenn Napoleons Liebling Marschall Ney immer an Napoleons Seite sitzen soll?<o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-21.8pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(10)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Gruppen</span></b><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">: Wie viele verschiedene Personengruppen kann man aus einer
+Klasse mit 20 Studierenden bilden?<o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-21.8pt;mso-list:l7 level1 lfo6">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(11)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></b>
+        <!--[endif]--><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif">Teilmengen</span></b><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">: (11a) Wie viele dreielementige Teilmengen hat
+die Menge {1,2,3,4}? (11b) Wie viele Teilmengen hat die Menge {1,2,3,4}?<span style="mso-spacerun:yes">  </span>(11b) Wie viele Teilmengen hat eine Menge mit n Elementen?
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <h2 style="margin-left:19.8pt;text-indent:-19.8pt;mso-list:l17 level2 lfo2">
+        <a name="_Toc510507544">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial"><span style="mso-list:Ignore">1.2<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>
+            </span>
+            <!--[endif]--><u>Lösungen
+der Beispiele</u></a><u> </u></h2>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(1)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Das Zahlenschloss hat 6
+Zahlenkränze mit den Zahlen 0 bis 9. An jedem Kranz können unabhängig von den
+anderen Kränzen 10 verschiedene Zahlen eingestellt werden. Damit gibt es<span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"> </span><span style="mso-spacerun:yes"></span>\( 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 = {10^6} \) mögliche
+        Zahlencodes. Unten in der Tabelle ist als Beispiel der Zahlencode 011909 mit Kreuzen markiert. In jeder Spalte können die Kreuze unabhängig von den anderen Spalten gesetzt werden, um alle möglichen Zahlencodes zu finden.
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="mso-bidi-font-size:11.0pt;mso-bidi-font-family:Arial"><o:p>&nbsp;</o:p></span></p>
+
+    <table class="MsoNormalTable" style="margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext" cellspacing="0" cellpadding="0" border="1">
+        <tbody>
+            <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+                <td style="width:58.4pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="78" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zahlen 0 bis 9 <o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Kranz1<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Kranz2<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Kranz3<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Kranz4<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Kranz5<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Kranz6<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:1">
+                <td style="width:58.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="78" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">0<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:2">
+                <td style="width:58.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="78" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">1<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:3">
+                <td style="width:58.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="78" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">…<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:4">
+                <td style="width:58.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="78" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">8<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+                <td style="width:58.4pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="78" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">9<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X<o:p></o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:68.7pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="92" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X<o:p></o:p></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(2)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Für den ersten Platz
+gibt es 10 mögliche Platzierungen. Wenn eine Schwimmerin auf dem ersten Platz
+platziert ist, so gibt es für den zweiten Platz noch 9 mögliche Schwimmerinnen
+und ebenso für den dritten Platz noch 8 mögliche Schwimmerinnen. Somit gibt es <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;\( 10 \cdot 9 \cdot 8 = \frac{{10!}}{{(10 - 3)!}} = 720 \)</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:144.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:107.7pt;height:29.4pt'
+ o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image003.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1026"
+  DrawAspect="Content" ObjectID="_1628485236">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">verschiedene
+Platzierungen für die ersten drei Plätze. In der Tabelle ist die Platzierung
+Schwimmer 1 auf Platz 2, Schwimmer 3 auf Platz 1 und Schwimmer 10 auf Platz 3
+mit Kreuzen markiert. Auf diese Weise können alle möglichen Platzierungen
+eingetragen werden. Allerdings muss in jeder Zeile genau ein Kreuz stehen, da
+wir nicht zulassen, dass<span style="mso-spacerun:yes">  </span>Schwimmerinnen gleichzeitig ins Ziel kommen. Die Einträge beim Abzählen sind nicht unabhängig voneinander, wie beim Zahlenschlossproblem. Wenn man beim Eintragen in der ersten Zeile beginnt,
+        so gibt es 10 Möglichkeiten ein Kreuz zu setzen. In der zweiten Zeile darf das Kreuz nicht unter das Kreuz der ersten Zeile gesetzt werden. Es gibt 9 Möglichkeiten dies zu tun und entsprechend gibt es für die dritte Zeile noch 8 Möglichkeiten.
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+
+
+    <table class="MsoNormalTable" style="margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext" cellspacing="0" cellpadding="0" border="1">
+        <tbody>
+            <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+                <td style="width:54.25pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="72" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">Schwimmer1<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:62.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">Schwimmer2</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">Schwimmer3</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:56.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="75" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">…<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">Schwimmer9<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:64.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">Schwimmer10</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:1">
+                <td style="width:54.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="72" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Platz1<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X</span><span style="font-size:
+  11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:56.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="75" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:2">
+                <td style="width:54.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="72" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Platz2<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X</span><span style="font-size:
+  11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:56.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="75" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:3;mso-yfti-lastrow:yes">
+                <td style="width:54.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#92D050;padding:0cm 5.4pt 0cm 5.4pt" width="72" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Platz3<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:62.4pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="83" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:56.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="75" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:black">-<o:p></o:p></span></p>
+                </td>
+                <td style="width:64.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="86" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;color:#00B050">X</span><span style="font-size:
+  11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(3)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Bei der Ziehung 6 aus
+49 spielt die Reihenfolge der gezogenen Zahlen keine Rolle. Es kommt nur auf
+die Zahlenauswahl an. Käme es auf die Reihenfolge an, so hätte man wie im
+Problem mit den Schwimmerinnen 6 Plätze für mögliche 49 Zahlen zu besetzen.
+Dazu würde es <span style="position:relative;top:12.0pt;mso-text-raise:-12.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:120.9pt;height:27.6pt'
+ o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image005.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( 49 \cdot 48 \cdot 47 \cdot 46 \cdot 45 \cdot 44 = \frac{{49!}}{{43!}} \)</span> Möglichkeiten geben. Zu jeder bestimmten Auswahl von 6 Zahlen gibt es aber <span style="position:relative;
+top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1028"
+ type="#_x0000_t75" style='width:79.2pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image007.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 = 6! \) </span>verschiedene Arten diese anzuordnen. Also gibt es <span style="position:relative;top:12.0pt;mso-text-raise:
+-12.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1029" type="#_x0000_t75"
+ style='width:30.3pt;height:27.6pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image009.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( \frac{{49!}}{{43! \cdot 6!}} \)</span> Auswahlen von 6 Zahlen aus 49 ohne Berücksichtigung der Reihenfolge. Die Zahl <span style="position:
+relative;top:12.0pt;mso-text-raise:-12.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1030"
+ type="#_x0000_t75" style='width:30.3pt;height:27.6pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image009.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span><span>\( \frac{{49!}}{{43! \cdot 6!}} \)</span></span><span style="mso-spacerun:yes"> </span>entspricht dem <b style="mso-bidi-font-weight:normal">Binomialkoeffizienten</b> <span style="position:relative;top:15.0pt;mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1031" type="#_x0000_t75" style='width:85.5pt;height:32.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image011.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( \left( \begin{array}{l}
+49\\
+6
+\end{array} \right) = \frac{{49!}}{{(49 - 6)! \cdot 6!}} \) </span>in Worten „<b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:normal">6 aus
+49“</i></b> oder „<b style="mso-bidi-font-weight:normal"><i style="mso-bidi-font-style:
+normal">49 tief 6“</i></b>. Die Chancen 6 richtige Zahlen zu erraten sind <span style="position:relative;top:15.0pt;mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1032" type="#_x0000_t75" style='width:134.1pt;height:32.1pt'
+ o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image013.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( 1/\left( \begin{array}{l} 49\\ 6 \end{array} \right) = \frac{{43! \cdot 6!}}{{49!}} \approx {\rm{7}}{\rm{.1511}} \cdot {\rm{1}}{{\rm{0}}^{ - 8}} \).
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(4)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Entsprechend dem
+Zahlenschlossproblem gibt es hier 64 Stellen. Unabhängig voneinander, pro
+Stelle, gibt es zwei mögliche Besetzungen, die Zahlen 1 oder 0. Insgesamt gibt
+es <span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1033" type="#_x0000_t75" style='width:76.5pt;height:24pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image015.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( \underbrace {2 \cdot 2 \cdot ... \cdot 2 \cdot 2}_{64 - Mal} = {2^{64}} \) verschiedene Dezimalzahlen.
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(5)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Das komplizierteste der
+hier beschriebenen Abzählprobleme wird mit einem <b style="mso-bidi-font-weight:
+normal">Ersatzproblem</b> gelöst. Dabei handelt es sich um ein äquivalentes
+Problem, welches einfacher zu lösen ist. Jede Auswahl von 3 Objekten aus den 5
+Schalen kann eindeutig durch 3 Kreuze <b style="mso-bidi-font-weight:normal">XXX</b>
+und 4 Striche <b style="mso-bidi-font-weight:normal">IIII</b> nach der
+folgenden Regel beschrieben werden: Wir nummerieren die Schalen mit 1 bis 5 und
+denken uns folgendes System zum Abzählen aller Auswahlen von drei Objekten.
+Nehmen wir k1 Objekte aus Schale 1 heraus so werden k1 Striche nebeneinander
+geschrieben <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1034" type="#_x0000_t75" style='width:24pt;height:23.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image017.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( \underbrace {{\rm{I}}...I}_{k1 - Mal} \).&nbsp;
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Danach wird ein <b style="mso-bidi-font-weight:normal">X </b>geschrieben </span><span>\( \underbrace {{\rm{I}}...I}_{k1 - Mal}X \)</span><br><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1035" type="#_x0000_t75" style='width:33.9pt;height:23.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image019.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span> <span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">um zu kennzeichnen,
+dass jetzt die Objekte aus Schale 2 ausgewählt werden. Aus Schale 2 werden <span style="mso-spacerun:yes"> </span>k2 Objekte herausgenommen, was diesmal mit k2 Strichen notiert wird
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1036" type="#_x0000_t75" style='width:56.1pt;height:23.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image021.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( \underbrace {{\rm{I}}...I}_{k1 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k2 - Mal} \)<br>
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Danach wird wieder ein <b style="mso-bidi-font-weight:normal">X </b>geschrieben <o:p></o:p></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span>\( \underbrace {{\rm{I}}...I}_{k1 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k2 - Mal}X \),&nbsp;</span>
+        <span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+
+    </p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">um deutlich zu machen,
+dass nun Objekte aus Schale 3 entnommen werden. Für k3 entnommene Objekte
+werden entsprechend viele Striche geschrieben <span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1038" type="#_x0000_t75" style='width:87.9pt;height:23.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image025.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( \underbrace {{\rm{I}}...I}_{k1 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k2 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k3 - Mal} \).<br>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Anschliessend wird
+wieder ein Kreuz geschrieben, um zu kennzeichnen, dass zur Schale 4
+übergegangen wird <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1039" type="#_x0000_t75" style='width:96.9pt;height:23.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image027.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span>\(
+ \underbrace {{\rm{I}}...I}_{k1 - Mal}{\rm{X}}\underbrace 
+{{\rm{I}}...I}_{k2 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k3 - Mal} X
+\)</span>. <br>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Natürlich muss die
+Gesamtzahl der Striche immer kleiner oder gleich 3 sein, weil insgesamt genau
+drei Objekte entnommen werden sollen. Aus Schale 4 werden k4 Objekte gezogen
+und anschliessend ein letztes Kreuz geschrieben <o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:216.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:
+relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1040"
+ type="#_x0000_t75" style='width:129pt;height:23.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image029.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]-->\( \underbrace {{\rm{I}}...I}_{k1 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k2 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k3 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k4 - Mal}{\rm{X}} \). <br><!--[endif]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1040"
+  DrawAspect="Content" ObjectID="_1628485252">
+ </o:OLEObject>
+</xml><![endif]-->
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:216.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Schliesslich werden aus
+Schale 5 noch k5 Objekte herausgenommen, so dass die Gesamtzahl aller gezogenen
+Objekte, d.h. die Gesamtzahl der Striche, 3 ergibt: <o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1041" type="#_x0000_t75" style='width:111pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image031.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( k1 + k2 + k3 + k4 + k5 = 3 \).
+        <o:p></o:p>
+        </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span>
+
+    </p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Die so entstandene
+Zeichenkette besteht aus 3 Strichen <b style="mso-bidi-font-weight:normal">I </b>und
+4 Kreuzen<b style="mso-bidi-font-weight:normal"> X</b>, also insgesamt 7
+Zeichen <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:180.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1042" type="#_x0000_t75" style='width:152.1pt;height:23.1pt'
+ o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image033.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( \underbrace {{\rm{I}}...I}_{k1 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k2 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k3 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k4 - Mal}{\rm{X}}\underbrace {{\rm{I}}...I}_{k5
+        - Mal} \). <br>
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Auf diese Weise
+korrespondiert jede Auswahl von 3 Objekten aus den 5 Schalen mit einer solchen
+Zeichenkette und umgekehrt korrespondiert jede solche Zeichenkette mit einer bestimmten
+Auswahl von 3 Objekten aus den 5 Schalen. Beispielsweise entspricht die Zeichenfolge <br></span></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify">\( \underbrace {}_{k1 = 0}{\rm{X}}\underbrace {}_{k2 = 0}{\rm{X}}\underbrace {\rm{I}}_{k3 = 1}{\rm{X}}\underbrace {}_{k4 = 0}{\rm{X}}\underbrace {{\rm{II}}}_{k5 = 2} \)<br><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">der Ziehung von einem
+Objekt aus Schale 3 und zwei Objekten aus Schale 5. <o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Das Problem alle Auswahlen
+von 3 Objekten aus 5 Schalen zu bestimmen, ist gleichbedeutend mit dem Problem alle
+Zeichenfolgen mit 3 Strichen und 4 Kreuzen zu bestimmen. Dies wiederum
+entspricht der Anzahl aller Möglichkeiten 3 Striche (oder alternativ 4 Kreuze) auf
+7 Stellen zu verteilen. Das systematische Abzählen ist in der folgenden Tabelle
+angedeutet: <span style="mso-spacerun:yes"> </span><span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <table class="MsoNormalTable" style="margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext" cellspacing="0" cellpadding="0" border="1">
+        <tbody>
+            <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen1<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen2<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen3<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen4<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen5<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen6<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#FFC000;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Zeichen7<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:1">
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:2">
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:3">
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">I<o:p></o:p></span></b></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><b style="mso-bidi-font-weight:
+  normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:red">X</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal"><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;color:red">X</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:4">
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">…<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+                <td style="width:71.8pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">…<o:p></o:p></span></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.8pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+                <td style="width:71.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="96" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Dieses Problem ist dem
+Lottoproblem verwandt. Beim Lotto geht es darum 6 Zahlen aus 49 auszuwählen.
+Hier geht es darum 3 Zahlen aus 7 möglichen Zahlen auszuwählen. Die Antwort ist
+entsprechend zum Lottoproblem der Binomialkoeffizient <o:p></o:p></span></p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span> \( \left( \begin{array}{l} 7\\ 3 \end{array} \right) = \frac{{7!}}{{4! \cdot 3!}} = 35 \)<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>. </o:p></span><br></div>
+        <span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">
+            <o:p></o:p>
+            </span>
+    </div>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Ein Kind hat demnach 35
+Möglichkeiten drei Objekte aus 5 Schalen auszuwählen. <o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(6)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Aus 20 Studierenden sollen
+11 Personen ausgewählt werden. Wie beim Lotto 6 aus 49 ist das Problem hier 11
+aus 20. Es gibt <span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+
+
+
+            \( \left( \begin{array}{l} 20\\ 11 \end{array} \right) = \frac{{20!}}{{9!{\rm{ }} \cdot 11!}} = {\rm{167960}} \)<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span><br></div><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></div>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">solche Auswahlen, d.h. Fussballmannschaften.
+Besteht die Klasse aus 8 Frauen und 12 Männern und die Auswahl aus 6 Frauen und
+5 Männern so kann man z.B. zuerst die 6 Frauen aus den 8 Frauen der Klasse
+auswählen. Dafür gibt es <o:p></o:p></span></p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+
+
+
+            \( \left( \begin{array}{l} 8\\ 6 \end{array} \right) = \frac{{8!}}{{2!{\rm{ }} \cdot 6!}} = {\rm{24}} \)<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span><br></div><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></div>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Möglichkeiten. Danach
+wählt man die 5 Männer aus den 12 Männern der Klasse aus. Dafür gibt es <o:p></o:p></span></p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+
+
+
+            \( \left( \begin{array}{l} 12\\ 5 \end{array} \right) = \frac{{12!}}{{7!{\rm{ }} \cdot 5!}} = 792 \)<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span><br></div><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></div>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">mögliche Auswahlen.
+Jede Auswahl von 6 Frauen kann mit jeder Auswahl von 5 Männern zu einer
+Mannschaft zusammengesetzt werden. Insgesamt gibt es <o:p></o:p></span></p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span> \( \left( \begin{array}{l} 8\\ 6 \end{array} \right) \cdot \left( \begin{array}{l} 12\\ 5 \end{array} \right) = 24 \cdot 792 = {\rm{ 19008}} \)
+            <span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">
+                <o:p></o:p>
+                </span><br></div><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></div>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span>
+
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+            <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><span style="mso-tab-count:1">            </span>mögliche Auswahlen von 6 Frauen und 5 Männern.
+                <o:p></o:p>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(7)<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span></span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Das Problem mit 10
+verschiedenen Buchstaben Worte von 5 Zeichen zu bilden entspricht <span style="mso-spacerun:yes"> </span>dem Problem der Platzierung von 10 Schwimmerinnen auf 3 Plätzen. Hier sind es nicht 3 sondern 5 Plätze und Buchstaben, statt Schwimmerinnen. Wir nummerieren
+        die 5 Buchstaben des zu bildenden Wortes mit 1 bis 5. Für den ersten Buchstaben im Wort gibt es 10 mögliche Besetzungen, für den zweiten noch 9, für den dritten noch 8, den vierten 7 und den fünften 6. Insgesamt gibt es
+        <o:p></o:p>
+        </span>
+    </p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+
+            \( 10 \cdot 9 \cdot 8 \cdot 7 \cdot 6 = \frac{{10!}}{{(10 - 5)!}} = {\rm{30240}} \)</div>
+    </div>
+    <p class="MsoNormal" style="margin-left:108.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:14.0pt;mso-text-raise:-14.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1049" type="#_x0000_t75" style='width:139.8pt;height:29.4pt'
+ o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image047.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1049"
+  DrawAspect="Content" ObjectID="_1628485265">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">verschiedene Worte. <o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Falls bei der Bildung
+der Worte erlaubt ist, dass Buchstaben mehrfach vorkommen dürfen, so entspricht
+das dem Zahlenschloss Problem. Hier sind es allerdings 5 Stellen, auf denen jeweils
+unabhängig voneinander 10 verschiedene Buchstaben geschrieben werden können.
+Insgesamt gibt es <o:p></o:p></span></p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+
+            \( 10 \cdot 10 \cdot 10 \cdot 10 \cdot 10 = {10^5} \)</div>
+    </div>
+    <p class="MsoNormal" style="margin-left:108.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1050" type="#_x0000_t75" style='width:96.9pt;height:14.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image049.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1050"
+  DrawAspect="Content" ObjectID="_1628485266">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">verschiedene Worte. <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(8)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Wilhelm Tell schiesst
+mit drei Pfeilen auf eine Zielscheibe, welche in 10 ringförmige<span style="mso-spacerun:yes">  </span>Bereiche unterteilt ist. Wenn man Wilhelm die Möglichkeit zugesteht daneben zu schiessen, so hat er 3 Versuche mit jeweils 11 verschiedenen Resultaten.
+        Dieses Problem entspricht dem Zahnarztproblem 3 Objekte aus 5 möglichen Sorten zu wählen. Hier sind es nicht 5 sondern 11 mögliche Resultate. Somit gibt es
+        <o:p></o:p>
+        </span>
+    </p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span> \( \left( \begin{array}{l} 13\\ 3 \end{array} \right) = \frac{{13!}}{{(13 - 3)! \cdot 3!}} = 572 \)<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p> <br></o:p></span></div>
+    </div>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><span style="mso-tab-count:1"></span>mögliche Ausgänge des Schiessens.
+            <o:p></o:p>
+            </span>
+
+        </div>
+    </div>
+    <p class="MsoNormal" style="margin-left:144.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-18.0pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(9)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Napoleon schart seine 10
+Generäle an einen kreisrunden Tisch mit 11 Plätzen. Bei der Sitzordnung kommt
+es nur auf die Reihenfolge der Personen an. Man könnte den Tisch auch drehen
+und die Sitzordnung bleibt dieselbe. Somit kann man für das Abzählen eine
+bestimmte Person, zum Beispiel Napoleon, immer an dieselbe Stelle positionieren,
+wie unten im Bild. <o:p></o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:18.0pt;text-align:justify">
+        <!--[if gte vml 1]><v:shapetype
+ id="_x0000_t202" coordsize="21600,21600" o:spt="202" path="m,l,21600r21600,l21600,xe">
+ <v:stroke joinstyle="miter"/>
+ <v:path gradientshapeok="t" o:connecttype="rect"/>
+</v:shapetype><v:shape id="_x0000_s3246" type="#_x0000_t202" style='position:absolute;
+ left:0;text-align:left;margin-left:98.6pt;margin-top:5.65pt;width:211.4pt;
+ height:234.75pt;z-index:251647488;visibility:visible;mso-wrap-style:none;
+ mso-width-percent:400;mso-height-percent:200;mso-width-percent:400;
+ mso-height-percent:200;mso-width-relative:margin;mso-height-relative:margin'
+ strokecolor="white">
+ <v:textbox style='mso-fit-shape-to-text:t'/>
+</v:shape><![endif]-->
+        <!--[if !vml]--><span style="mso-ignore:vglayout">
+
+      <img src="data/Napoleon.png" alt="Napoleon" class="img-responsive atto_image_button_text-bottom" width="400" height="300"><br>
+      
+
+
+    </span></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Die 10 Generäle haben 10
+Plätze zur Wahl. Das Problem ist wie beim Platzieren der 10 Schwimmer auf 10
+Positionen. Es gibt <span style="position:relative;top:3.0pt;mso-text-raise:
+-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1052" type="#_x0000_t75"
+ style='width:64.2pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image055.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( 10! = {\rm{3628800}} \) </span>verschiedene Möglichkeiten die 10 Generäle an den Tisch zu setzen. Wenn Marschall Ney immer links von Napoleon sitzen soll gibt es <span style="position:relative;top:3.0pt;
+mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1053" type="#_x0000_t75"
+ style='width:54.3pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image057.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( 9! = {\rm{362880}} \) </span>mögliche Sitzordnungen und ebenso, wenn er zu Napoleons Rechten sitzt. Insgesamt gibt es <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1054" type="#_x0000_t75" style='width:65.1pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image059.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( 2 \cdot 9! = {\rm{725760}} \) mögliche Sitzordnungen mit Marschall Ney an Napoleons Seite.
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-21.8pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(10)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Wie viele verschiedene
+Personengruppen kann man aus einer Klasse mit 20 Studierenden bilden? Der
+direkte Ansatz wäre sich zu fragen, wie viele Gruppen es mit einer Person, zwei
+Personen, drei Personen, vier Personen, …, 20 Personen gibt und diese Zahlen zu
+addieren. Diese Summe ergibt die Antwort auf das Problem. Alternativ werden wir
+ein <b style="mso-bidi-font-weight:normal">Ersatzproblem</b> formulieren. Wir
+nummerieren die Personen von 1 bis 20. Dann kann man eine bestimmte Auswahl in
+einem Koordinatensystem eindeutig kennzeichnen indem man den Mitgliedern der Auswahl
+den Wert 1 und allen anderen Personen den Wert 0 zuordnet, wie es unten im Bild
+mit einer Gruppe von 8 Personen gemacht wurde. <br></span></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-21.8pt;mso-list:l13 level1 lfo7"><img src="data/Bitmuster.png?time=1567029951105" alt="Bitmuster" class="img-responsive atto_image_button_text-bottom" width="400" height="300"><br></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-21.8pt;mso-list:l13 level1 lfo7"><br><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p> </o:p></span>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>Die so beschriebene Gruppe kann mit dem folgenden Bitmuster </o:p></span><br></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify">\( {\rm{ 1 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 1 1 1 0}} \) <br></p>
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify">identifiziert werden. Andererseits entspricht je<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">des 20 Bit Muster, über den oben beschriebenen
+Zusammenhang, einer bestimmten Gruppe aus den 20 Personen. Es gibt <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1056" type="#_x0000_t75" style='width:63.3pt;height:14.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image065.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( {2^{20}} = {\rm{1048576}} \)<span style="mso-spacerun:yes"></span> verschiedene Bitmuster also auch so viele verschiedene Gruppen welche man aus den 20 Personen bilden kann. Allerdings ist dabei auch die
+        leere Gruppe, das Bitmuster mit 20 Nullen. Es gib</span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"></span></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">t \( {2^{20}} - 1 = {\rm{1048575}} \)<span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1057" type="#_x0000_t75" style='width:76.5pt;height:14.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image067.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span> <span style="mso-spacerun:yes"></span>verschiedene Gruppen mit mindestens einer Person.
+        <o:p></o:p>
+        </span>
+
+
+
+    </p>
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><span style="mso-tab-count:1">            </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify;text-indent:
+-21.8pt;mso-list:l13 level1 lfo7">
+        <!--[if !supportLists]--><b style="mso-bidi-font-weight:
+normal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-fareast-font-family:Arial"><span style="mso-list:Ignore">(11)<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span></span></b>
+        <!--[endif]--><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Eine Möglichkeit die Teilmengen
+der Menge {1,2,3,4} zu kategorisieren, ist nach der Anzahl der Elemente: <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <table class="MsoNormalTable" style="margin-left:36.0pt;border-collapse:collapse;border:none;mso-border-alt:
+ solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+ mso-border-insideh:.5pt solid windowtext;mso-border-insidev:.5pt solid windowtext" cellspacing="0" cellpadding="0" border="1">
+        <tbody>
+            <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+                <td style="width:144.45pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:#F79646;padding:0cm 5.4pt 0cm 5.4pt" width="193" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:14.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">k<o:p></o:p></span></p>
+                </td>
+                <td style="width:205.6pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#F79646;padding:0cm 5.4pt 0cm 5.4pt" width="274" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:14.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Teilmengen mit k Elementen<o:p></o:p></span></p>
+                </td>
+                <td style="width:120.55pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;background:#F79646;padding:0cm 5.4pt 0cm 5.4pt" width="161" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:14.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">Anzahl<o:p></o:p></span></p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:1">
+                <td style="width:144.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="193" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">0<o:p></o:p></span></p>
+                </td>
+                <td style="width:205.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="274" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:5.0pt;
+  mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1058" type="#_x0000_t75"
+   style='width:11.4pt;height:14.4pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image069.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--></span>\( \{\} \)
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1058"
+    DrawAspect="Content" ObjectID="_1628485275">
+   </o:OLEObject>
+  </xml><![endif]--><span style="mso-spacerun:yes"></span>„leere Menge“
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+                <td style="width:120.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="161" valign="top"><span><span>\( \left( \begin{array}{l}
+4\\
+0
+\end{array} \right) = 1 \)</span></span>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;
+  mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1059" type="#_x0000_t75"
+   style='width:33.9pt;height:32.1pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image071.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1059"
+    DrawAspect="Content" ObjectID="_1628485276">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:2">
+                <td style="width:144.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="193" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">1<o:p></o:p></span></p>
+                </td>
+                <td style="width:205.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="274" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:5.0pt;
+  mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1060" type="#_x0000_t75"
+   style='width:15pt;height:14.4pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image073.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--></span>\( \{ 1\} ,\{ 2\} ,\{ 3\} ,\{ 4\} \)<span style="position:relative;top:5.0pt;mso-text-raise:
+  -5.0pt"><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1063"
+    DrawAspect="Content" ObjectID="_1628485280">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+                <td style="width:120.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="161" valign="top">
+                    <span><span><span><span>\( \left( \begin{array}{l}
+4\\ 1
+\end{array} \right) = 4 \)</span></span>
+                    </span>
+                    </span>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;
+  mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1064" type="#_x0000_t75"
+   style='width:35.7pt;height:32.1pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image081.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1064"
+    DrawAspect="Content" ObjectID="_1628485281">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:3">
+                <td style="width:144.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="193" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">2<o:p></o:p></span></p>
+                </td>
+                <td style="width:205.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="274" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:5.0pt;
+  mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1065" type="#_x0000_t75"
+   style='width:24pt;height:14.4pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image083.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--></span>\( \{ 1,2\} ,\{ 1,3\} ,\{ 1,4\} ,\{ 2,3\} ,\{ 2,4\} ,\{ 3,4\} \)<span style="position:relative;top:5.0pt;mso-text-raise:
+  -5.0pt"><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1070"
+    DrawAspect="Content" ObjectID="_1628485287">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+                <td style="width:120.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="161" valign="top">
+                    <span><span><span><span><span><span>\( \left( \begin{array}{l}
+4\\ 2
+\end{array} \right) = 6 \)</span></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;
+  mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1071" type="#_x0000_t75"
+   style='width:35.7pt;height:32.1pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image095.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1071"
+    DrawAspect="Content" ObjectID="_1628485289">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:4">
+                <td style="width:144.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="193" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">3<o:p></o:p></span></p>
+                </td>
+                <td style="width:205.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="274" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:5.0pt;
+  mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1072" type="#_x0000_t75"
+   style='width:32.1pt;height:14.4pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image097.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--></span>\( \{ 1,2,3\} ,\{ 1,2,4\} ,\{ 1,3,4\} ,\{ 2,3,4\} \)<span style="position:relative;top:5.0pt;mso-text-raise:
+  -5.0pt"><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1075"
+    DrawAspect="Content" ObjectID="_1628485293">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+                <td style="width:120.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="161" valign="top">
+                    <span><span><span><span><span><span><span><span>\( \left( \begin{array}{l}
+4\\ 3
+\end{array} \right) = 4 \)</span></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;
+  mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1076" type="#_x0000_t75"
+   style='width:35.7pt;height:32.1pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image105.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1076"
+    DrawAspect="Content" ObjectID="_1628485294">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+            <tr style="mso-yfti-irow:5;mso-yfti-lastrow:yes">
+                <td style="width:144.45pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0cm 5.4pt 0cm 5.4pt" width="193" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif">4<o:p></o:p></span></p>
+                </td>
+                <td style="width:205.6pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="274" valign="top">
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:5.0pt;
+  mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1077" type="#_x0000_t75"
+   style='width:40.8pt;height:14.4pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image107.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]-->\( \{ 1,2,3,4\}  \)<!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1077"
+    DrawAspect="Content" ObjectID="_1628485295">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+                <td style="width:120.55pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt" width="161" valign="top">
+                    <span><span><span><span><span><span><span><span><span><span>\( \left( \begin{array}{l}
+4\\ 4
+\end{array} \right) = 1 \)</span></span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    </span>
+                    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+  font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;
+  mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1078" type="#_x0000_t75"
+   style='width:33.9pt;height:32.1pt' o:ole="">
+   <v:imagedata src="Kombinatorik-Dateien/image109.wmz" o:title=""/>
+  </v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+                        <!--[if gte mso 9]><xml>
+   <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1078"
+    DrawAspect="Content" ObjectID="_1628485296">
+   </o:OLEObject>
+  </xml><![endif]-->
+                        <o:p></o:p>
+                        </span>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Wir erhalten als
+Gesamtzahl aller Teilmengen (die leere Menge mit eingerechnet) <o:p></o:p></span></p>
+
+    <p class="MsoNormal" style="margin-left:36.0pt;text-align:justify"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;\( \left( \begin{array}{l}
+4\\
+0
+\end{array} \right) + \left( \begin{array}{l}
+4\\
+1
+\end{array} \right) + \left( \begin{array}{l}
+4\\
+2
+\end{array} \right) + \left( \begin{array}{l}
+4\\
+3
+\end{array} \right) + \left( \begin{array}{l}
+4\\
+4
+\end{array} \right) = 1 + 4 + 6 + 4 + 1 = 16 = {2^4} \)</o:p></span></p>
+    <div style="margin-left: 30px;" class="editor-indent">
+        <div style="margin-left: 30px;" class="editor-indent">
+
+            Verallgemeinern wir das auf eine beliebige Menge, so kann man sagen: Jede Menge mit n Elementen hat
+            <o:p></o:p>\( \left( \begin{array}{l} n\\ 0 \end{array} \right) + \left( \begin{array}{l} n\\ 1 \end{array} \right) + \left( \begin{array}{l} n\\ 2 \end{array} \right) + \left( \begin{array}{l} n\\ 3 \end{array} \right) + .. + \left( \begin{array}{l}
+            n\\ n \end{array} \right) = {2^n} \)<span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"> <span>verschiedene Teilmengen
+(die leere Menge mit eingerechnet). </span></span><br><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span></span></span>
+        </div>
+    </div>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><br></span></span>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><p class="MsoNormal" style="margin-left:108.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p>
+        </span>
+    </p>
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><br></span></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><h2 style="margin-left:19.8pt;text-indent:-19.8pt;mso-list:l17 level2 lfo2">
+            <a name="_Toc510507545">
+                <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial"><span style="mso-list:Ignore">1.3<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </span></span>
+    </span>
+    <!--[endif]--><u>Systematik</u></a>
+    </h2>
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span>
+
+
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">Bei allen hier betrachteten elementaren Abzählproblemen
+geht es um eine Auswahl von k Objekten aus einer Gesamtheit von n Objekten. Beim
+Zahlenschlossproblem und beim Bitproblem kommt es auf die Reihenfolge der
+gewählten Objekte an, beim Lottoproblem spielt die Reihenfolge keine Rolle. Beim
+Zahlenschlossproblem und auch beim Bitproblem ist es möglich, dass Zahlen
+mehrmals vorkommen können, beim Lottoproblem ist das nicht der Fall. Beim
+Schwimmwettbewerb kommt es auf die Reihenfolge an, aber keine Schwimmerin darf
+in der Platzierung mehrmals vorkommen. Beim Tellschiessen kommt es nicht auf
+die Reihenfolge an und Resultate (getroffene Bereiche) können mehrmals
+vorkommen. Eine Wiederholung bereits getroffener Bereiche ist möglich. <o:p></o:p></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span></span></span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">Man teilt die Probleme daher nach zwei
+Kriterien ein: Ob in der Auswahl die Reihenfolge der Objekte eine Rolle spielt und
+ob Wiederholung der Objekte in der Auswahl möglich ist. Eine Auswahl von k
+Objekten aus n Objekten bei der die Reihenfolge eine Rolle spielt, heisst <b style="mso-bidi-font-weight:normal">Variation von k Objekten aus n</b>. Eine
+Auswahl von k Objekten aus n Objekten bei der die Reihenfolge keine Rolle
+spielt, nennt man <b style="mso-bidi-font-weight:normal">Kombination von k
+Objekten aus n Objekten</b>. Die hier besprochenen elementaren Abzählprobleme werden
+unter diesen beiden Kriterien in die folgenden 4 Klassen eingeteilt: <o:p></o:p></span></p>
+
+
+
+    <ul style="margin-top:0cm" type="disc">
+        <li class="MsoNormal" style="text-align:justify;mso-list:l14 level1 lfo13"><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;
+     font-family:&quot;Arial&quot;,sans-serif">Variation</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"> von k aus n Objekten
+     <b style="mso-bidi-font-weight:normal">mit</b> Wiederholung. <o:p></o:p></span></li>
+        <li class="MsoNormal" style="text-align:justify;mso-list:l14 level1 lfo13"><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;
+     font-family:&quot;Arial&quot;,sans-serif">Variation</span></b><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"> von k aus n Objekten
+     <b style="mso-bidi-font-weight:normal">ohne</b> Wiederholung.<o:p></o:p></span></li><li class="MsoNormal" style="text-align:justify;mso-list:l14 level1 lfo13"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span><span><span><b><span>Kombination</span></b><span> von k aus n Objekten
+     <b>mit</b> Wiederholung. </span></span></span><br></li>
+        <li class="MsoNormal" style="text-align:justify;mso-list:l14 level1 lfo13"><b style="mso-bidi-font-weight:normal"><span style="font-size:11.0pt;
+     font-family:&quot;Arial&quot;,sans-serif"></span></b><span><span><span><span><span><b><span>Kombination</span></b><span> von k aus n Objekten
+     <b>ohne</b> Wiederholung</span></span></span></span></span></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span>.</span></span></span></span></li><br><img src="data/Diagramm.png?time=1567493284880" alt="Systematik" class="img-responsive atto_image_button_text-bottom" width="650" height="330"><br><br>
+    </ul>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p><p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+
+    <h1 style="margin-left:54.0pt;text-indent:-36.0pt;mso-list:l6 level1 lfo1">
+        <a name="_Toc510507546">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial;color:red"><span style="mso-list:Ignore">II.<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </span></span>
+            </span>
+            <!--[endif]--><span style="color:red">Binomialkoeffizienten</span></a><span style="color:red"><o:p></o:p></span></h1>
+
+    <p class="MsoNormal">
+        <o:p>&nbsp;</o:p>
+    </p>
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">Der <b style="mso-bidi-font-weight:normal">Binomialkoeffizient</b>
+<span style="position:relative;top:15.0pt;mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1081" type="#_x0000_t75" style='width:21.9pt;height:36pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image116.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\( \left( \begin{array}{l}
+n\\
+k
+\end{array} \right) \) </span>(<i style="mso-bidi-font-style:
+normal">k aus n</i> oder <i style="mso-bidi-font-style:normal">n tief k</i>) ist eine handliche Abkürzung für ein elementares Abzählproblem: Wie viele Möglichkeiten gibt es <span style="position:relative;top:3.0pt;mso-text-raise:
+-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1082" type="#_x0000_t75"
+ style='width:9pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image118.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(k \) <span style="mso-spacerun:yes"></span>Objekte aus einer Gesamtheit von <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1083" type="#_x0000_t75" style='width:9pt;height:9.9pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image120.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(n\)&nbsp;
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1083"
+  DrawAspect="Content" ObjectID="_1628485302">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>Objekten auszuwählen. Dabei kommt es nicht auf die Reihenfolge der ausgewählten Objekte an und eine Wiederholung von bestimmten Objekten in der Auswahl ist zudem nicht erlaubt.
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif">Bereits im vorangehenden Kapitel wurden
+Binomialkoeffizienten in diesem Sinne benutzt um die Lösungsformel zweier elementarer
+kombinatorischer Probleme, das Lottoproblem <i style="mso-bidi-font-style:normal">6
+aus 49</i>, und das Zahnarztproblem, bzw. das Tellschiessen kurz und prägnant zu
+formulieren. <o:p></o:p></span></p>
+
+    <p class="MsoNormal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><h2 style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level2 lfo5">
+        <a name="_Toc510507547">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial"><span style="mso-list:Ignore">2.1<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span>
+    </span>
+    <!--[endif]--><u>Definition</u></a><u><o:p></o:p></u></h2>
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span>
+
+
+
+    <p class="MsoNormal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Die
+<b style="mso-bidi-font-weight:normal">Fakultät</b> <span style="position:relative;
+top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1084"
+ type="#_x0000_t75" style='width:12.3pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image122.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( n! \) <span style="mso-spacerun:yes"></span>ist für eine natürliche Zahl <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1085" type="#_x0000_t75" style='width:9pt;height:9.9pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image124.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(n\) <span style="mso-spacerun:yes"></span>rekursiv definiert. Für den Startwert <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1086" type="#_x0000_t75" style='width:8.1pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image125.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(0\) <span style="mso-spacerun:yes"></span>als <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1087" type="#_x0000_t75" style='width:25.8pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image127.wmz" o:title=""/>
+</v:shape><![endif]--></span><span><span><span><span></span>\( 0!=1 \)</span>
+    </span>
+    </span><span style="mso-spacerun:yes"></span> und für jeden Nachfolger <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><span><span><span></span></span>
+    </span>
+    </span>
+    <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1088"
+  DrawAspect="Content" ObjectID="_1628485307">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"></span><span><span><span><span></span>\( n\geq 1 \)</span>
+    </span>
+    </span> definiert man <span style="position:relative;top:5.0pt;mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1089" type="#_x0000_t75" style='width:64.2pt;height:14.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image131.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\( n! = n \cdot (n - 1)! \). <br></span>
+    </p>
+
+
+
+    <p class="MsoNormal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Zum
+Beispiel ist mit dieser Definition \( 4! = 4 \cdot 3! = 4 \cdot 3 \cdot 2! = 4 \cdot 3 \cdot 2 \cdot 1! = 4 \cdot 3 \cdot 2 \cdot 1 \cdot 1 \cdot 0! = 4 \cdot 3 \cdot 2 \cdot 1 \cdot 1 \cdot 1 = 24 \). <o:p></o:p></span></p>
+
+    <p class="MsoNormal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span><br>
+        <o:p></o:p>
+    </p>
+
+    <p class="MsoNormal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Der
+<b style="mso-bidi-font-weight:normal">Binomialkoeffizient</b> <span><span><span><span></span><span>\( \left( \begin{array}{l}
+n\\
+k
+\end{array} \right) \) </span></span>
+        </span>
+        </span><span style="position:relative;top:15.0pt;mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1091" type="#_x0000_t75" style='width:19.5pt;height:32.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image135.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1091"
+  DrawAspect="Content" ObjectID="_1628485311">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>ist für natürliche Zahlen
+        <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1092" type="#_x0000_t75" style='width:40.8pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image137.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1092"
+  DrawAspect="Content" ObjectID="_1628485312">
+ </o:OLEObject>
+</xml><![endif]-->\(0\leq k \leq n\), mit Hilfe der Fakultät definiert als
+        <o:p></o:p>
+        </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:144.0pt"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;
+mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1093" type="#_x0000_t75"
+ style='width:76.5pt;height:32.1pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image139.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span><span><span><span></span><span>\( \left( \begin{array}{l}
+n\\
+k
+\end{array} \right) = \frac{{n!}}{{(n - k)! \cdot k!}} \). </span></span>
+        </span>
+        </span>
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    <p class="MsoNormal"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">Dahinter
+steckt die anschauliche Bedeutung des Binomialkoeffizienten als die Anzahl
+aller Auswahlen (ohne Reihenfolge!) von <span style="position:relative;
+top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1094"
+ type="#_x0000_t75" style='width:9pt;height:12.3pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image141.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(k\)
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1094"
+  DrawAspect="Content" ObjectID="_1628485314">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>Objekten aus einer Gesamtheit von <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1095" type="#_x0000_t75" style='width:9pt;height:9.9pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image143.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span><span style="mso-spacerun:yes">\(n\) </span>unterscheidbaren Objekten.
+        <span style="mso-spacerun:yes"> </span>Der <b style="mso-bidi-font-weight:normal">Matlab
+Befehl</b> für den Binomialkoeffizienten lautet <b style="mso-bidi-font-weight:
+normal"><i style="mso-bidi-font-style:normal">nchoosek(n,k). </i></b>
+        <o:p></o:p>
+        </span>
+    </p>
+
+
+
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><h2 style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level2 lfo5">
+        <a name="_Toc510507548">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial"><span style="mso-list:Ignore">2.2<span style="font:7.0pt &quot;Times New Roman&quot;"> </span></span>
+    </span>
+    <!--[endif]--><u>Beispiele</u></a><u><o:p></o:p></u></h2>
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span><p><span><span><span></span></span>
+    </span><span>(1) Wie
+viele mögliche Tipps gibt es beim Lotto 6 aus 49? <span><span><span><span></span></span>
+
+
+
+
+    <button onclick="myFunction()">Lösung</button>
+    </span>
+    </span>
+    </span>
+    </p>
+    <div id="myDIV"><i><br>\( \left( \begin{array}{l}
+49\\
+6
+\end{array} \right) = \frac{{49!}}{{43! \cdot 6!}} = \frac{{49 \cdot 48 
+\cdot 47 \cdot 46 \cdot 45 \cdot 44}}{{6 \cdot 5 \cdot 4 \cdot 3 \cdot 
+2}} = 49 \cdot 4 \cdot 47 \cdot 46 \cdot 3 \cdot 11 = {\rm{13983816}} \).
+    <br></i></div><i>
+<script>
+    x = document.getElementById("myDIV");
+    x.style.display = "none";
+
+    function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<div><br><br></div> 
+    
+      
+  </i>(2) Wie viele Gruppen von 11 Personen kann man aus 20 Personen bilden?<i> </i></span>
+    </span><i>
+    
+  
+  <button onclick="myFunction1()">Lösung</button>
+</i>
+
+    <div id="myDIV1"><i><br></i>\( \left( \begin{array}{l} 20\\ 11 \end{array} \right) = \frac{{20!}}{{9! \cdot 11!}} = \frac{{20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 \cdot 14 \cdot 13 \cdot 12}}{{9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2}} = 20
+        \cdot 19 \cdot 17 \cdot 2 \cdot 13 = {\rm{167960}} \)<i>.
+    <br></i></div><i>
+<script>
+    x = document.getElementById("myDIV1");
+    x.style.display = "none";
+
+    function myFunction1() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<div><br><br></div>
+  
+  </i>(3) Wie viele Zeichenketten kann man aus drei Kreuzen <b>X</b> und 5 Strichen <b>I</b> bilden?<i>
+  
+  
+   <button onclick="myFunction2()">Lösung</button>
+</i></span>
+
+    <div id="myDIV2"><i><br>
+ </i>\( \left( \begin{array}{l} 8\\ 3 \end{array} \right) = \left( \begin{array}{l} 8\\ 5 \end{array} \right) = \frac{{8!}}{{5! \cdot 3!}} = \frac{{8 \cdot 7 \cdot 6}}{{3 \cdot 2}} = 56 \)<i>.
+    <br></i></div><i>
+<script>
+    x = document.getElementById("myDIV2");
+    x.style.display = "none";
+
+    function myFunction2() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<div><br><br></div>
+ </i>(4) Wie viele Teilmengen mit 4 Elementen hat die Menge \( \{ a,g,h,z,r,e\} \)?<i>
+
+ 
+   <button onclick="myFunction3()">Lösung</button>
+</i></span>
+
+    <div id="myDIV3"><i><br></i>\( \left( \begin{array}{l} 6\\ 4 \end{array} \right) = \frac{{6!}}{{2! \cdot 4!}} = \frac{{6 \cdot 5}}{2} = 15 \)<i>.
+    <br></i></div><i>
+<script>
+    x = document.getElementById("myDIV3");
+    x.style.display = "none";
+
+    function myFunction3() {
+        var x = document.getElementById("myDIV3");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+  </script>
+<div><br><br></div>
+</i>(5) 30 Gummibärchen der gleichen Farbe sollen auf 5 Studierende verteilt werden. Auf wie viele Arten ist dies möglich, wenn jeder Studierende mindestens ein Gummibärchen erhalten soll.<i>
+  
+  <button onclick="myFunction4()">Lösung</button>
+</i>
+
+
+    <div id="myDIV4"><i><br></i>Jeder Studierende erhält mindestens ein Gummibärchen. Bleiben noch 25, die auf 5 Studierende verteilt werden sollen. Dafür gibt es, entsprechend zum Tellschiessen bzw. dem Zahnarztproblem \( \left( \begin{array}{l} 25 + 4\\ 4 \end{array}
+        \right) = \left( \begin{array}{l} 25 + 4\\ 25 \end{array} \right) = \frac{{29!}}{{4! \cdot 25!}} = \frac{{29 \cdot 28 \cdot 27 \cdot 26}}{{4 \cdot 3 \cdot 2}} = 29 \cdot 7 \cdot 9 \cdot 13 = {\rm{23751}} \)<i>,</i>
+        <span></span>
+        <span> </span>Möglichkeiten<i>.
+    <br></i></div><i>
+<script>
+    x = document.getElementById("myDIV4");
+    x.style.display = "none";
+
+    function myFunction4() {
+        var x = document.getElementById("myDIV4");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+  </script>
+<div><br><br></div>
+
+  </i>(6) Vom Startpunkt \( A(0,0) \) ausgehend darf pro Zug entweder <b>eine Einheit</b> <b>nach rechts</b> (in Richtung x-Achse) oder <b>eine Einheit nach oben</b> (in Richtung y-Achse) gezogen werden. Das nebenstehende Bild zeigt zwei Wege (rot und
+    schwarz), welche nach dieser Regel (in 5 Zügen) möglich sind. <br></div>
+<div class="WordSection1">(a) Wie viele verschiedene Wege gibt es von \( A(0,0) \) nach \( B(2,3) \)? <br></div>
+<div class="WordSection1">(b) Wie viele verschiedene Wege gibt es von \( A(0,0) \) zum Punkt \( C(12,4) \)?
+
+
+    <img src="data/Weg.png" alt="Weg" class="img-responsive atto_image_button_text-bottom" width="500" height="374">
+    
+
+    <p class="MsoNormal"><i>
+        <o:p>&nbsp;<span><span><span><span><span><span><span><span><span><span></span></span>
+            </span>
+            </span>
+            </span>
+          
+      
+
+
+      
+       <button onclick="myFunction5()">Lösung</button>
+</span></span></span></span></span></o:p></i>
+    </p>
+    
+    
+    <div id="myDIV5"><i><br></i>(a) Um den Punkt B nach den Spielregeln zu erreichen müssen 2 Züge nach rechts und 3 Züge nach oben gemacht werden. Bei insgesamt 5 Zügen gibt es für genau 2 Züge nach rechts
+        <span></span>\( \left( \begin{array}{l} 5\\ 2 \end{array} \right) = \frac{{5!}}{{3! \cdot 2!}} = \frac{{5 \cdot 4}}{2} = 10 \)
+        <span> </span>Möglichkeiten.
+
+
+
+
+        <p><span>(b) Um den Punkt C zu erreichen wird 12 Mal
+nach rechts und 4 Mal nach oben also insgesamt 16 Mal gezogen. Dafür gibt es
+nach den Spielregeln <span></span>\( \left( \begin{array}{l} 16\\ 12 \end{array} \right) = \left( \begin{array}{l} 16\\ 4 \end{array} \right) = \frac{{16!}}{{12! \cdot 4!}} = \frac{{16 \cdot 15 \cdot 14 \cdot 13}}{{4 \cdot 3 \cdot 2}} = 2 \cdot 5 \cdot
+            14 \cdot 13 = 1820 \)
+            <span> </span>Möglichkeiten.
+            </span><i><span><br></span></i></p>
+    </div><i>
+<script>
+    x = document.getElementById("myDIV5");
+    x.style.display = "none";
+
+    function myFunction5() {
+        var x = document.getElementById("myDIV5");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<div><br><br></div>
+      
+    
+
+
+    <span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><h2 style="margin-left:18.0pt;text-indent:-18.0pt;mso-list:l9 level2 lfo5">
+        <a name="_Toc510507549">
+            <!--[if !supportLists]--><span style="mso-fareast-font-family:
+Arial;mso-bidi-font-family:Arial"><span style="mso-list:Ignore">2.3<span style="font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;; font-size-adjust: none; font-kerning: auto; font-language-override: normal; font-feature-settings: normal;"> </span></span>
+    </span>
+    <!--[endif]--><u>Eigenschaften</u></a><u><o:p></o:p></u></h2>
+    </span>
+    </span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span>
+
+    <p class="MsoNormal">
+        <o:p>&nbsp;</o:p>
+    </p>
+
+   
+  </span></span></i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span></span></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span>Es gibt genau eine Teilmenge aus einer Menge
+von n Objekten, nämlich die <b style="mso-bidi-font-weight:normal">leere Menge</b>
+<span style="position:relative;top:5.0pt;mso-text-raise:-5.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1111" type="#_x0000_t75" style='width:13.5pt;height:16.5pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image169.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(\{\}\). Mit dem Binomialkoeffizienten lautet das so, wenn man nach der Anzahl der Teilmengen mit 0 Elementen fragt: </span></span><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span style="mso-spacerun:yes"> </span>
+    <o:p></o:p> <br></span></span></i></div><div class="WordSection1"><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><i><span><span>\(
+ \left( \begin{array}{l} n\\ 0 \end{array} \right) = \frac{{n!}}{{(n - 
+0)! \cdot 0!}} = \frac{{n!}}{{n! \cdot 0!}} = \frac{{n!}}{{n! \cdot 1}} =
+ 1 \).
+        </span></span></i></span></span></i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><p class="MsoNormal" style="margin-left:108.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p></span></i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"></span></i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"></span></i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"></span></i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"></span></i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif">
+
+    </span>
+    </i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+mso-bidi-font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-bidi-font-family:
+&quot;Times New Roman&quot;">Wählt man </span><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif"><span style="position:relative;top:3.0pt;mso-text-raise:
+-3.0pt"><!--[if gte vml 1]><v:shape id="_x0000_i1113" type="#_x0000_t75"
+ style='width:10.5pt;height:14.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image173.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(k\)
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1113"
+  DrawAspect="Content" ObjectID="_1628485334">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>Objekte aus <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1114" type="#_x0000_t75" style='width:10.5pt;height:11.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image175.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(n\)
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1114"
+  DrawAspect="Content" ObjectID="_1628485336">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>Objekten aus, so bleiben <span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1115" type="#_x0000_t75" style='width:28.2pt;height:14.4pt' o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image177.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--></span>\(n-k\)
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1115"
+  DrawAspect="Content" ObjectID="_1628485337">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>übrig. Deswegen ist die Anzahl aller Möglichkeiten <span><span><span></span><span><span></span>\(k\)
+        <span> </span>Objekte aus <span></span>\(n\)</span>
+        </span>
+        </span> Objekten auszuwählen gleich der Anzahl der Möglichkeiten <span><span><span></span><span><span></span>\(n-k\)
+        <span> </span>Objekte aus <span></span>\(n\)</span>
+        </span>
+        </span><span style="position:relative;top:3.0pt;mso-text-raise:-3.0pt"><!--[endif]--></span>
+        <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1119"
+  DrawAspect="Content" ObjectID="_1628485341">
+ </o:OLEObject>
+</xml><![endif]--><span style="mso-spacerun:yes"> </span>Objekten auszuwählen. Der Binomialkoeffizient hat folgende Symmetrieeigenschaft: <span><span><span><span><span><br></span></span></span></span></span></span></p><p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif"><span><span><span><span><span><span><span>\( \left( \begin{array}{l} n\\ k \end{array} \right) = \left( \begin{array}{l} n\\ n - k \end{array} \right) \)</span></span><br></span></span></span></span></span></span></p><p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;font-family:
+&quot;Arial&quot;,sans-serif"><span><span><span><span><span>Schreibt man alle Binomialkoeffizienten zu festem </span><span><span></span>\(n\)
+        <span> </span>in einer Reihe mit wachsendem
+        <span></span>\(k\) <span> </span>auf, so ist diese Reihe symmetrisch zu ihrer Mitte:</span></span></span></span></span> <br></span>
+    </p>
+    <p class="MsoNormal" style="text-align:justify"><i><i><span><span><span><i><i><span><span><span><span><span><span><span><span><span><span><span>\( \left( \begin{array}{l}
+n\\
+0
+\end{array} \right){\rm{   }}\left( \begin{array}{l}
+n\\
+1
+\end{array} \right){\rm{   }}\left( \begin{array}{l}
+n\\
+2
+\end{array} \right){\rm{    }}\left( \begin{array}{l}
+n\\
+3
+\end{array} \right){\rm{   }}.....{\rm{      }}\left( \begin{array}{l}
+n\\
+n - 3
+\end{array} \right){\rm{  }}\left( \begin{array}{l}
+n\\
+n - 2
+\end{array} \right){\rm{  }}\left( \begin{array}{l}
+n\\
+n - 1
+\end{array} \right){\rm{   }}\left( \begin{array}{l}
+n\\
+n
+\end{array} \right) \)</span></span></span></span></span></span></span></span></span></span></span></i></i></span></span></span></i></i><br></p></span></span><i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><p class="MsoNormal" style="text-align:justify"><span><span><span></span><span></span></span></span></p></span></span></i></i><span><span><span><span><span><span>Will man alle Teilmengen mit 4 Elementen aus der
+Menge <span></span>\( M = \{ a,b,c,d,e,f\} \)
+    <span> </span>finden, so kann man ein Element, zum Beispiel <span></span>\(a\)
+    , fixieren. Die Teilmengen mit 4 Elementen können danach eingeteilt werden ob sie <span><span><span> <span></span>\(a\) </span>
+    </span>
+    </span><span></span>enthalten oder nicht. Wir nennen für den Moment eine Teilmenge mit 4 Elementen, welche <span></span><span><span><span> <span></span>\(a\)</span>
+    </span>
+    </span>
+    <span> </span>enthält,
+ eine Kategorie A Menge. Alle anderen Teilmengen mit 4 Elementen nennen 
+wir Kategorie B Menge. Unten in der Tabelle sind für dieses Beispiel die
+ Kategorie A und B Mengen aufgeführt.</span></span></span></span></span></span><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span> <span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span></div><div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span></div><div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span><span><span><span><span><span><span><img src="data/Kategorie.png?time=1567086123074" alt="Kategorie" class="img-responsive atto_image_button_text-bottom" width="600" height="292"><br></span></span></span></span></span></span></span></span></span></span></div><div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span><span><span><span><span><span><span><br></span></span></span></span></span></span></span></span></span></span></div><div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span><span><span><span><span><span><span>Um eine Kategorie A Menge zu bilden, müssen 3
+Elemente aus der Menge <span></span>\( \{ b,c,d,e,f\} \)
+    <span> </span>ausgewählt werden. Dazu gibt es <span></span><span></span>\( \left( \begin{array}{l} 5\\ 3 \end{array} \right) = 10 \) Möglichkeiten.
+    Dagegen müssen für Kategorie B Mengen 4 Elemente aus der Menge <span></span>\( \{ b,c,d,e,f\} \)
+    <span> </span>ausgewählt werden. Dies geht auf <span></span>\( \left( \begin{array}{l} 5\\ 4 \end{array} \right) = 5 \)
+    <span> </span>Arten.
+ Andererseits ist die Anzahl aller 4-elementigen Teilmengen aus einer 
+Menge mit 6 Elementen gleich dem Binomialkoeffizienten \( \left( 
+\begin{array}{l} 6\\ 4 \end{array} \right) \). Aus diesem Grund gilt
+    der folgende Zusammenhang: <br></span></span></span></span></span></span></span></span></span></span></div><div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><span><span><span><span><span><span><span><span></span></span></span></span></span><span><span></span></span></span></span></span><i><i><span><span><span><i><i><span><span></span></span></i></i></span></span></span></i></i><span><span><p><span><br></span></p><p><span>\(
+ \left( \begin{array}{l} 6\\ 4 \end{array} \right) = \left( 
+\begin{array}{l} 5\\ 3 \end{array} \right) + \left( \begin{array}{l} 5\\
+ 4 \end{array} \right) = 10 + 5 = 15 \)
+    
+    </span>
+    </p>
+
+
+
+    </span></span><span><span><p><span>Allgemein gilt die folgende Konstruktionsformel
+der Binomialkoeffizienten: <br></span></p><p><span><br><span><span></span></span></span></p><p><span>&nbsp;\( \left( \begin{array}{l}
+n + 1\\
+k + 1
+\end{array} \right) = \left( \begin{array}{l}
+n\\
+k
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+k + 1
+\end{array} \right) \)</span></p>
+
+    <p><span><span></span>
+        
+        
+        </span>
+    </p>
+
+
+
+    <p><span>Man rechne die Gültigkeit dieser Formel von
+Hand nach (am besten von rechts nach links in der Gleichung). Mit Hilfe dieser
+rekursiven Vorschrift können die Binomialkoeffizienten bestimmt werden, ohne
+die nötigen Fakultäten und Quotienten explizit ausrechnen zu müssen. Dieses
+Berechnungs-verfahren für Binomialkoeffizienten ist als das <b>Pascal’sche Dreieck</b> bekannt. Das Schema
+unten verdeutlicht die Berechnung einiger Koeffizienten. <br></span></p><p><span><span><span><span><img src="data/Pascal.png?time=1567086266777" alt="Pascal" class="img-responsive atto_image_button_text-bottom" width="800" height="380"><br></span></span></span></span></p><p><span><span><span><span><br></span></span></span></span></p><p><span><span><span><span>Die
+ absteigenden Diagonalen von rechts nach
+links gehören jeweils zum gleichen \(k\) Wert. Sie sind in der gleichen 
+Farbe gehalten. Die Zeilen gehören jeweils zu einem bestimmten \(n\)
+            <span> </span>Wert.
+ Man beachte, wie die Einträge jeder Zeile aus den Werten der jeweils 
+vorhergehenden Zeile nach obiger Formel berechnet werden. <br></span></span></span></span></p><p><span><span><span><span>        <span><span><span>Beim <b>binomischen
+Lehrsatz</b> handelt es sich um eine Summenformel für das distributive
+Ausmultiplizieren eines Binoms \( {(a + b)^n} \)
+            <span> </span>mit komplexen Zahlen <span></span>\( a,b \in \mathbb C \)
+        : <br></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span>\( {(a + b)^n} = \underbrace {(a + b) \cdot (a + b) \cdot ... \cdot (a + b)}_{n - Mal} \)
+    <span><span><span><br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Beim distributiven Ausmultiplizieren dieser \(n\) Faktoren
+<span></span>\((a+b)\)&nbsp;
+        <span> </span>entstehen Faktoren der Form <span></span>\( {a^k}{b^{n - k}} \)
+        <span> </span>und zwar immer \( \left( \begin{array}{l} n\\ k \end{array} \right) \)
+        <span> </span>Stück. Summiert man über alle solche Produkte erhält man die Summenformel&nbsp;<span><span><br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>\(
+ {(a + b)^n} = \left( \begin{array}{l} n\\ 0 \end{array} 
+\right){a^0}{b^n} + \left( \begin{array}{l} n\\ 1 \end{array} 
+\right)a{b^{n - 1}} + \left( \begin{array}{l} n\\ 2 \end{array} 
+\right){a^2}{b^{n - 2}} + ... + \left( \begin{array}{l} n\\ n
+        - 1 \end{array} \right){a^{n - 1}}b + \left( \begin{array}{l} 
+n\\ n \end{array} \right){a^n}{b^0} = \sum\limits_{k = 0}^n {\left( 
+\begin{array}{l} n\\ k \end{array} \right){a^k}{b^{n - k}}} \)<span><span><span> <br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>Im Teilmengenproblem des vergangenen
+Abschnittes wurde bereits besprochen, dass die Anzahl aller Teilmengen
+(inklusive der leeren Menge) einer n-elementigen Menge sich als Summe aller
+Binomialkoeffizienten <br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>\( \left( \begin{array}{l}
+n\\
+0
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+1
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+2
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+3
+\end{array} \right) + .. + \left( \begin{array}{l}
+n\\
+n
+\end{array} \right) \) <br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>vom Grad n schreiben lässt und dass diese Summe
+den Wert \(<span><span><span>{2^n} \)<span><span><span> <br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>\( \left( \begin{array}{l}
+n\\
+0
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+1
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+2
+\end{array} \right) + \left( \begin{array}{l}
+n\\
+3
+\end{array} \right) + .. + \left( \begin{array}{l}
+n\\
+n
+\end{array} \right) = {2^n} \) <br></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span><span>ergibt. Alternativ kann man diese Formel mit
+Hilfe des binomischen Lehrsatzes zeigen, indem man für a und b den Wert 1
+einsetzt: </span></span></span></span></span></span></span></span></span></span></span></span><span><span><span><span>
+        </span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span><i><i><span><span></span></span></i></i></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p><p><i><i><span><br></span></i></i></p></span></span></span></span><p></p><p></p><i><i><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><p class="MsoNormal" style="text-align:justify"><i><i><span><span><span></span>\(  {(1 + 1)^n} = \sum\limits_{k = 0}^n {\left( \begin{array}{l} n\\ k \end{array} \right){1^k} \cdot {1^{n - k}}} = \sum\limits_{k = 0}^n {\left( \begin{array}{l} n\\ k \end{array} \right)}  \)<i><i><span><span></span></span></i></i></span></span></i></i><br><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p><p class="MsoNormal" style="text-align:justify"><span style="font-size:11.0pt;
+font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p></span></span></i></i></div><i><i><i>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><br></span></span>
+</div>
+<div class="WordSection1"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span><img src="data/Bino.png" alt="BinoPascal" class="img-responsive atto_image_button_text-bottom" width="700" height="516"><br><p class="MsoNormal" style="margin-left:108.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><span style="position:relative;top:15.0pt;mso-text-raise:-15.0pt"><!--[if gte vml 1]><v:shape
+ id="_x0000_i1203" type="#_x0000_t75" style='width:166.5pt;height:36.9pt'
+ o:ole="">
+ <v:imagedata src="Kombinatorik-Dateien/image313.wmz" o:title=""/>
+</v:shape><![endif]--><!--[if !vml]--><!--[endif]--></span>
+    <!--[if gte mso 9]><xml>
+ <o:OLEObject Type="Embed" ProgID="Equation.DSMT4" ShapeID="_x0000_i1203"
+  DrawAspect="Content" ObjectID="_1628485435">
+ </o:OLEObject>
+</xml><![endif]-->
+    <o:p></o:p>
+    </span>
+    </p>
+
+    <p class="MsoNormal" style="margin-left:108.0pt;text-align:justify;text-indent:
+36.0pt"><span style="font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;<br></o:p></span></p>
+
+    </span>
+    </span>
+</div>
+</i>
+
+</i></i>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+    <title>2_Visualisierung zur Hypergeometrischen Verteilung</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<p>Wir betrachten eine Urne mit \(N \) Objekten. Darunter sind \(M \) Objekte einer bestimmten Sorte, wir nennen sie Sorte \(M \), die Merkmalsträger und \(N-M \) andersartige Objekte. Es wird zufällig eine Stichprobe von \(n \) Objekten aus der Urne entnommen.
+    Das Ziehen kann auf einmal passieren oder auch nacheinander, wichtig aber ist, dass <b>ohne Zurücklegen</b> der Objekte gezogen wird. Mit der Zufallsvariable \(X \) sei die <b>Anzahl der Merkmalsträger in
+der Stichprobe</b> bezeichnet. Die Verteilung von \(X \) heisst <b>hypergeometrische Verteilung</b>. Mit Binomialkoeffizienten lässt sich die Anzahl der relevanten Ergebnisse abzählen und die Zähldichte (PDF) der Zufallsvariablen \(X \) elegant aufschreiben.
+    Die Anzahl der Möglichkeiten genau \(k \) Merkmalsträger aus insgesamt \(M \) Merkmalsträgern zu ziehen ist <br></p>
+<p>\( \left( \begin{array}{l} M\\ k \end{array} \right) = \frac{{M!}}{{(M - k)! \cdot k!}} \)</p>
+<p></p>
+<p>Eine Ziehung besteht aus \(n \) Objekten. Um insgesamt genau \(n \) Objekte zu erhalten müssen noch \(n-k \) Objekte gezogen werden, welche keine Merkmalsträger sind. Dafür gibt es </p>
+
+<p>&nbsp;\( \left( \begin{array}{l} N - M\\ n - k \end{array} \right) \)</p>
+<p>Möglichkeiten. Insgesamt gibt es<br></p>
+<p></p>\( \left( \begin{array}{l} M\\ k \end{array} \right) \cdot \left( \begin{array}{l} N - M\\ n - k \end{array} \right) \)
+<p></p>
+<p></p>
+<p>Möglichkeiten für eine Stichprobe mit \(k \) Merkmalsträgern und \(n-k \) Objekten ohne Merkmal. Die Wahrscheinlichkeit für genau \(k \) Merkmalsträger in der Stichprobe von \(n \) Objekten ist demnach: <br></p>
+<p>\( P(X = k) = \frac{{\left( \begin{array}{l} M\\ k \end{array} \right) \cdot \left( \begin{array}{l} N - M\\ n - k \end{array} \right)}}{{\left( \begin{array}{l} N\\ n \end{array} \right)}} \)<br></p><b>Beispie</b>l: (Lotto 6 aus 49) Es soll die Wahrscheinlichkeit
+für genau \(k \) Treffer (\(k \) erratene Gewinnzahlen) bei einem Versuch bestimmt werden. Bei diesem Zufallsexperiment gibt es genau 6 Zahlen, welche Merkmalsträger sind, nämlich die 6 Gewinnzahlen. 43 weitere Zahlen sind keine Merkmalsträger. Wenn wir
+die Notation von oben benutzen, so geht es bei diesem Spiel um eine Stichprobe von \(n=6\) Zahlen aus einer Gesamtheit von \(N=49\) Zahlen. Darunter sind \(M=6\) Merkmalsträger, nämlich die Gewinnzahlen, und \(N-M=43\) Zahlen, welche das Merkmal nicht
+haben, die Nieten. Die Anzahl der Gewinnzahlen X in der Stichprobe ist hypergeometrisch verteilt mit der Dichte <br>
+<p></p>
+<p>\( P(X = k) = \frac{{\left( \begin{array}{l} 6\\ k \end{array} \right) \cdot \left( \begin{array}{l} 43\\ 6 - k \end{array} \right)}}{{\left( \begin{array}{l} 49\\ 6 \end{array} \right)}} \)</p>
+<p>Beispielsweise ist die Wahrscheinlichkeit für mindestens 4 richtige Zahlen: <br></p>
+<p>\( \begin{array}{ll} P(X \ge 4) &amp;=&amp; P(X = 4) + P(X = 5) + P(X = 6) \\ &amp; = &amp; \frac{1}{{\left( \begin{array}{l} 49\\ 6 \end{array} \right)}} \cdot [\left( \begin{array}{l} 6\\ 4 \end{array} \right) \cdot \left( \begin{array}{l} 43\\ 2 \end{array}
+    \right) + \left( \begin{array}{l} 6\\ 5 \end{array} \right) \cdot \left( \begin{array}{l} 43\\ 1 \end{array} \right) + \left( \begin{array}{l} 6\\ 6 \end{array} \right) \cdot \left( \begin{array}{l} 43\\ 0 \end{array} \right)] \\ &amp; \approx &amp;
+    {\rm{9}}{\rm{.8714}} \cdot {\rm{1}}{{\rm{0}}^{ - 4}} \end{array} \)</p>
+<p>Unter 1000 Rateversuchen wird somit ein Versuch mit mindestens 4 richtigen Zahlen erwartet. Wenn man die CDF der Verteilung zur Verfügung hat, wie z. B. in Matlab oder den Statistikpaketen des TR, so kann obige Wahrscheinlichkeit am besten über das Gegenereignis
+    und die CDF \( F(k) = P(X \le k) \) der hypergeometrischen Verteilung berechnet werden.
+
+</p>
+<p>&nbsp;\( P(X \ge 4) = 1 - P(X \le 3) = 1 - F(3) \approx {\rm{9}}{\rm{.8714}} \cdot {\rm{1}}{{\rm{0}}^{ - 4}} \)</p>
+<p></p>
+<p>In Matlab wäre das der Befehl 1-hygecdf(3,49,6,6). </p><img src="data/Hyge.png" alt="Hyge" class="img-responsive atto_image_button_text-bottom" width="650" height="557"><br>
+<p></p><br>
+<p></p>
+<p><img src="data/hygepdf.png?time=1567716182650" alt="hygepdf" class="img-responsive atto_image_button_text-bottom" width="650" height="330"><br></p>
+<p><br></p>
+
+<p><br></p>
+
+<h4><a name="_Toc13237403"></a></h4>
+
+<p><b>Aufgabe 1</b></p>
+<p>In einer Lostrommel befinden sich 250 Lose. Darunter sind 20 Gewinne. Sie greifen in die Lostrommel und ziehen 10 Lose. Wie gross ist die Wahrscheinlichkeit, dass Sie kein einziges Gewinnlos gezogen haben? Wie gross ist die Wahrscheinlichkeit, dass Sie mindestens 3 Gewinnlose haben? &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction1()">Lösung</button>
+</p>
+<div id="myDIV1"><br>\(X\) sei die Anzahl der Gewinnlose in der Stichprobe. \(X \) ist hypergeometrisch verteilt mit den Parametern \(N=250\),
+    \(M=20\), \(n=10\): \( P(X =0) \approx 0.4275\). \( P(X \geq 3) =1-&nbsp;P(X \leq 2) \approx 0.0367\). <br></div>
+<script>
+    x = document.getElementById("myDIV1");
+    x.style.display = "none";
+
+    function myFunction1() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+<p><b>Aufgabe 2<b> (Qualitätsprüfung)</b></b> <br></p>
+<p>Eine Lieferung besteht aus 500 gleichen Bauteilen. Lieferungen mit 10% oder mehr defekten Bauteilen sollen abgelehnt werden. <b>Testverfahren</b>: Eine Stichprobe von 16 Bauteilen wird entnommen. Wenn sich darunter mindestens ein defektes Bauteil befindet,
+    wird die Lieferung abgelehnt. <b>Behauptung</b>: Dieses Verfahren ermöglicht es&nbsp; Lieferungen mit 10% oder mehr defekten Bauteilen mit 80 prozentiger Wahrscheinlichkeit zu erkennen. Man kann sagen: Mit diesem Verfahren werden rund 80 % der fehlerhaften
+    Lieferungen erkannt und abgelehnt. &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction2()">Lösung</button>
+</p>
+<div id="myDIV2"><br>Wir gehen von einer Lieferung von 500 mit 50 defekten Bauteilen aus. Dann wird eine Stichprobe von 16 Bauteilen entnommen. \(X\) sei die Anzahl der defekten Bauteile in dieser Stichprobe. \(X \) ist hypergeometrisch verteilt mit den Parametern \(N=500\),
+    \(M=50\), \(n=16\): \( P(X \geq 1) =1-&nbsp;P(X \leq 0) \approx 0.8197\). <br></div>
+<script>
+    x = document.getElementById("myDIV2");
+    x.style.display = "none";
+
+    function myFunction2() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+
+<p><b>Aufgabe 3</b> <br></p>
+<p>Der Aufsichtsrat eines AKWs besteht aus 7 Personen, welche aus einem Kreis von 16 anerkannten Experten durch Losentscheid ausgewählt werden. Unter den 16 Experten sind 5 Mitglieder der Z Partei. Wie gross ist die Wahrscheinlichkeit, dass mindestens 4
+    Mitglieder der Z Partei in den Aufsichtsrat gewählt werden? &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction3()">Lösung</button>
+</p>
+<div id="myDIV3"><br>Sei \(X\) die Anzahl der Z Mitglieder im Aufsichtsrat.&nbsp; \(X \) ist hypergeometrisch verteilt mit den Parametern \(N=16\), \(M=5\), \(n=7\). \( P(X \geq 4) =1-&nbsp;P(X \leq 3)= 1- \sum_{k=0}^{3}\frac{{\left( \begin{array}{l} 5\\ k \end{array}
+    \right) \cdot \left( \begin{array}{l} 11\\ 7-k \end{array} \right)}}{{\left( \begin{array}{l} 16\\ 7 \end{array} \right)}} \approx 0.07692\). <br></div>
+<script>
+    x = document.getElementById("myDIV3");
+    x.style.display = "none";
+
+    function myFunction3() {
+        var x = document.getElementById("myDIV3");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+
+
+
+<iframe src="https://www.geogebra.org/m/ungfnm32" scrolling="no" allowfullscreen="" width="980" height="750" frameborder="0"></iframe>
+
+
+
+<a href="https://www.geogebra.org/m/ungfnm32" target="_blank">Extra Fenster</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿Hello Walter, 
+
+Thanks for helping to rid the world of bad software! We're honored that you'd like to use Balsamiq in your program.
+
+We've issued you a trial license (that just means it's fully-functional, but has an end-date) for you and your students to use on home and school computers for the duration of your class. After that time, you will be able to view native wireframe files, but won't be able to save edits.
+
+Please keep in mind that this trial license can be shared with Faculty Members and other Students, but should not be posted publicly.
+
+You can also use the license to register Balsamiq Wireframes for Desktop on computer lab machines.
+
+Product: Wireframes for Desktop
+
+LICENSE INFORMATION:
+
+License Key: SoftwareEngineering12020|gqxJeJxzCncxiQ+pCc5PKylPLEpVcM1Lz8xLTS3KzEtXMFQwMjAyqDE0MzCzMDWyMAABAIk3Dlw=
+
+License End Date: Dec 31, 2020
+
+If you haven't already, you can download it here: https://balsamiq.com/wireframes/desktop/
+
+Be sure to copy and paste the License Key exactly as shown above.
+
+Here is an FAQ to get you started using Balsamiq in the classroom: https://balsamiq.com/givingback/free/classroom/
+
+And a free resource that may be useful to you: a user-contributed collection of ready-to-use UI components and design patterns built-into Balsamiq: https://balsamiq.com/wireframes/desktop/docs/symbols/#importing-symbols-from-wireframes-to-go
+
+Maybe your students will contribute there someday.
+
+Happy wireframing from all of us to all of you.
+
+
+--
+Alasdair Manson
+Customer Champion, https://balsamiq.com
+Sales: sales@balsamiq.com
+Support: support@balsamiq.com
++1 (415) 367-3531
+We're good people, and we care. 
+
+
+

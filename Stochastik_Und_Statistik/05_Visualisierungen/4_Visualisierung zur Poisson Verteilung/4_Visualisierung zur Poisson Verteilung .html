@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+    <title>4_Visualisierung zur Poisson Verteilung </title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<p></p>
+<p></p>
+<p>Die <b>Poisson
+Verteilung</b> wird immer dort als stochastisches Modell benutzt, wenn es um die Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl gleichartiger Ereignisse geht, welche in einem gegebenen Zeitintervall (unabhängig voneinander) beliebig oft
+    auftreten können. Das sind beispielsweise die Anrufzahlen in einer Telefonzentrale, die Server Anfragen in einer Computer Zentrale, die Ausfälle von bestimmten Bauteilen (z.B. Sicherungen) oder die Meteoriteneinschläge in einer bestimmten zeitlichen
+    Periode.&nbsp; <br></p>
+<p>Wir betrachten eine Telefonzentrale in einem Zeitintervall \([0,T] \). Die Zufallsvariable \(X \) gebe die Anzahl der in diesem Zeitintervall erfolgten Anrufe an. Wir wollen eine Verteilung für diese Zufallsvariable herleiten. Dazu machen wir die folgenden
+    Annahmen:&nbsp;</p>
+<p></p>
+<ul>
+    <li>Anrufe sind im gegebenen Zeitintervall unabhängig voneinander;</li>
+    <li>Anrufe sind im gegebenen Zeitintervall gleichverteilt (es gibt im Zeitintervall keine Stoss- oder Niederzeiten);&nbsp;</li>
+    <li>Die durchschnittliche Zahl der Anrufe \(\lambda &gt; 0 \) im gegebenen Zeitintervall ist bekannt. <br></li>
+</ul>
+<p>Dann wählen wir eine natürliche Zahl
+    <!--[if !vml]-->\(n&gt;0 \)
+    <!--[endif]-->
+    <!--[if !vml]-->&nbsp;und teilen das Zeitintervall in \(n \) gleichgrosse Teilintervalle der Länge \(T/n \). Die Zahl \(n \) sei so gross, dass <br></p>
+<ul>
+    <li>in jedem Teilintervall immer nur höchstens ein Anruf erfolgen kann. <br></li>
+</ul>
+<p>
+    <!--[if !vml]-->Da es durchschnittlich \(\lambda \) Anrufe im Zeitintervall gibt und die Anrufe gleichverteilt sind, können wir annehmen, dass in jedem Teilintervall ein Anruf mit der Wahrscheinlichkeit \( p = \lambda /n \) erfolgt. Wegen der Unabhängigkeit der Anrufe,
+    ist die Anrufzahl \(X \) binomialverteilt mit der Wahrscheinlichkeit für genau \(k\geq 0 \) Anrufe (Zähldichte, PDF) <br></p>
+<p>\( P(X = k) = \left( \begin{array}{l} n\\ k \end{array} \right) \cdot {[\frac{\lambda }{n}]^k} \cdot {[1 - \frac{\lambda }{n}]^{n - k}} \). <br></p>
+<p>Der Nachteil einer solchen Binomialverteilung ist, dass nicht mehr als \(n \) Anrufe im gegebenen Zeitintervall erfolgen können. Eine solche obere Schranke wollen wir nicht im Modell haben. Aus diesem Grund werden wir (bei konstantem \(k\geq 0 \)) in
+    einem Grenzprozess den Parameter \(n \)&nbsp;immer grösser werden lassen, d.h. das gegebene Zeitfenster \([0,T] \) in immer kleinere Teilintervalle zerlegen. Die resultierende Grenzverteilung dieser Binomialverteilungen wird, unter den getroffenen
+    Annahmen, beliebige Anrufzahlen im gegebenen Zeitintervall zulassen: </p>
+<p>\( \left( \begin{array}{l} n\\ k \end{array} \right) \cdot {[\frac{\lambda }{n}]^k} \cdot {[1 - \frac{\lambda }{n}]^{n - k}} = \frac{{n! \cdot {\lambda ^k} \cdot {{[1 - \frac{\lambda }{n}]}^n}}}{{(n - k)! \cdot k! \cdot {n^k} \cdot {{[1 - \frac{\lambda
+    }{n}]}^k}}} = \underbrace {\frac{{n(n - 1)...(n - k + 1)}}{{n \cdot n \cdot ... \cdot n}}}_{ \to 1} \cdot \frac{1}{{\underbrace {{{[1 - \frac{\lambda }{n}]}^k}}_{ \to 1}}} \cdot \underbrace {{{[1 - \frac{\lambda }{n}]}^n} \cdot }_{ \to {e^{ - \lambda
+    }}}\frac{{{\lambda ^k}}}{{k!}} \)<br></p>Im Grenzprozess \( n \to \infty \) erhält man eine neue Zähldichte (PDF):<br>
+<p></p>
+<p>\( P(X = k) = \left( \begin{array}{l} n\\ k \end{array} \right) \cdot {[\frac{\lambda }{n}]^k} \cdot {[1 - \frac{\lambda }{n}]^{n - k}} \stackrel{n\to \infty}{\longrightarrow} {e^{ - \lambda }} \cdot \frac{{{\lambda ^k}}}{{k!}} \)<br></p>
+<p>Also setzen wir für die Wahrscheinlichkeit für genau \(k \) Anrufe im Zeitintervall \([0,T]\): <br></p>
+<p></p>
+<p></p>
+<p>
+    <!--[if !vml]-->\( P(X = k) = {e^{ - \lambda }} \cdot \frac{{{\lambda ^k}}}{{k!}} \)<br></p>
+<p></p>
+<p></p>
+<p>
+    <!--[if !vml]-->
+</p>
+<p>Dies ist die Zähldichte (PDF) der sogenannten <b>Poisson Verteilung</b>. Sie ist, wie oben dargestellt, als Grenzverteilung von Binomialverteilungen definiert. </p><br>
+<p></p>
+<p><b>Beispie</b>l <br></p>
+<p>Von 1820 bis 1929 sah die Statistik für die Zahl der Kriegsausbrüche&nbsp;&nbsp;\(k \)&nbsp; pro Jahr, wie folgt aus (Nature 155 1945)</p>
+<p><img src="data/Kriege.png" alt="Kriege" class="img-responsive atto_image_button_text-bottom" width="650" height="51"><br></p>
+<p>
+    <!--[if !vml]-->Die Zahl der Kriege (pro Jahr) wollen wir als Zufallsvariable \(X \)
+    <!--[if !vml]-->ansehen und dessen Verteilung bestimmen. Dazu treffen wir die Annahmen, dass Kriege voneinander unabhängig ausbrechen und im Zeitraum eines Jahres gleichverteilt sind. Als durchschnittliche Anzahl Kriege pro Jahr nehmen wir das arithmetische Mittel
+    der oben angegebenen Kriegszahlen über den Zeitraum von 110 Jahren:</p>
+<p>\( \lambda = \frac{1}{{110}}(0 \cdot 63 + 1 \cdot 35 + 2 \cdot 9 + 3 \cdot 2 + 4 \cdot 1) = {\rm{ 0}}{\rm{.5727}} \)</p>
+<p></p>
+<p>
+    <!--[if !vml]-->
+</p>
+<p>
+    <!--[if !vml]-->
+    <!--[if !vml]-->Unter diesen Voraussetzungen ist \(X \) eine Poisson verteilte Zufallsvariable. Die Wahrscheinlichkeit für den Ausbruch von \( k \) Kriegen während eines Jahres wird mit folgender Zähldichte (PDF) berechnet: </p>
+<p></p>\( P(X = k) = {e^{ - 0.5727}} \cdot \frac{{{{0.5727}^k}}}{{k!}} \). <br>
+<p></p>
+<p></p>
+<p></p>
+<p>Die Übereinstimmung mit der Statistik ist bemerkenswert. Unten in der Tabelle sind die statistisch ermittelten absoluten Häufigkeiten zusammen mit den Werten der Zähldichte der Poisson Verteilung (multipliziert mit der Gesamtzahl der 110 betrachteten
+    Jahre) zu sehen. </p>
+<p></p>
+<p></p><img src="data/KriegePoisson.png" alt="KriegePoisson" class="img-responsive atto_image_button_text-bottom" width="650" height="68"><br>
+<p></p>
+<p>Der Matllab Befehl, um die rot markierten Tabellenwerte für 0 bis 4 zu erhalten, wäre poisspdf([0:4])*110. Im Diagramm unten ist der Vergleich der statistisch erhobenen Daten mit den prognostizierten Werten zu sehen. <br></p>
+<p><br></p>
+<p></p>
+<p></p>
+<p></p><img src="data/PoissonBsp.png?time=1567666089926" alt="PoissonBsp" class="img-responsive atto_image_button_text-bottom" width="700" height="344"><br>
+<p></p><br>
+<p></p>
+<img src="data/Pois.png?time=1567692528483" alt="Pois" class="img-responsive atto_image_button_text-bottom" width="650" height="416">
+<p></p>
+<p></p>
+<p><br></p>
+<h4><a name="_Toc13237403"></a></h4>
+
+<p><b>Aufgabe 1</b></p>
+<p></p><p>Eine
+Telefonvermittlung erhält während der Hauptbetriebszeit durchschnittlich 300
+Anrufe stündlich. Sie kann maximal 10 Verbindungen pro Minute herstellen. Wie
+gross ist die Wahrscheinlichkeit, dass die Vermittlung während einer beliebigen
+gegebenen Minute in der Hauptbetriebszeit überlastet ist, d. h. mehr Anrufe
+erhält, als sie Verbindungen herstellen kann? &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction1()">Lösung</button>
+</p><p></p>
+<div id="myDIV1"><br>\(X\) bezeichne die Anzahl der Anrufe pro Minute. \(X \) ist Poisson verteilt mit Parameter \(\lambda=5\): \( P(X \geq 11) =1-&nbsp;P(X \leq 10) \approx 0.0137\). <br></div>
+<script>
+    x = document.getElementById("myDIV1");
+    x.style.display = "none";
+
+    function myFunction1() {
+        var x = document.getElementById("myDIV1");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+<p><b>Aufgabe 2<b>&nbsp;</b></b> <br></p>
+<p><p><!--[if !supportLists]--><!--[endif]-->Die Verteilung der Anzahl der Schiffsunglücke (mit Schiffen über eine
+gewisse Mindestgrösse), im Atlantik bzw. Pazifik soll jeweils durch eine <b>Poisson verteilte</b> <b>Zufallsvariable</b> modelliert werden. Im Atlantik ereigneten sich im
+Jahr 2010 28 Schiffsunglücke. Im Pazifik waren im Jahr 2010 (von 52 Wochen)
+genau 32 Wochen ohne Unglück (<i>Zahlen sind
+frei erfunden</i>!). </p>
+
+
+
+<p><!--[if !supportLists]-->a)&nbsp; <!--[endif]-->Wie gross ist die
+Wahrscheinlichkeit, dass es im Atlantik in einem halben Jahr <b>nicht mehr als</b> 15 Unglücke gibt. </p>
+
+<p><!--[if !supportLists]-->b)&nbsp; <!--[endif]-->Wie gross ist die
+Wahrscheinlichkeit, dass es im Pazifik während eines halben Jahres <b>nicht mehr als</b> 15 Unglücke gibt.</p>
+
+<p><!--[if !supportLists]-->c)&nbsp;&nbsp;
+<!--[endif]-->Wie gross ist die Wahrscheinlichkeit, dass im Atlantik <b>mindestens</b> 8 Wochen lang <b>kein</b> Unglück passiert.</p>
+
+<p><!--[if !supportLists]-->d)&nbsp; <!--[endif]-->Wie gross ist die
+Wahrscheinlichkeit, dass es im Pazifik von einer zur nächsten Katastrophe <b>nicht mehr als</b> 2 Wochen dauert.</p>
+
+<p><!--[if !supportLists]-->e)&nbsp; <!--[endif]-->Wie gross ist die
+Wahrscheinlichkeit, dass sich während 5 Wochen in beiden Ozeanen <b>zusammen</b> mehr als 10 Unglücke ereignen. &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction2()">Lösung</button>
+</p></p>
+<div id="myDIV2"><br><!--[if !vml]--><!--[if !vml]-->Es soll \(A(k) \) bzw. \(B(k)\) die Anzahl der Unglücke im Antlantik bzw. Pazifik für den Zeitraum von \(k\) Wochen bezeichnen. Der
+Parameter für den Atlantik (A) ist \( {\lambda _A} = \frac{{28}}{{52}} = \frac{7}{{13}} \approx {\rm{ 0}}{\rm{.5385}} \) für das Zeitfenster von einer Woche. Der Parameter für den Pazifik (B)
+ergibt sich aus der Überlegung, dass die Wahrscheinlichkeit für kein Unglück
+während 1 Woche durch das Verhältnis \( \frac{{32}}{{52}} = \frac{8}{{13}} \approx {\rm{  0}}{\rm{.6154}} \) geschätzt werden kann. Nimmt man an, dass die Anzahl der Unglücke im
+Pazifik \(B(1)\) in 1 Woche, Poisson verteilt mit Parameter \( {\lambda _B}\)&nbsp; (Unglücke pro Woche) ist, so muss gelten: \( \frac{8}{{13}} = P(B(1) = 0) = {e^{ - {\lambda _B}}} \Leftrightarrow {\lambda _B} =  - \ln (\frac{8}{{13}}) \approx {\rm{0}}{\rm{.4855}} \). a) \( P(A(26) \le 15) = {e^{ - {\lambda _A} \cdot 26}} \cdot \sum\limits_{k = 0}^{15} {\frac{{{{({\lambda _A} \cdot 26)}^k}}}{{k!}}}  \approx {\rm{  0}}{\rm{.6694}} \). b) \( P(B(26) \le 15) = {e^{ - {\lambda _B} \cdot 26}} \cdot \sum\limits_{k = 0}^3 {\frac{{{{({\lambda _B} \cdot 26)}^k}}}{{k!}}}  \approx {\rm{ 0}}{\rm{.7959}} \). c) \( P(A(8) = 0) = {e^{ - {\lambda _A} \cdot 8}} \approx {\rm{0}}{\rm{.0135}} \). d) \( P(B(2) \ge 1) = 1 - P(B(2) = 0) = 1 - {e^{ - {\lambda _B} \cdot 2}} \approx {\rm{ 0}}{\rm{.6213}} \). e) Die Summe \( X(k) = A(k) + B(k) \) ist wieder Poisson verteilt mit dem Paramter \( \lambda  = {\lambda _A} + {\lambda _B} = \frac{7}{{13}} - \ln (\frac{8}{{13}}) \approx {\rm{ 1}}{\rm{.0240}} \) (pro Woche): \( P(X(5) \ge 11) = 1 - P(X(5) \le 10) = 1 - {e^{ - \lambda  \cdot 5}}\sum\limits_{k = 0}^{10} {\frac{{{{(\lambda  \cdot 5)}^k}}}{{k!}}}  \approx {\rm{ 0}}{\rm{.0160}} \). <br></div>
+<script>
+    x = document.getElementById("myDIV2");
+    x.style.display = "none";
+
+    function myFunction2() {
+        var x = document.getElementById("myDIV2");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+
+<p><b>Aufgabe 3</b> <br></p>
+<p></p><p>Es ist bekannt,
+dass 0.01% einer Bevölkerungsgruppe jährlich durch einen gewissen Unfall
+getötet werden. Bei einer Versicherung sind 10000 Personen der genannten
+Bevölkerungsgruppe gegen diesen Unfall versichert. Betrachten Sie die
+Zufallsvariable <i>\(</i>X<i>\) </i>=
+Anzahl Versicherte, die in einem bestimmten Jahr durch diesen Unfall umkommen.</p>
+
+<p><!--[if !supportLists]-->a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Welcher
+Wahrscheinlichkeitsverteilung folgt die Zufallsvariable <i><i>\(</i>X<i>\)</i></i>?</p>
+
+<p><!--[if !supportLists]-->b)&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Welches
+sind die Werte der Parameter dieser Wahrscheinlichkeitsverteilung?</p>
+
+<p><!--[if !supportLists]-->c)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Welche
+Approximation eignet sich für diesen Fall? <br></p>
+
+<p><!--[if !supportLists]-->d)&nbsp;&nbsp;&nbsp;&nbsp;
+<!--[endif]-->Berechnen
+Sie die Wahrscheinlichkeit, dass in einem
+gegebenen Jahr mehr als zwei dieser Versicherten durch den genannten Unfall
+umkommen, exakt und mit Hilfe der Approximation. &nbsp; &nbsp;&nbsp;&nbsp;
+    <button onclick="myFunction3()">Lösung</button>
+</p><p></p>
+<div id="myDIV3"><br>a), b) Die Zufallsvariable \(X\) ist binomialverteilt mit den
+Parametern \(p=0.0001\), \(n=10000\). c) Poisson Verteilung mit Parameter \(\lambda =n \cdot p =1\). d) \( P(X \geq 3) =1-&nbsp;P(X \leq 2) \approx 0.0803\). Mit der Poisson Approximation \( P(X \geq 3) =1- P(X \leq 2) \approx 1-e^{-1}\cdot (1+1+0.5)\approx 0.0803 \). <br></div>
+<script>
+    x = document.getElementById("myDIV3");
+    x.style.display = "none";
+
+    function myFunction3() {
+        var x = document.getElementById("myDIV3");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+<p><b><br></b></p>
+
+<iframe src="https://www.geogebra.org/m/ungfnm32" scrolling="no" allowfullscreen="" width="980" height="750" frameborder="0"></iframe>
+
+
+
+<a href="https://www.geogebra.org/m/ungfnm32" target="_blank">Extra Fenster</a>
+</body>
+</html>

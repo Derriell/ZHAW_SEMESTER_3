@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <title>01_Übersicht Python-Module</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<p id="Einführung">Der folgende Abschnitt gibt einen Überblick über die Module (teilweise auch als Bibliotheken bezeichnet), die für den Unterricht genutzt werden können. Viele der Beispiele wurden dem Kurs <a href="https://www.python-kurs.eu/numerisches_programmieren_in_Python.php">Numerisches Programmieren mit Python</a> entnommen</p>
+<p>
+
+</p>
+<h5>Mit SciPy auf wissenschaftliche Werkzeuge zugreifen</h5>
+<p>Das SciPy-Paket (<a href="http://www.scipy.org/">http://www.scipy.org/</a>) enthält eine Menge anderer Module, die man auch separat nutzen kann. Diese Module sind:</p>
+<ul>
+    <li>
+        <div>NumPy</div>
+    </li>
+    <li>
+        <div>SciPy</div>
+    </li>
+    <li>
+        <div>MatPlotLib</div>
+    </li>
+    <li>
+        <div>IPython</div>
+    </li>
+    <li>
+        <div>SymPy</div>
+    </li>
+    <li>
+        <div>Pandas</div>
+    </li>
+</ul>
+<p>Als Gesamtsystem enthält SciPy&nbsp;damit unter anderem Module für die numerische Optimierung, lineare Algebra, numerische Integration, Interpolation, FFT, Signalverarbeitung, Bildverarbeitung, numerische Integration gewöhnlicher Differentialgleichungen
+    und symbolische Mathematik. In vielen Fälle genügt es aber nur eines der Module wie z.B. NumPy zu nutzen.</p>
+<p>
+
+</p>
+<h5>Grundlagen des wissenschaftlichen Rechnens mit NumPy</h5>
+<p id="Einführung">NumPy ist ein Akronym für "Numerisches Python" (englisch: "Numeric Python" oder "Numerical Python"). Dabei handelt es sich um ein Erweiterungsmodul für Python, welches zum größten Teil in C geschrieben ist. Dadurch wird sichergestellt, dass die kompilierten
+    mathematischen und numerischen Funktionen und Funktionalitäten eine grösstmögliche Ausführungsgeschwindigkeit garantieren.</p>Das NumPy-Modul (<a href="http://www.numpy.org/">http://www.numpy.org/</a>) stellt Mittel für n-dimensionale Array-Manipulation
+bereit, ein wichtiger Bereich der Data Science. NumPy bietet Funktionen für lineare Algebra, Fourier-Transformationen und Zufallszahlen-Generierung (mehr dazu unter <a href="http://docs.scipy.org/doc/numpy/reference/routines.html">http://docs.scipy.org/doc/numpy/reference/routines.html</a>).<br>
+<p></p>
+
+<h5>Datenanalyse mit Pandas</h5>
+<p>Das Pandas-Modul (<a href="http://pandas.pydata.org/">http://pandas.pydata.org/</a>) unterstützt Datenstrukturen und Analysewerkzeuge. Sie ist für spezielle Data-Science-Aufgaben optimiert und führt sie besonders schnell und effizient aus. Das Grundprinzip
+    besteht darin, Datenanalysen und Unterstützung zu ihrer Modellierung bereitzustellen, ähnlich wie in anderen Sprachen, zum Beispiel R. Pandas ist dabei ideal für das Arbeiten mit Tabellendaten, wie man sie aus Tabellenkalkulationsprogrammen wie beispielsweise
+    Excel kennt.</p>
+
+<p></p>
+<h5>Plotten mit MatPlotLib</h5>
+<p>Die MatPlotLib-Bibliothek (<a href="http://matplotlib.org/">http://matplotlib.org/</a>) bietet eine MATLAB ähnliche Oberfläche für die Präsentation der analysierten Daten.&nbsp;<br></p>
+<p>Übersichtsgrafik</p>
+
+<p></p>
+<h5>Ein einfaches NumPy-Beispiel</h5>
+<p>Bevor wir NumPy benutzen können, müssen wir es importieren. Es wird importiert wie jedes andere Modul auch. Üblicherweise wird NumPy in np umbenannt:&nbsp;</p>
+<p><i><span style="color: rgb(1, 100, 167);">import numpy as np</span></i></p>
+
+<p>In dem ersten einfachen NumPy-Beispiel geht es um Temperaturen. Wir definieren eine Liste mit Temperaturwerten in Celsius:</p>
+
+<p><i><span style="color: rgb(1, 100, 167);">cvalues = [20.1, 20.8, 21.9, 22.5, 22.7, 21.8, 21.3, 20.9,
+20.1]</span></i></p>
+
+<p>Aus unserer Liste cvalues erzeugen wir nun ein eindimensionales NumPy-Array:
+</p>
+
+<p><span lang="EN-US"><i><span style="color: rgb(1, 100, 167);">C = np.array(cvalues)</span></i>
+    </span>
+<br>
+<span lang="EN-US"><i><span style="color: rgb(1, 100, 167);">print(C, type(C))</span></i>
+    </span>
+<br>
+<span lang="EN-US"><i><span style="color: rgb(1, 100, 167);">OUT: [20.1 20.8 21.9 22.5
+22.7 21.8 21.3 20.9 20.1] &lt;class 'numpy.ndarray'&gt;</span></i>
+    </span>
+</p>
+
+<p>Nehmen wir nun an, dass wir die Werte in Grad Fahrenheit benötigen. </p>
+
+<p>Dies kann sehr einfach mit einem NumPy-Array bewerkstelligt werden. Die Lösung unseres Problems besteht in einer einfachen skalaren Multiplikation:</p>
+
+<p><i><span style="color: rgb(1, 100, 167);">print(C * 9 / 5 + 32)</span></i><br>
+    <i><span style="color: rgb(1, 100, 167);">OUT: [68.18 69.44 71.42 72.5&nbsp; 72.86
+71.24 70.34 69.62 68.18]</span></i></p>
+<p>In Python ohne Verwendung des Moduls wäre dies wesentlich aufwändiger.</p>
+
+<p></p>
+<p></p>
+</body>
+</html>

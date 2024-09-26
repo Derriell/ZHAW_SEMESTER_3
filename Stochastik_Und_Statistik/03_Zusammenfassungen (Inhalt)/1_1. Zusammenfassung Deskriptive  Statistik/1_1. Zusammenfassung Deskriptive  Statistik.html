@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+    <title>1_1. Zusammenfassung: Deskriptive  Statistik</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<h4>Stichproben<br></h4>
+
+
+<p></p>
+<p><span lang="DE">Eine <i>Stichprobe</i> \((x_1,...,x_n)\) der Länge \(n\) ist eine Auswahl von <span lang="DE">\(n\) </span>Objekten aus einer Grundgesamtheit. Meist handelt es sich um eine <i>Zufallsstichprobe</i>, d.h. die Auswahl der Objekte ist zufällig
+        und repräsentativ. Relevant ist oft nur ein bestimmtes <i>Merkmal</i>, z.B. die Partei, für welche die i-te befragte Person in der kommenden Wahl stimmen wird. Das untersuchte Merkmal kann bestimmte <i>Ausprägungen</i> annehmen. Im Beispiel wäre das
+        die Menge der zur Wahl stehenden Parteien. Eine solche Stichprobe <span lang="DE">\((x_1,...,x_n)\) </span>wäre zum Beispiel eine Folge von \(n\) Parteinamen <span lang="DE">\(x_i\)</span>.&nbsp; <br></span>
+</p>
+
+<p><span lang="DE">Merkmale, wie die Partei, die Augenfarbe, das Alter, die Prüfungsnote, die Laufzeit, etc. werden danach eingeteilt, ob die möglichen Ausprägungen eine natürliche Ordnungstruktur tragen oder ob nur ein nominaler Zusammenhang besteht. Im obigen Beispiel handelt es sich um eine Menge von Parteinamen, welche ohne weiteres zutun keine Anordnung besitzen. Es handelt sich hier um einen nominalen Merkmalstyp. Allgemein werden die folgenden 4 <i>Merkmalstypen unterschieden</i>: <br></span></p>
+
+<p><span lang="DE"><img src="data/Markmalstyp.png" alt="Markmalstypen" class="img-responsive atto_image_button_text-bottom" width="500" height="275"><br></span></p><br><br>
+
+<h4>Absolute und relative Häufigkeitsfunktionen</h4>
+
+
+<p>Sei <span lang="DE"> \((x_1,...,x_n)\) eine Stichprobe eines metrischen Merkmals. </span><br></p>
+
+
+<p>Die reelle Funktion \( h: \mathbb R \to&nbsp;\mathbb R \, , \, h(x) =\) Anzahl der \(1 \leq i \leq n\) mit \(x_i=x\), heisst <i>(empirische) absolute Häufigkeitsfunktion </i>der Stichprobe<i>.<br></i></p>
+<p>Die reelle Funktion \( f: \mathbb R \to[0,1] \, , \, f(x) = \frac{h(x)}{n} \), heisst <i>(empirische) relative Häufigkeitsfunktion </i>oder <i>(</i><i>empirische) Dichtefunktion </i>der Stichprobe<i>. </i>Häufig wird dafür das Kürzel <i>PMF</i> vom Englischen
+    probability mass function, benutzt.&nbsp;&nbsp; <br></p>
+<p>Visualisiert werden die beiden Funktionen als Stab-oder Säulendiagramm. Nachfolgend Stab-und Säulendiagramme für ein Würfelexperiment zu sehen. <br></p>
+<p><img src="data/Abshkeit.png" alt="Stab-und Säulendiagramm der absoluten Häufigkeitsfunktion eines Würfelexperiments" class="img-responsive atto_image_button_text-bottom" width="350" height="231"></p>
+<p><img src="data/PMF.jpg" alt="PDF eines Würfelexperiments als Stab-und Säulendiagramm" class="img-fluid atto_image_button_text-bottom" width="400" height="300"><br></p>
+
+<p></p>
+<h4>Absolute und relative Summenhäufigkeit für nichtklassierte Stichproben<br></h4>
+<p></p>
+<p>Sei <span lang="DE"> \((x_1,...,x_n)\) eine Stichprobe eines metrischen Merkmals mit der absoluten Häufigkeitsfunktion <span lang="DE"></span>\( h(x) \) und der PMF \( f(x)\). <br></span>
+</p>
+<p><span lang="DE"><span lang="DE">Die reelle Funktion \( H: \mathbb R \to \mathbb R \, , \, H(x) =\) Summe aller&nbsp; \( h(y) \) mit \( y\leq x\) heisst <i>(empirische) absolute Summenhäufigkeit </i>der Stichprobe.</span><br></span>
+</p>
+<p><span lang="DE">Die reelle Funktion \( F: \mathbb R \to [0,1] \, , \, F(x) =\) Summe aller PMF Werte&nbsp; \( f(y) \) mit \( y\leq x\) heisst <i>(empirische) relative Summenhäufigkeit oder (empirische) kumulative Verteilungsfunktion</i> oder kurz <i>C</i><i>MF</i>, vom Englischen cumulative mass function, der Stichprobe.</span><br></p>
+<p>In den Diagrammen sind die absolute Summenhäufigkeit und die CMF aus einem Besipiel zu sehen. <br></p>
+
+<h5><img src="data/AbsSummhk.png" alt="Absolute Summenhäufigkeit" class="img-responsive atto_image_button_text-bottom" width="350" height="233"></h5>
+<p><img src="data/CDF.png" alt="CDF" class="img-responsive atto_image_button_text-bottom" width="350" height="228"><br></p>
+<h5><br></h5>
+<h5>Eigenschaften der PMF und CMF bei nichtklassierten Stichproben<br></h5>
+
+<p>
+</p>
+<p>(1) \( 0\leq f(x) \leq 1\) und \( 0\leq F(x) \leq 1\), für alle \(x \in \mathbb R\). <br></p>
+<p>(2) \( \sum\limits_{x = - \infty }^\infty {f(x)} = 1 \,\)&nbsp;und \(\, F(z) = \sum\limits_{x = - \infty }^z {f(x)} \)</p>
+<p>(3) Die CMF \(F(x) \) ist eine rechtsseitig stetige Treppenfunktion, d.h. bei jedem Treppenabsatz des Graphen gehört der obere Punkt zum und der untere nicht zum Graph).<br></p>
+<p>(4)&nbsp;Monotonie: Aus \(\,x \le y \,\) folgt \(\, F(x) \le F(y) \) <br></p>
+<p>(5) Es gibt reelle Zahlen \( a,b \) mit \(F(a) = 0 \) und \(F(b) = 1 \)<br></p>
+
+<p>(6) Der Anteil aller Stichprobenwerte \(x_i \) mit \( x_i \le b \) ist \( F(b)&nbsp; \,\).<br></p>
+<p>(7) Der Anteil aller Stichprobenwerte \(x_i \) mit \( a &lt; x_i \le b \) ist \( F(b) - F(a) \,\). <br></p>
+<p>(8) Der Anteil aller Stichprobenwerte \(x_i \) mit \( x_i&nbsp; &gt; b \) ist \( 1 - F(b)\, \). <br></p>
+<p></p>
+<h5><br></h5>
+<h4>Klassierte Stichproben<br></h4>
+<p>Gegeben sei eine<span lang="DE"> Klassierung <span lang="DE"> \((K_1,...,K_m)\), d.h. die i-te Klasse <span lang="DE"> <span lang="DE"> \(K_i\) ist ein (nichtleeres) halboffenes Intervall <span lang="DE"> <span lang="DE"> \(K_i =[a_i ,a_{i+1}[ \) mit der Klassenbreite <span lang="DE"> <span lang="DE"> \(b_i= a_{i+1} -a_i\) und den relativen Klässenhäufigkeiten \(f_i\), mit \(f_1+...+f_m=1\).&nbsp; </span></span>
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </span>
+    </span><br></p>
+<p>Die reelle Funktion \( g: \mathbb R \to[0,1] \, , \, g(x) = {f_i} \), falls \( x \in K_i\),&nbsp;sonst \(g(x)=0 \),heisst <i>(empirische) relative Häufigkeitsfunktion </i>der klassierten Stichprobe<i>.&nbsp;</i>&nbsp; <br></p>
+<p>Die reelle Funktion \( f: \mathbb R \to[0,1] \, , \, f(x) = \frac{g(x)}{b_i} \), falls \( x \in K_i\),&nbsp;sonst \(f(x)=0 \), heisst <i>(empirische) </i><i>Dichtefunktion </i>der klassierten Stichprobe<i>. </i>Häufig wird dafür das Kürzel <i>PDF</i> vom Englischen probability density function, benutzt.&nbsp; <br></p>
+<p><span lang="DE">Die reelle Funktion \( F: \mathbb R \to [0,1] \, , \, F(x) =\int_{-\infty}^x f(y) dy \) heisst&nbsp;<i> (empirische) kumulative Verteilungsfunktion</i> oder kurz <i>C</i><i>DF</i>, vom Englischen cumulative distribution function, der klassierten Stichprobe.</span></p>
+<p><span lang="DE">Im Diagramm sind PDF und CDF einer klassierten Stichprobe zu sehen: <br></span></p>
+<p><span lang="DE"></span></p>
+
+<p><img src="data/PDFCDFklassiert.png" alt="PDFCDFklassiert" class="img-responsive atto_image_button_text-bottom" width="350" height="231"><br></p>
+<h5>Eigenschaften der PDF und CDF bei klassierten Stichproben<br></h5>
+
+<p>
+</p>
+<p>(1) \( 0\leq f(x) \leq 1\) und \( 0\leq F(x) \leq 1\), für alle \(x \in \mathbb R\). <br></p>
+<p>(2) \( \int_{- \infty }^\infty {f(x) \, dx } = 1 \,\)&nbsp;und \(\, F(x) = \int_{ - \infty }^x {f(y)\, dy } \) <span lang="DE">und \(\, F'(x) = f(x)\).</span><br></p>
+<p>(3) Der Graph der CDF \(F(x) \) ist ein Streckenzug. <br></p>
+<p>(4) Der Graph von \(f(x)\) ist eine Säulenfunktion. Der Flächeninhalt der i-ten Säule entspricht der relativen Häufigkeit der i-ten Klasse. <br></p>
+<p>(5)&nbsp;Monotonie: Aus \(\,x \le y \,\) folgt \(\, F(x) \le F(y) \) <br></p>
+<p>(6) Es gibt reelle Zahlen \( a,b \) mit \(F(a) = 0 \) und \(F(b) = 1 \). <br></p>
+<p>(7) Der Anteil der Stichprobenwerte \(x\) mit \( x\le b \) ist \( F(b)&nbsp; \,\).<br></p>
+
+<p>(8) Der Anteil aller Stichprobenwerte \(x\) mit \( a &lt; x \le b \) (bzw.&nbsp;\( a \le x \le b \) ) ist \( F(b) - F(a) \,\). <br></p>
+<p>(9) Der Anteil aller Stichprobenwerte \(x\) mit \( x &gt; b \) (bzw. \( x \geq b \)) ist \( 1 - F(b)\, \). <br></p>
+<p>(10) Für \( x \in K_i\) gilt: \( \frac {F(x)-F(a_i)}{x-a_i}= \frac {F(a_{i+1})-F(a_i)}{a_{i+1}-a_i} \) und \( F(x)= \underbrace{F(a_i)}_{=f_1+...+f_{i-1}}+ \frac {{x-a_i}}{a_{i+1}-a_i}\cdot \underbrace{(F(a_{i+1})-F(a_i))}_{=f_i} \)<br></p><br>
+<p></p>
+<p></p>
+
+<h4>Kenngrössen</h4>
+
+<p>Um Verteilungen verschiedener Stichproben vergleichen zu können bedient man sich einiger weniger charakteristischer Merkmale, sogenannter Kenngrössen. Wir betrachten <i>Lagemasse</i> und <i>Streumasse</i>. Lagemasse beschreiben das Zentrum der Verteilung
+    und Streumasse charakterisieren die Abweichung vom Zentrum.<br><br></p>
+
+<h5>Quantile, Perzentile, Quartile und Median<br></h5>
+<p>
+    <!--[if !supportAnnotations]-->
+
+    <script language="JavaScript">
+        <!--
+        function msoCommentShow(anchor_id, com_id) {
+            if (msoBrowserCheck()) {
+                c = document.all(com_id);
+                a = document.all(anchor_id);
+                if (null != c && null == c.length && null != a && null == a.length) {
+                    var cw = c.offsetWidth;
+                    var ch = c.offsetHeight;
+                    var aw = a.offsetWidth;
+                    var ah = a.offsetHeight;
+                    var x = a.offsetLeft;
+                    var y = a.offsetTop;
+                    var el = a;
+                    while (el.tagName != "BODY") {
+                        el = el.offsetParent;
+                        x = x + el.offsetLeft;
+                        y = y + el.offsetTop;
+                    }
+                    var bw = document.body.clientWidth;
+                    var bh = document.body.clientHeight;
+                    var bsl = document.body.scrollLeft;
+                    var bst = document.body.scrollTop;
+                    if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl) {
+                        c.style.left = x + aw - ah / 2 - cw;
+                    } else {
+                        c.style.left = x + ah / 2;
+                    }
+                    if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst) {
+                        c.style.top = y + ah / 2 - ch;
+                    } else {
+                        c.style.top = y + ah / 2;
+                    }
+                    c.style.visibility = "visible";
+                }
+            }
+        }
+
+        function msoCommentHide(com_id) {
+            if (msoBrowserCheck()) {
+                c = document.all(com_id);
+                if (null != c && null == c.length) {
+                    c.style.visibility = "hidden";
+                    c.style.left = -1000;
+                    c.style.top = -1000;
+                }
+            }
+        }
+
+        function msoBrowserCheck() {
+            ms = navigator.appVersion.indexOf("MSIE");
+            vers = navigator.appVersion.substring(ms + 5, ms + 6);
+            ie4 = (ms > 0) && (parseInt(vers) >= 4);
+            return ie4;
+        }
+        if (msoBrowserCheck()) {
+            document.styleSheets.dynCom.addRule(".msocomanchor", "background: infobackground");
+            document.styleSheets.dynCom.addRule(".msocomoff", "display: none");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "visibility: hidden");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "position: absolute");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "top: -1000");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "left: -1000");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "width: 33%");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "background: infobackground");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "color: infotext");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-top: 1pt solid threedlightshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-right: 2pt solid threedshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-bottom: 2pt solid threedshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-left: 1pt solid threedlightshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "padding: 3pt 3pt 3pt 3pt");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "z-index: 100");
+        }
+        // 
+        -->
+    </script>
+    <!--[endif]-->
+
+
+
+
+
+
+
+
+
+</p>
+<p>Eine reelle Zahl
+    <!--[if !msEquation]--><span lang="DE">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </span>
+    <!--[endif]--><span lang="DE"><a id="_anchor_1" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')" href="#_msocom_1" language="JavaScript" name="_msoanchor_1"></a></span><i>R</i> heisst ein (empirisches) <i>q-Quantil</i> (bzw.
+    <!--[if !msEquation]--><span lang="DE">
+
+    </span>
+    <!--[endif]-->ein \(q\cdot 100\) <i><a>Perzentil</a><span lang="DE">
+            <!--[if !supportAnnotations]--><a id="_anchor_2" onmouseover="msoCommentShow('_anchor_2','_com_2')" onmouseout="msoCommentHide('_com_2')" href="#_msocom_2" language="JavaScript" name="_msoanchor_2"></a>
+        </span></i>)
+    der Stichprobe
+    <span lang="DE"></span>, falls der Anteil der Stichprobenwerte \( \leq R \)
+    <!--[if !msEquation]--><span lang="DE">
+
+    </span>
+    <!--[endif]-->mindestens
+    <!--[if !msEquation]--><span lang="DE">
+
+    </span>
+    <!--[endif]-->\(q \) und der Anteil der Stichprobenwerte
+    <!--[if !msEquation]--><span lang="DE">
+
+    </span>
+    <!--[endif]-->\(&nbsp; \geq&nbsp; R \)&nbsp;mindestens
+    <!--[if !msEquation]--><span lang="DE">
+
+    </span>
+    <!--[endif]-->\(1-q\) ist. Das 0.25 Quantil wird <i>1. Quartil</i>, das 0.5 Quantil wird&nbsp; <i>2.</i> <i>Quartil</i> oder <i>Median</i> und das 0.75 Quantil wird <i>3. Quartil</i> genannt.&nbsp; &nbsp;&nbsp;&nbsp;
+</p>
+
+<div>
+    <!--[if !supportAnnotations]-->
+    <!--[endif]-->
+
+    <div>
+        <!--[if !supportAnnotations]-->
+
+        <div id="_com_1" language="JavaScript" onmouseover="msoCommentShow('_anchor_1','_com_1')" onmouseout="msoCommentHide('_com_1')">
+            <!--[endif]-->
+            <!--[if !supportAnnotations]--><a name="_msocom_1"></a><span lang="DE">
+                <!--[endif]-->
+            </span><span lang="DE"></span>
+        </div>
+    </div>
+    <div>
+        <div id="_com_2" language="JavaScript" onmouseover="msoCommentShow('_anchor_2','_com_2')" onmouseout="msoCommentHide('_com_2')">
+
+            <!--[if !supportAnnotations]-->
+        </div>
+
+        <!--[endif]-->
+    </div>
+
+</div>
+<p>Zur eindeutigen Bestimmung der q-Quantile \( R_q\) einer (nichtklassierten) Stichprobe <span lang="DE">\((x_1,...,x_n)\) (mit den sortierten Stichprobenwerten \((x_{[1]},...,x_{[n]})\))&nbsp;</span>für \( 0&lt;q&lt;1\) wird folgende Methode verwendet:
+    <br>
+</p>
+<p>
+    <!--[if !supportAnnotations]-->
+
+    <script language="JavaScript">
+        <!--
+        function msoCommentShow(anchor_id, com_id) {
+            if (msoBrowserCheck()) {
+                c = document.all(com_id);
+                a = document.all(anchor_id);
+                if (null != c && null == c.length && null != a && null == a.length) {
+                    var cw = c.offsetWidth;
+                    var ch = c.offsetHeight;
+                    var aw = a.offsetWidth;
+                    var ah = a.offsetHeight;
+                    var x = a.offsetLeft;
+                    var y = a.offsetTop;
+                    var el = a;
+                    while (el.tagName != "BODY") {
+                        el = el.offsetParent;
+                        x = x + el.offsetLeft;
+                        y = y + el.offsetTop;
+                    }
+                    var bw = document.body.clientWidth;
+                    var bh = document.body.clientHeight;
+                    var bsl = document.body.scrollLeft;
+                    var bst = document.body.scrollTop;
+                    if (x + cw + ah / 2 > bw + bsl && x + aw - ah / 2 - cw >= bsl) {
+                        c.style.left = x + aw - ah / 2 - cw;
+                    } else {
+                        c.style.left = x + ah / 2;
+                    }
+                    if (y + ch + ah / 2 > bh + bst && y + ah / 2 - ch >= bst) {
+                        c.style.top = y + ah / 2 - ch;
+                    } else {
+                        c.style.top = y + ah / 2;
+                    }
+                    c.style.visibility = "visible";
+                }
+            }
+        }
+
+        function msoCommentHide(com_id) {
+            if (msoBrowserCheck()) {
+                c = document.all(com_id);
+                if (null != c && null == c.length) {
+                    c.style.visibility = "hidden";
+                    c.style.left = -1000;
+                    c.style.top = -1000;
+                }
+            }
+        }
+
+        function msoBrowserCheck() {
+            ms = navigator.appVersion.indexOf("MSIE");
+            vers = navigator.appVersion.substring(ms + 5, ms + 6);
+            ie4 = (ms > 0) && (parseInt(vers) >= 4);
+            return ie4;
+        }
+        if (msoBrowserCheck()) {
+            document.styleSheets.dynCom.addRule(".msocomanchor", "background: infobackground");
+            document.styleSheets.dynCom.addRule(".msocomoff", "display: none");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "visibility: hidden");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "position: absolute");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "top: -1000");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "left: -1000");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "width: 33%");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "background: infobackground");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "color: infotext");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-top: 1pt solid threedlightshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-right: 2pt solid threedshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-bottom: 2pt solid threedshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "border-left: 1pt solid threedlightshadow");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "padding: 3pt 3pt 3pt 3pt");
+            document.styleSheets.dynCom.addRule(".msocomtxt", "z-index: 100");
+        }
+        // 
+        -->
+    </script>
+    <!--[endif]-->
+
+
+
+
+
+
+
+
+
+</p>
+<p>Ist&nbsp; \(z= n \cdot q \)
+    <!--[endif]-->
+    <!--[if !msEquation]--><span lang="DE">
+
+    </span>
+    <!--[endif]-->eine ganze Zahl, dann definiert man \( R_q =\frac{1}{2} (x_{[z]} +x_{[z+1]})&nbsp; \), andernfalls nimmt man die nächstgrössere ganze Zahl&nbsp; \( z= \lceil n \cdot q \rceil \)<span lang="DE">
+    </span> und setzt \( R_q =x_{[z]}&nbsp; &nbsp;\).&nbsp;
+</p>
+<p>Bei klassierten Stichproben sind die q-Quantile \( R_q\) eindeutig bestimmt und werden mit Hilfe der CDF \(F(x) \) und der Gleichung \( F(R_q ) = q&nbsp; \) bestimmt: <br></p>
+<p>Liegt \( R_q \) in der i-ten Klasse, d.h.&nbsp; \( R_q \in K_i\) so gilt: \( R_q = a_i +&nbsp; \frac{ q- \overbrace{F(a_i)}^{=f_1+...+f_{i-1}}}{\underbrace{F(a_{i+1}) -F(a_i) }_{=f_i} } \cdot (a_{i+1} -a_i )\). <br></p>
+<p>
+</p>
+<h5>Boxplot <br></h5>
+<p>
+</p>
+<p></p>
+<p><i>Box</i>: Zeigt das erste Quartil \(Q_1\), den Median \(Q_2\) und das dritte Quartil \(Q_3\). <br></p>
+<p><i>Quartilsabstand</i>: \(Q_3-Q_1\), d.h. die Breite der Box.
+    <br>
+</p>
+<p><i>Untere Antenn</i><i>e</i> (unterer Whisker): Minimum derjenigen Stichprobenwerte \( \geq&nbsp; Q_1 - 1.5 (Q_3-Q_1)\).&nbsp; <br></p>
+<p>Obere Antenne (oberer Whisker): Maximum derjenigen Stichprobenwerte \( \leq&nbsp; Q_3 +1.5 (Q_3-Q_1)\).&nbsp; <br></p>
+<p><i>Ausreisser</i> : Stichprobenwerte, welche sich ausserhalb des durch die Box und die Antennen markierten Bereichs befinden. </p><img src="data/Dat_20.png" alt="Boxplot" class="img-responsive atto_image_button_text-bottom" width="601" height="198"><br><br>
+<p><span style="font-size: 1.17188rem;">Stichprobenmittelwert, Varianz und Standardabweichung (nicht klassiert)&nbsp;</span><br></p>
+<p></p>
+<p>Sei <span lang="DE"> \((x_1,...,x_n)\) eine Stichprobe eines metrischen Merkmals. </span><br></p>
+<p></p>
+<p></p>
+
+
+<p>(1) Der <i>Stichprobenmittelwert</i> \( \overline x = \frac {1}{n} \cdot \sum_{i=1}^n {x_i } \) ist ein Lagemass der Verteilung der Stichprobe. <br></p>
+
+<p>(2) Die (Stichproben-)<i>Varianz</i> \( \tilde{s}^2=\frac {1}{n} \sum_{i=1}^n {(x_i-\overline x)^2 } \) und die <i>korrigierte</i> (Stichproben-)<i>Varianz</i> \( {s}^2=\frac {1}{n-1} \sum_{i=1}^n {(x_i-\overline x)^2 } \) sind Streumasse der Verteilung
+    der Stichprobe.</p>
+
+
+
+<p>(3) Die (Stichproben-)<i>Standardabweichung</i> \( \tilde{s}=\sqrt{\tilde{s}^2 } \) und die <i>korrigierte</i> (Stichproben-)<i>Standardabweichung</i> \( s=\sqrt{{s}^2 }\) sind Streumasse der Verteilung der Stichprobe.<br></p><p><br></p>
+<p></p>
+<h5>Stichprobenmittelwert, Varianz und Standardabweichung (klassiert) </h5>Gegeben sei eine<span lang="DE"> Klassierung <span lang="DE"> \((K_1,...,K_m)\), d.h. die i-te Klasse <span lang="DE"> <span lang="DE"> \(K_i\) ist ein (nichtleeres) halboffenes Intervall <span lang="DE"> <span lang="DE"> \(K_i =[a_i ,a_{i+1}[ \) mit den Klassenmitten <span lang="DE"> <span lang="DE"> \(M_i= \frac{a_{i+1} +a_i}{2}\) und den relativen Klässenhäufigkeiten \(f_i\), mit \(f_1+...+f_m=1\).&nbsp; Die Stichprobengrösse sei \(n\).&nbsp;</span></span>
+</span>
+</span>
+</span>
+</span>
+</span>
+</span><br>
+<p></p>
+<p></p>
+<p>(1) Der <i>Stichprobenmittelwert</i> \( \overline x =&nbsp; \sum_{i=1}^m {M_i \cdot f_i } \) ist ein Lagemass der klassierten Stichprobe. <br></p>
+
+<p>(2) Die (Stichproben-)<i>Varianz</i> \( \tilde{s}^2= \sum_{i=1}^n {(M_i-\overline x)^2 \cdot f_i } \) und die <i>korrigierte</i> (Stichproben-)<i>Varianz</i> \( {s}^2=\frac {n}{n-1} \cdot \tilde{s}^2&nbsp; \) sind Streumasse der Verteilung der klassierten Stichprobe.</p>
+
+
+
+<p>(3) Die (Stichproben-)<i>Standardabweichung</i> \( \tilde{s}=\sqrt{\tilde{s}^2 } \) und die <i>korrigierte</i> (Stichproben-)<i>Standardabweichung</i> \( s=\sqrt{{s}^2 }\) sind Streumasse der klassierten Stichprobe.</p><br>
+<p></p>
+<p></p>
+<h5>Eigenschaften der Kenngrössen <br></h5>
+<p><span lang="DE">Es seien&nbsp; \(x=(x_1,...,x_n)\) und <span lang="DE"> \(y=(y_1,...,y_n)\) zwei Stichproben eines metrischen Merkmals. Wir verwenden die folgenden Abkürzungen: <span lang="DE"> \(x+y=(x_1+y_1,...,x_n+y_n)\) und&nbsp;\(  \alpha x= (\alpha\cdot x_1,...,\alpha\cdot x_n) \) <span lang="DE"> und \(x^2=(x_1^2,...,x_n^2)\). </span></span>
+    </span>
+    </span><br></p>
+<p>(1) <b>Linearität</b>: \( \overline{x+y} = \overline{x} + \overline{y}\) und \(\overline{\alpha x} = \alpha\cdot \overline{x}\),&nbsp; mit \(\alpha&nbsp; \in \mathbb R \).</p>
+
+<p>(2) <b>Verschiebungssatz für die Varianz</b>: \( \tilde{s}^2 = \overline{x^2} - \overline{x}^2 \).</p>
+
+<p>(3) <b>Zusammenhang zwischen korrgierter und nichtkorrigierter Varianz: </b>\( s^2 = \frac{n}{n-1} \tilde{s}^2\).</p><br>
+</body>
+</html>

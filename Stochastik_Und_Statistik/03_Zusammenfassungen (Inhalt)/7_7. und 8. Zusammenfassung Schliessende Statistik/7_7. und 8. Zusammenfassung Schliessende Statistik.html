@@ -1,0 +1,458 @@
+<!doctype html>
+<html>
+<head>
+    <title>7_7. und 8. Zusammenfassung: Schliessende Statistik</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<h4>Zufallsstichproben</h4>
+<h5>Definition</h5>
+
+<p>Eine <i>einfache Zufallsstichprobe</i> vom Umfang \( n \) ist eine Folge von stochastisch unabhängigen und identisch verteilten Zufallsvariablen \( X_1, \ldots , X_n \), den sogenannten
+    <i>Stichprobenvariablen</i>. Dabei bezeichnet \( X_i \) die Merkmalsausprägung des \( i \)-ten Elements in der Stichprobe. Die beobachteten Merkmalswerte \( x_1, \ldots ,x_n \) der \( n \) Elemente sind Realisierungen der Zufallsvariablen \( X_1,
+    \ldots, X_n \) und heissen <i>Stichprobenwerte</i>.<br>
+</p>
+<h4>Parameterschätzungen</h4>
+<h5>Definition</h5>
+<p>Allgemein ist eine <i>Stichprobenfunktion</i> eine Funktion, die von den Stichprobenvariablen \( X_1, \ldots, X_n \) abhängt. Eine <i>Schätzfunktion</i> \( \Theta = g(X_1,\ldots, X_n) \) ist eine spezielle Stichprobenfunktion, nämlich eine „Formel“, mit
+    der man den Wert eines Parameters \( \theta \) der Grundgesamtheit schätzen kann: Setzt man eine konkrete Stichprobe \( x_1, \ldots x_n \) ein, so erhält man einen <i>Schätzwert</i> \( \hat \theta = g(x_1, \ldots , x_n) \) für den Parameter \( \theta
+    \).
+</p>
+
+<h5>Definition</h5>
+<p>Eine Schätzfunktion \( \Theta \) eines Parameters \( \theta \) heisst <i>erwartungstreu</i>, wenn gilt: </p>
+\[ E(\Theta)=\theta \]
+
+<p>Gegeben sind zwei erwartungstreue Schätzfunktionen \( \Theta_1 \) und \( \Theta_2 \) desselben Parameters \( \theta \). Man nennt \( \Theta_1 \) <i>effizienter</i> als \( \Theta_2 \), falls gilt:</p>
+\[ V(\Theta_1) &lt; V(\Theta_2) \]
+
+<p>Eine Schätzfunktion \( \Theta \) eines Parameters \( \theta \) heisst <i>konsistent</i>, wenn gilt:</p>
+\[ E( \Theta) \to \theta \text{ und } V( \Theta) \to 0 \text{ für } n \to \infty \]<br>
+
+<h5>Schätzfunktionen für die wichtigsten statistischen Parameter</h5>
+
+<table width="630" cellspacing="0" cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td>
+                <b><span lang="DE">&nbsp;</span></b>
+            </td>
+            <td align="center">
+                <b><span lang="DE">Schätzfunktion</span></b>
+            </td>
+            <td align="center">
+                <b><span lang="DE">Schätzwert</span></b>
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle">
+                <b>Erwartungswert</b><br>Spezialfall: Anteilswert einer Bernoulli-Verteilung
+            </td>
+            <td valign="middle" align="center">
+                \( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} \)
+            </td>
+            <td valign="middle" align="center">\( \hat \mu = \bar x = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{x_i}} \)<br>\( \hat p = \bar x = \frac{1}{n}\sum\limits_{i = 1}^n {{x_i}}=\frac{\text{Anzahl 1en}}{n} \)</td>
+
+        </tr>
+        <tr>
+            <td valign="middle">
+                <b><span lang="DE">Varianz<b><span lang="DE"></span></b></span>
+                </b>
+            </td>
+            <td valign="middle" align="center">\( {S^2} = \frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({X_i} - \bar X)}^2}} \)
+            </td>
+            <td valign="middle" align="center">\( {\hat \sigma ^2} = {s^2} = \frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({x_i} - \bar x)}^2}} \)<br><span lang="DE"></span>
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle"><b><span lang="DE">Standardabweichung</span></b></td>
+            <td valign="middle" align="center">
+                <span lang="DE">\( S = \sqrt {{S^2}} \)</span>
+            </td>
+            <td valign="middle" align="center">\( {\hat \sigma} = {s} = \sqrt{\frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({x_i} - \bar x)}^2}}} \)</td>
+        </tr>
+    </tbody>
+</table><br>
+
+<table cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td><b>Satz</b><br>(1) \( \bar X \) und \( {S^2} \) sind erwartungstreu und konsistent. <br> (2) \( S \) ist konsistent, aber nicht erwartungstreu.<br>
+            </td>
+        </tr>
+    </tbody>
+</table><br>
+
+
+
+<h4>Vertrauensintervalle<br></h4>
+<p>Man bestimmt zwei Stichprobenfunktionen \(\Theta_u\) und \(\Theta_o\), die den wahren Wert des Parameters \(\theta\) mit der vorgegebenen Wahrscheinlichkeit \(\gamma\) einschliessen:</p>
+\[P(\Theta_u\le\theta\le\Theta_o)=\gamma\]
+<p>Setzt man nun die Werte \(x_1,x_2,...,x_n\) einer konkreten Stichprobe in \(\Theta_u\) und \(\Theta_o\) ein, so erhält man die Zahlen \(c_u\) und \(c_o\). Das Intervall \([c_u;c_o]\) ist dann ein
+    <i>Vertrauensintervall</i> für den unbekannten Parameter \(\theta\).
+</p>
+<p>Die Wahrscheinlichkeit \(\gamma\) heisst <i>Vertrauensniveau</i> oder <i>statistische Sicherheit</i> (übliche Werte: 95% oder 99%); \(\alpha=1-\gamma\)&nbsp; wird <i>Irrtumswahrscheinlichkeit</i> genannt.</p>
+<p>Wenn man hundertmal eine Stichprobe nehmen und zu jeder Stichprobe das Vertrauensintervall berechnen würde, so würden etwa \(100\cdot\gamma\) dieser Intervalle (bei \(\gamma=95\%\) also etwa \(95\)) den wahren Wert des Parameters einschliessen:</p>
+<p><img src="data/Vertrauensint2.png" alt="" role="presentation" class="img-responsive atto_image_button_middle" width="563" height="563"><br></p>
+
+<p><a href="https://moodle.cast.zhaw.ch/browseandembed/index/media/entryid/0_9mqnnq9a/showDescription/false/showTitle/false/showTags/false/showDuration/false/showOwner/false/showUploadDate/false/playerSize/640x390/playerSkin/23448450/">tinymce-kalturamedia-embed||10.1 (08:05)||640||390</a><br></p>
+
+<h5>Übersicht über verschiedene Vertrauensintervalle zum Niveau \( \gamma \)</h5>
+
+<table cellspacing="0" cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+            <td width="400" align="center"><b>(1) Verteilung der Grundgesamtheit</b>
+            </td>
+            <td align="center"><b>(2) zu schätzender Parameter</b>
+            </td>
+            <td align="center"><b>(3) Schätzfunktionen</b>
+            </td>
+            <td align="center"><b>(4) zugehörige standardisierte Zufallsvariable</b>
+            </td>
+            <td align="center"><b>(5) Verteilung und benötigte Quantile</b>
+            </td>
+            <td align="center"><b>(6) Zufallsvariablen<br>für Intervallgrenzen</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">1
+            </td>
+            <td>
+                Normalverteilung (Varianz \( \sigma^2 \) bekannt)
+            </td>
+            <td align="center">\(\mu\)
+            </td>
+            <td align="center">\( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} \)
+            </td>
+            <td align="center">\( U = \frac{{\bar X - \mu }}{{\sigma /\sqrt n }} \)
+            </td>
+            <td><b>Standardnormalverteilung</b><br> (Tabelle&nbsp;2)<br> \(c=u_p\) mit \( p = \frac{{1 + \gamma }}{2} \)
+            </td>
+            <td align="center">
+                \( {\Theta _u} = \bar X - c \cdot \frac{\sigma }{{\sqrt n }} \)<br> \( {\Theta _o} = \bar X +c \cdot \frac{\sigma }{{\sqrt n }} \)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">2
+            </td>
+            <td>
+                Normalverteilung (Varianz \( \sigma^2 \) unbekannt und \( n\leq 30 \); sonst Fall 1 mit \(s \) als Schätzwert für \(\sigma\) )
+            </td>
+            <td align="center">\(\mu\)
+            </td>
+            <td align="center">
+                \( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} \)<br> \( {S^2} = \frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({X_i} - \bar X)}^2}} \)
+            </td>
+            <td align="center">
+                \( T = \frac{{\bar X - \mu }}{{S/\sqrt n }} \)
+            </td>
+            <td><b>\(t\)-Verteilung</b> (Tabelle&nbsp;4)<br> mit \( f = n - 1 \)<br> \( c = {t_{(p;f)}} \) mit \( p = \frac{{1 + \gamma }}{2} \)
+            </td>
+            <td align="center">
+                \( {\Theta _u} = \bar X - c \cdot S/\sqrt{n} \)<br> \( {\Theta _o} = \bar X + c \cdot S/\sqrt{n} \)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">3
+            </td>
+            <td>
+                Normalverteilung
+            </td>
+            <td align="center">
+                \(\sigma^2\)
+            </td>
+            <td align="center">\( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} \)<br> \( {S^2} = \frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({X_i} - \bar X)}^2}} \)
+            </td>
+            <td align="center">
+                \( Z = (n - 1)\frac{{{S^2}}}{{{\sigma ^2}}} \)
+            </td>
+            <td>
+                <b>Chi-Quadrat-Verteilung</b> (Tabelle&nbsp;3) mit \( f = n - 1 \)
+                <br> \( {c_1} = {z_{({p_1};f)}} \) mit \( {p_1} = \frac{{1 - \gamma }}{2} \)
+                <br> \( {c_2} = {z_{({p_2};f)}} \) mit \( {p_2} = \frac{{1 + \gamma }}{2} \)
+            </td>
+            <td align="center">
+                \( {\Theta _u} = \frac{{(n - 1) \cdot {S^2}}}{{{c_2}}} \)<br> \( {\Theta _o} = \frac{{(n - 1) \cdot {S^2}}}{{{c_1}}} \)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">4
+            </td>
+            <td>
+                Bernoulli-Verteilung<br>mit \( n\hat p(1 - \hat p) &gt; 9 \)
+            </td>
+            <td align="center">\( p\)
+            </td>
+            <td align="center">\( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}}\)<br> \( X_i \) 0/1-wertig mit<br> \( P({X_i} = 1) = p \)
+            </td>
+            <td align="center">
+                \( U = \frac{{\overline X - p}}{{\sqrt {p(1 - p)/n} }} \)
+            </td>
+            <td>
+                <b>Standardnormalverteilung</b> näherungsweise (Tabelle&nbsp;2)<br> \( c = {u_q} \) mit \( q = \frac{{1 + \gamma }}{2} \)
+            </td>
+            <td align="center">
+                \( {\Theta _u} = \bar X - c \cdot \sqrt {\frac{{\bar X \cdot (1 - \bar X)}}{n}} \)
+                <br> \( {\Theta _o} = \bar X + c \cdot \sqrt {\frac{{\bar X \cdot (1 - \bar X)}}{n}} \)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">5
+            </td>
+            <td>
+                beliebig mit \(n&gt;30\)</td>
+            <td align="center">\(\mu\ , \sigma^2\)
+            </td>
+            <td colspan="4" align="center">wie im Fall 1 (gegebenenfalls mit \(s\) als Schätzwert für \(\sigma\)) bzw. wie im Fall 3
+            </td>
+        </tr>
+    </tbody>
+</table><br>
+
+<h4>Hypothesentests<br></h4>
+<h5>Vorgehen bei einem Parametertest</h5>
+<p></p>
+<table cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td>
+                <b>1. Nullhypothese \( H_0 \) aufstellen</b> <br> Um welchen Parameter geht es? Welchen Wert hat er angeblich? Oder werden zwei Parameter verglichen? <br><br>
+                <b>2. Alternativhypothese \( H_A \) aufstellen</b><br> Kommt es darauf an, in welche Richtung die Abweichung geht? Ist dies der Fall, so beschreibt \( H_A \) nur die relevante Alternative.
+                <br><br>
+                <b>3. Die richtige Zeile in der Tabelle "Übersicht über die wichtigsten Parametertests" finden</b><br> Welcher Verteilung folgt die Grundgesamtheit? Um welche Nullhypothese geht es? Welcher Fall liegt vor? <br><br>
+                <b>4. Kritische Grenzen bestimmen</b> <br> Dabei müssen wir Folgendes berücksichtigen:
+                <br> - Verteilung der Testvariablen gemäss Tabelle "Übersicht über die wichtigsten Parametertests" (letzte Kolonne)<br> - Signifikanzniveau \( \alpha \)<br> - Ist \( H_A \) einseitig oder zweiseitig? Wenn einseitig, auf welcher Seite befindet
+                sich der kritische Bereich?<br><br>
+                <b>5. Testwert berechnen</b> <br> gemäss Tabelle "Übersicht über die wichtigsten Parametertests" (vorletzte Kolonne).
+                <br><br>
+                <b>6. Testentscheidung fällen</b><br> Liegt der Testwert im Annahmebereich oder im kritischen Bereich?
+            </td>
+        </tr>
+    </tbody>
+</table><br>
+
+<h5>Übersicht über die wichtigsten Parametertests<br></h5>
+
+<table cellspacing="0" cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td align="center">&nbsp;
+            </td>
+            <td align="center"><b>Verteilung der Grundgesamtheit</b>
+            </td>
+            <td align="center"><b>Nullhypothese</b>
+            </td>
+            <td align="center"><b>Fall</b>
+            </td>
+            <td align="center"><b>Schätzfunktion</b>
+            </td>
+            <td align="center"><b>Testvariable (standardisiert)</b>
+            </td>
+            <td align="center"><b>Verteilung der Testvariablen unter \(H_0\)</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">1
+            </td>
+            <td align="center"> Normalverteilung
+            </td>
+            <td align="center">
+                \( \mu = {\mu _0} \)
+            </td>
+            <td align="center">Varianz \( \sigma^2 \) bekannt <br>oder \(n&gt;30\)*
+            </td>
+            <td align="center">
+                \( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} \)
+            </td>
+            <td align="center">
+                \( U = \frac{{\bar X - {\mu _0}}}{{\sigma /\sqrt n }} \)
+            </td>
+            <td align="center">Standardnormal-verteilung (Tabelle&nbsp;2)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">2
+            </td>
+            <td align="center"> Normalverteilung
+            </td>
+            <td align="center">\( \mu = {\mu _0} \)
+            </td>
+            <td align="center">Varianz \( \sigma^2 \) unbekannt
+            </td>
+            <td align="center">
+                \( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} \)
+            </td>
+            <td align="center">
+                \( T = \frac{{\bar X - {\mu _0}}}{{S/\sqrt n }} \)
+            </td>
+            <td align="center"><i>\(t\)-</i>Verteilung mit \(f=n-1\) (Tabelle&nbsp;4)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">3
+            </td>
+            <td align="center">2 Normal-verteilungen
+            </td>
+            <td align="center">
+                \( {\mu _1} - {\mu _2} = 0 \)
+            </td>
+            <td align="center">Abhängige Stichproben; Varianzen \( \sigma_1^2 \) und \( \sigma_2^2 \) bekannt oder \(n&gt;30\)*</td>
+            <td align="center">
+                \( \bar Z = \bar X - \bar Y \)
+            </td>
+            <td align="center">
+                \( U = \frac{{\bar Z}}{{\sigma}} \) mit \( {\sigma ^2} = \frac{{\sigma _1^2 + \sigma _2^2}}{n} \)
+            </td>
+            <td align="center">Standardnormal-verteilung (Tabelle&nbsp;2)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">4
+            </td>
+            <td align="center">2 Normal-verteilungen
+            </td>
+            <td align="center">
+                \( {\mu _1} - {\mu _2} = 0 \)
+            </td>
+            <td align="center">Abhängige Stichproben; Varianzen \( \sigma_1^2 \) und \( \sigma_2^2 \) unbekannt
+            </td>
+            <td align="center">
+                \( \bar Z = \bar X - \bar Y \)<br> \( {S^2} = \frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({X_i} - {Y_i} - \bar Z)}^2}} \)
+            </td>
+            <td align="center">
+                \( T = \frac{{\bar Z}}{{S/\sqrt n }} \)
+            </td>
+            <td align="center"><i>\(t\)-</i>Verteilung mit \(f=n-1\) (Tabelle&nbsp;4)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">5
+                <p></p>
+            </td>
+            <td align="center">2 Normal-verteilungen
+            </td>
+            <td align="center">
+                \( {\mu _1} - {\mu _2} = 0 \)
+            </td>
+            <td align="center">Unabhängige Stichproben; Varianzen \( \sigma_1^2 \) und \( \sigma_2^2 \) bekannt oder \(n_1,n_2&gt;30\)*</td>
+            <td align="center">
+                \( \bar Z = \bar X - \bar Y \)
+            </td>
+            <td align="center">
+                \( U = \frac{Z}{\sigma } \) mit \( {\sigma ^2} = \frac{{\sigma _1^2}}{{{n_1}}} + \frac{{\sigma _2^2}}{{{n_2}}} \)
+            </td>
+            <td align="center">Standardnormal-verteilung (Tabelle&nbsp;2)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">6
+            </td>
+            <td align="center">2 Normal-verteilungen
+            </td>
+            <td align="center">\( {\mu _1} - {\mu _2} = 0 \)
+            </td>
+            <td align="center">Unabhängige Stichproben; Varianzen \( \sigma_1^2 \) und \( \sigma_2^2 \) unbekannt, aber gleich
+            </td>
+            <td colspan="2" align="center">
+                \( T = \sqrt {\frac{{{n_1}{n_2}({n_1} + {n_2} - 2)}}{{{n_1} + {n_2}}} \cdot } \frac{{\bar X - \bar Y}}{{\sqrt {({n_1} - 1)S_1^2 + ({n_2} - 1)S_2^2} }} \)
+            </td>
+            <td align="center"><i>t</i>-Verteilung mit \(f=n_1+n_2-2\) (Tabelle&nbsp;4)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">7
+            </td>
+            <td align="center">Normalverteilung
+            </td>
+            <td align="center">
+                \( {\sigma ^2} = \sigma _0^2 \)
+            </td>
+            <td>&nbsp;
+            </td>
+            <td align="center">
+                \( {S^2} = \frac{1}{{n - 1}} \cdot \sum\limits_{i = 1}^n {{{({X_i} - \bar X)}^2}} \)
+            </td>
+            <td align="center">
+                \( Z = (n - 1)\frac{{{S^2}}}{{\sigma _0^2}} \)
+            </td>
+            <td align="center">Chi-Quadrat-Vert. mit \(f=n–1\) (Tabelle&nbsp;3)
+            </td>
+        </tr>
+        <tr>
+            <td align="center">8
+            </td>
+            <td align="center">Bernoulli-Verteilung
+            </td>
+            <td align="center">\( p = {p_0} \)
+            </td>
+            <td>&nbsp;
+            </td>
+            <td align="center">
+                \( \bar X = \frac{1}{n} \cdot \sum\limits_{i = 1}^n {{X_i}} =\frac{\text{Anzahl 1en}}{n}\)
+            </td>
+            <td align="center">
+                \( U = \frac{{\bar X - {p_0}}}{{\sqrt {{p_0}(1 - {p_0})/n} }} \)
+            </td>
+            <td align="center">näherungsweise Standardnormal-verteilung (Tabelle&nbsp;2)
+            </td>
+        </tr>
+    </tbody>
+</table><br>
+
+<p>*)&nbsp; Falls gilt: \(n&gt;30\) bzw. \(n_1&gt;30\) und \(n_2&gt;30\), so kann der entsprechende Fall für bekannte Varianzen angewendet werden; dabei dient \(s\) als Schätzwert für \(\sigma\) bzw. \(s_i\) als Schätzwert für \(\sigma_i\).</p>
+<h5>Mögliche Fehler bei einem Hypothesentest</h5>
+<p>Bei einem Hypothesentest können zwei Arten von Fehlern auftreten: <br></p>
+<p></p>
+<table cellspacing="0" cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td width="200">\(\quad\quad\;\; \smallsetminus \quad\)<span class="" style="color: rgb(1, 100, 167);">Testentscheidung<br></span>
+                <span class="" style="color: rgb(34, 139, 34);">Realität</span>&nbsp;\(\quad\smallsetminus\)
+            </td>
+            <td width="200" valign="top" align="center">
+                <span class="" style="color: rgb(1, 100, 167);">\( H_0 \) wird angenommen</span>
+            </td>
+            <td width="200" valign="top" align="center">
+                <span class="" style="color: rgb(1, 100, 167);">\( H_0 \) wird abgelehnt</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="" style="color: rgb(34, 139, 34);">\( H_0 \) ist wahr</span>
+            </td>
+            <td>&nbsp;</td>
+            <td align="center"><span class="" style="color: rgb(239, 69, 64);">Fehler 1. Art</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span class="" style="color: rgb(34, 139, 34);">\( H_0 \) ist falsch</span>
+            </td>
+            <td align="center"><span class="" style="color: rgb(239, 69, 64);">Fehler 2. Art</span>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table><br>
+<h5>Der p-Wert</h5>
+<p>Der p-Wert ist die Wahrscheinlichkeit, dass die Testvariable \(T\) einen Wert annimmt, der mindestens so extrem ist wie der Testwert \(\hat t\), der aufgrund der Stichprobe berechnet wurde, wenn \(H_0\) wahr ist.</p>
+<table width="690" cellspacing="0" cellpadding="10" border="1">
+    <tbody>
+        <tr>
+            <td width="345"><img src="data/Kap10-pWert-2seitig.png?time=1590778269789" alt="" role="presentation" class="img-responsive atto_image_button_middle" width="345" height="123"></td>
+            <td width="345"><img src="data/Kap10-pWert-1seitig.png" alt="" role="presentation" class="img-responsive atto_image_button_middle" width="345" height="123"></td>
+        </tr>
+        <tr>
+            <td>Die eingefärbte Fläche entspricht dem p-Wert bei einer 2-seitigen Alternativhypothese \(H_A:\theta\ne\theta_0\).</td>
+            <td>Die eingefärbte Fläche entspricht dem p-Wert bei einer 1-seitigen Alternativhypothese \(H_A:\theta&gt;\theta_0\).</td>
+        </tr>
+    </tbody>
+</table>
+<p></p>
+</body>
+</html>

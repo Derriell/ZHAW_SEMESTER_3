@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <title>2_2. Zusammenfassung: Deskriptive Statistik- Mehrere Merkmale</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<h4>Kovarianz und Korrelation<br></h4>
+
+
+<p></p>
+<p><span lang="DE">Generell setzen wir eine bivariate (d.h. 2-merkmalige) Stichprobe \((x_1, y_1),...,(x_n,y_n)\) der Länge \(n\) von metrischen Merkmalen voraus. Für die Berechnung der bivariaten Kennwerte legen wir die folgenden Abkürzungen für arithmetische Mittel fest: </span></p>
+
+
+
+
+<p><span lang="DE">Arithmetische Mittel der x-und y-Merkmale: \( \overline x = \frac{1}{n} \sum_{i=1}^n x_i \), und <span lang="DE">\( \overline y = \frac{1}{n} \sum_{i=1}^n y_i \)</span>. <br></span></p>
+<p><span lang="DE"><span lang="DE">Arithmetische Mittel der quadrierten x-und y-Merkmale: </span>\( \overline {x^2} = \frac{1}{n} \sum_{i=1}^n {x_i}^2 \), und \( \overline {y^2} = \frac{1}{n} \sum_{i=1}^n {y_i}^2 \)<span lang="DE"><span lang="DE"></span>. </span><br></span></p>
+<p><span lang="DE"><span lang="DE">Arithmetische Mittel des Produktes der x-und y-Merkmale: <span lang="DE">\( \overline {xy} = \frac{1}{n} \sum_{i=1}^n x_i y_i \). <br></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE">Für Varianz und Standardabweichung benutzen wir die bekannten Abkürzungen und Zusammenhänge: <br></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"> \( \tilde{s}_x^2=\overline {x^2} - {\overline x}^2 \),</span> <span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"></span></span></span></span>\( \tilde{s}_x=\sqrt{\tilde{s}_x^2} \).&nbsp; <br></span></span></span></p>
+<h5>Definition <br></h5>
+<p>(Empirische) <i>Kovarianz</i>: \( \tilde{s}_{xy} = \frac{1}{n} \sum_{i=1}^n (x_i-\overline x) \cdot (y_i-\overline y) \).&nbsp;<span lang="DE"><span lang="DE"><span lang="DE"> <br></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE">(Empirischer) <i>Korrelationskoeffizient nach Pearson</i>: <span lang="DE"><span lang="DE"> <span lang="DE">\( r_{xy} = \frac{\tilde{s}_{xy} }{ \tilde{s}_x \cdot \tilde{s}_y } \), für \( \tilde{s}_x \neq 0 \) und \( \tilde{s}_y \neq 0 \). </span></span></span></span></span></span><br></p>
+<p></p>
+<h5>Wichtige Eigenschaften der Kovarianz und Korrelation<br></h5>
+<p>(1)&nbsp;<span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"></span></span></span></span></span></span>\( \tilde{s}_{xy} \)&nbsp; und \(r_{xy} \) messen den linearen Zusammenhang der beiden Merkmale, d.h. wie nahe die Datenpunkte einer Geraden mit der Gleichung \(y = m\cdot x + q \) mit \(m \neq 0\) kommen. <br></p>
+<p>(2) \(-1 \leq r_{xy} \leq 1 \)</p>
+<p>(3) \(r_{xy} =0 \) bzw. \( \tilde{s}_{xy} =0 \)&nbsp; oder nahe bei Null, bedeutet, dass die Punkte <span lang="DE">\((x_1, y_1),...,(x_n,y_n)\) </span>gleichmässig <span lang="DE">um den Schwerpunkt <span lang="DE">\((\overline x , \overline y)\) verteilt sind. <br></span></span></p>
+<p><span lang="DE"><span lang="DE">(4) \(r_{xy} =1 \) bedeutet, dass ein positiver linearer Zusammenhang zwischen den Merkmalen besteht. <br></span></span></p>
+<p><span lang="DE"><span lang="DE">(5) <span lang="DE"><span lang="DE"> \(r_{xy} =-1 \) bedeutet, dass ein negativer linearer Zusammenhang zwischen den Merkmalen besteht. <br></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(6) \( 𝑟_{𝑥𝑦} &gt; 0\): Die Punkte liegen tendenziell um eine Gerade mit positiver Steigung (gleichsinniger linearer Zusammenhang, positive Korrelation). <br></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(7) <span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">\(
+                                    𝑟_{𝑥𝑦} &lt; 0\): Die Punkte liegen tendenziell um eine Gerade mit
+                                    negativer Steigung (gleichsinniger linearer Zusammenhang, negative
+                                    Korrelation). </span></span></span></span><br></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(8) \(r_{xy} \) ist nicht robust, d.h. bereits ein Ausreisser in den Daten kann den Wert stark beeinflussen. <br></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(9) <span lang="DE"><span lang="DE"> <span lang="DE">\( \tilde{s}_{xy}&nbsp; =\overline {xy} - \overline{x } \cdot \overline {y} \). </span></span></span></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(10) <span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"> <span lang="DE">\( r_{xy} = \frac{\overline {xy} - \overline{x } \cdot \overline {y} }{ \sqrt{\overline {x^2} - {\overline x}^2}\cdot \sqrt{\overline {y^2} - {\overline y}^2} } \). </span></span></span></span></span></span></span></span></span></span></span></span></span><br></p>
+<p></p>
+
+<h4>Rangkorrelation <br></h4>
+
+
+<p>Sei <span lang="DE"> \((x_1,...,x_n)\) eine Stichprobe eines metrischen Merkmals. <br></span></p>
+<p><span lang="DE">Der <i>Rang</i> <span lang="DE"><span lang="DE"> \(rg(x_i)\) </span></span>des Stichprobenwertes <span lang="DE"> \(x_i\) ist definiert als der Index von <span lang="DE"><span lang="DE">\(x_i\)</span></span> in der nach der Grösse geordneten Stichprobe, wenn dieser Wert nur einmal auftritt. Tritt der Stichprobenwert <span lang="DE"><span lang="DE"> <span lang="DE"><span lang="DE">\(x_i\)</span></span></span></span> mehrmals auf (man sagt dann, dass <i>Bindungen</i> in den Daten auftreten), so <span lang="DE"> <span lang="DE"><span lang="DE"> ist \(rg(x_i)\) </span></span></span>das arithmetische Mittel der Indizes aller Stichprobenwerte <span lang="DE"><span lang="DE"><span lang="DE">\(x_i\) in der geordneten Stichprobe.&nbsp; Für die Stichprobe \( (6,3,4,3,3,2,6)\) erhält man die nach der Grösse geordnete Stichprobe <span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">\( (2,3,3,3,4,6,6)\)</span></span></span></span></span> und die Ränge <span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"> \( rg(2)=1\), \(rg(3) =\frac{1}{3} (2+3+4)= 3\), \(rg(4)=5\), \(rg(6)=\frac{1}{2} (6+7)= 6.5 \).</span></span></span></span></span></span></span></span></span></span></p>
+<h5>Definition </h5>
+<p><span lang="DE">Wir setzen eine bivariate Stichprobe \((x_1,
+        y_1),...,(x_n,y_n)\) der Länge \(n\) von metrischen Merkmalen voraus. Dazu bilden wir die zugehörigen Rangfolgen: <br></span></p>
+<p><span lang="DE"><span lang="DE">Die Folge der Rangpaare: \( rg(xy)=((rg(x_1),
+            rg(y_1)),...,(rg(x_n),rg(y_n))\)</span> <br></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE">Die Folge der Ränge der x-Werte: \( rg(x)=(rg(x_1),...,rg(x_n))\)</span></span> <br></span></p>
+<p><span lang="DE">Die Folge der Ränge der y-Werte: <span lang="DE"><span lang="DE"><span lang="DE"> \( rg(y)=(rg(y_1),...,rg(y_n)\)</span></span></span>. <br></span></p>
+<p><span lang="DE"></span>Der (<span lang="DE"><span lang="DE"><span lang="DE">empirische) <i>Korrelationskoeffizient nach Spearman (Rangkorrelationskoeffizient)</i> ist definiert als der Pearson Korrelationskoeffizient der Rangfolgen:&nbsp; <span lang="DE"><span lang="DE"> <span lang="DE">\( r_{Sp} = r_{rg(xy)} \). </span></span></span></span></span></span><br></p>
+<h5>Wichtige Eigenschaften der Rangkorrelation</h5>
+<p>(1) \( \tilde{s}_{rg(xy)} \) und \(r_{Sp} \) messen den monotonen Zusammenhang der beiden Merkmale,&nbsp;d.h. wie nahe die Datenpunkte einer streng monotonen Funktion kommen. In anderen Worten, es wird gemessen wie gut die Rangordnungen in den \(x\) und \(y\) Werten sich entsprechen. <br></p>
+<p>(2) \(-1 \leq r_{Sp} \leq 1 \) <br></p>
+<p>(3) \(r_{Sp} =0 \) bzw. \( \tilde{s}_{rg(xy)} =0 \) bedeutet, dass die Punkte <span lang="DE">\((x_1, y_1),...,(x_n,y_n)\) </span>gleichmässig <span lang="DE">um den Schwerpunkt der Ränge\( (\overline {rg(x)} , \overline {rg(y)})=(\frac{n+1}{2},\frac{n+1}{2}) \)<span lang="DE">verteilt sind. <br></span></span></p>
+<p><span lang="DE"><span lang="DE">(4) \(r_{Sp} =1 \) bedeutet, dass ein streng monoton wachsender funktionaler Zusammenhang zwischen den Merkmalen besteht. <br></span></span></p>
+<p><span lang="DE"><span lang="DE">(5) <span lang="DE"><span lang="DE"> \(r_{Sp} =-1 \) bedeutet, dass ein streng monoton fallender funktionaler Zusammenhang zwischen den Merkmalen besteht. <br></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(6) \(r_{Sp} \) ist robust, d.h. Ausreisser in den Datenpunkten beeinflussen den Wert nicht. <br></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(7) <span lang="DE"><span lang="DE"> <span lang="DE">\( \tilde{s}_{rg(xy)}&nbsp; =\overline {rg(xy)} - \overline{rg(x) } \cdot \overline {rg(y)} =\overline {rg(xy)} - \frac{ (n+1)^2}{4} \). </span></span></span></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(8) \( r_{Sp} = \frac{\overline {rg(xy)} - \overline{rg(x) } \cdot \overline {rg(y)} }{ \sqrt{\overline {rg(x)^2} - \overline{ rg(x)}^2}\cdot \sqrt{\overline {rg(y)^2} - \overline {rg(y)}^2} } =
+                                \frac{\overline {rg(xy)} - \frac{(n+1)^2}{4} }{ \sqrt{\overline {rg(x)^2} - \frac{(n+1)^2}{4}}\cdot \sqrt{\overline {rg(y)^2} - \frac{ (n+1)^2}{4} } } \)<span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">. </span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE">(9) Falls jeder Stichprobenwert der x und der y-Werte nur einmal vorkommt, in anderen Worten, falls die Ränge in den x Werte und auch in den y-Werte alle verschieden sind (also keine Bindungen auftreten), gibt es eine einfache Berechnungsformel: &nbsp;<span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"><span lang="DE"> \( r_{Sp} =1-&nbsp; \frac{6\cdot \sum_{i=1}^n {d_i}^2 }{ n \cdot (n^2-1) } \) mit \(d_i = rg(y_i) - rg(x_i)\). </span></span></span></span></span></span></span></span></span></span></span></span><br></span></span></span></span></span></span></span></span></span></span></span></span></span></p><br>
+<p></p><br>
+</body>
+</html>

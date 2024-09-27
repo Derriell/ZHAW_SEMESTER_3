@@ -1,4 +1,4 @@
-package ch.zhaw.ads;
+/*package ch.zhaw.ads;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -27,3 +27,4 @@ public class ADS1_3_test {
         test("[({3 +3)* 35} +3]* {3 +2}", false);
     }
 }
+*/

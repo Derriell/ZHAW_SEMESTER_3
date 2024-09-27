@@ -1,4 +1,4 @@
-/*
+
 package ch.zhaw.ads;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class ADS1_2_test {
@@ -50,5 +51,3 @@ public class ADS1_2_test {
         assertNull(stack.pop());
     }
 }
-
-*/

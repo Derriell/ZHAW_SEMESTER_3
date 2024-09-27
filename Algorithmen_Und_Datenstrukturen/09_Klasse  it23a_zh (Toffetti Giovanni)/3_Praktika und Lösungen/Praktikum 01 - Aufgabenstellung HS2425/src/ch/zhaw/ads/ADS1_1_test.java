@@ -1,4 +1,4 @@
-/*
+
 package ch.zhaw.ads;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -22,5 +22,3 @@ public class ADS1_1_test {
         assertEquals(12, server.kgv(4, 6), "kgv von 4 6");
     }
 }
-
- */

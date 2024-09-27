@@ -15,7 +15,7 @@ public class KgvServer implements CommandExecutor {
     }
 
     @Override
-    public String execute(String command) {
+    public String execute(String s) {
         String[] numbers = s.split("[ ,]+"); 
         int a = Integer.parseInt(numbers[0]); 
         int b = Integer.parseInt(numbers[1]); 

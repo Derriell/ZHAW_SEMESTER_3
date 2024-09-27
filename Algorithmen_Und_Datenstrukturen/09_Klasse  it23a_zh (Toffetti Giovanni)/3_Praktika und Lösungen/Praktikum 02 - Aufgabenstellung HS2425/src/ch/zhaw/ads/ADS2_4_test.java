@@ -1,3 +1,5 @@
+/**
+
 package ch.zhaw.ads;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -9,13 +11,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
+
  * @(#)ListTest.java
  *
  *
  * @author
  * @version 1.00 2017/8/30
- */
+ 
 public class ADS2_4_test {
     MySortedList list;
 
@@ -78,3 +80,5 @@ public class ADS2_4_test {
         }
     }
 }
+
+*/

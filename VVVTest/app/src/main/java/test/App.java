@@ -1,22 +1,30 @@
 package test;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class App extends Application {
     public static List<Punkt> points = new ArrayList<>();
     private int clickCounter = 0;
-    private static final int CLICKED = 4;
+    private static final int CLICKED = 2;
+    private Timeline timeline;
+    private boolean isRunning = false;
 
     public static class Punkt {
         int row, col;
@@ -72,13 +80,10 @@ public class App extends Application {
         grid.setPadding(new Insets(70, 0, 0, 35));
 
         for (Punkt point : points) {
-            point.circle.setOnMouseClicked(event -> handlePointClick(point));
             grid.add(point.circle, point.col, point.row);
         }
 
         ScrollPane scrollPane = new ScrollPane(grid);
-
-
 
         Scene scene = new Scene(scrollPane, 1400, 800);
         primaryStage.setTitle("Dotted World Map with Attributes");
@@ -87,6 +92,35 @@ public class App extends Application {
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();
+
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> handleAutomaticMovement()));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+
+        scene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.SPACE) {
+                if (isRunning) {
+                    timeline.stop();
+                } else {
+                    timeline.play();
+                }
+                isRunning = !isRunning;
+            }
+        });
+    }
+
+    private void handleAutomaticMovement() {
+        new Thread(() -> {
+            Random random = new Random();
+            while (true) {
+                Punkt point = points.get(random.nextInt(points.size()));
+                Platform.runLater(() -> handlePointClick(point));
+                try {
+                    Thread.sleep(500); // Sleep for 500 milliseconds (0.5 seconds)
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 
     private void handlePointClick(Punkt point) {
@@ -114,8 +148,7 @@ public class App extends Application {
                 neighbor.circle.setFill(neighbor.getColor());
             }
         } else {
-            if (point.co2Belastung != 60) // cant change fully red points
-                point.co2Belastung = 0;
+            point.co2Belastung = 0;
             point.circle.setFill(point.getColor());
 
             List<Punkt> neighbors = getNeighbors(point);
@@ -123,10 +156,9 @@ public class App extends Application {
                 double distance = Math
                         .sqrt(Math.pow(neighbor.row - point.row, 2) + Math.pow(neighbor.col - point.col, 2));
                 if (distance <= 1) {
-                    if (neighbor.co2Belastung != 60) // cant change fully red points
-                        neighbor.co2Belastung = 0;
+                    neighbor.co2Belastung = 0;
                 } else if (distance <= 3) {
-                    if (neighbor.co2Belastung > 10 && neighbor.co2Belastung != 60) {
+                    if (neighbor.co2Belastung > 10) {
                         neighbor.co2Belastung = 10;
                     }
                 } else if (distance <= 5) {

@@ -94,7 +94,18 @@ public class App extends Application {
         primaryStage.show();
 
         timeline = new Timeline(new KeyFrame(Duration.seconds(1), event -> handleAutomaticMovement()));
-        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.setCycleCount(20);
+
+        scrollPane.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.SPACE) {
+                if (isRunning) {
+                    timeline.stop();
+                } else {
+                    timeline.play();
+                }
+                isRunning = !isRunning;
+            }
+        });
 
         scene.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.SPACE) {
@@ -115,7 +126,7 @@ public class App extends Application {
                 Punkt point = points.get(random.nextInt(points.size()));
                 Platform.runLater(() -> handlePointClick(point));
                 try {
-                    Thread.sleep(500); // Sleep for 500 milliseconds (0.5 seconds)
+                    Thread.sleep(300); // Sleep for 500 milliseconds (0.5 seconds)
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Random;
 
 public class App extends Application {
-    private static final int DELAY_TIME = 500;
+    private static final int DELAY_TIME = 300;
     public static List<Punkt> points = new ArrayList<>();
     private int clickCounter = 0;
     private static final int CLICKED = 5;

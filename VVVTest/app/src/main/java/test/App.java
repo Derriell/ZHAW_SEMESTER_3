@@ -20,9 +20,10 @@ import java.util.List;
 import java.util.Random;
 
 public class App extends Application {
+    private static final int DELAY_TIME = 500;
     public static List<Punkt> points = new ArrayList<>();
     private int clickCounter = 0;
-    private static final int CLICKED = 2;
+    private static final int CLICKED = 5;
     private Timeline timeline;
     private boolean isRunning = false;
 
@@ -126,7 +127,7 @@ public class App extends Application {
                 Punkt point = points.get(random.nextInt(points.size()));
                 Platform.runLater(() -> handlePointClick(point));
                 try {
-                    Thread.sleep(300); // Sleep for 500 milliseconds (0.5 seconds)
+                    Thread.sleep(DELAY_TIME); // Sleep for 500 milliseconds (0.5 seconds)
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

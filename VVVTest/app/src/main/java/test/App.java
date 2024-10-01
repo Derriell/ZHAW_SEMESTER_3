@@ -23,7 +23,7 @@ public class App extends Application {
     private static final int DELAY_TIME = 300;
     public static List<Punkt> points = new ArrayList<>();
     private int clickCounter = 0;
-    private static final int CLICKED = 5;
+    private static final int CLICKED = 4;
     private Timeline timeline;
     private boolean isRunning = false;
 
@@ -146,7 +146,7 @@ public class App extends Application {
             for (Punkt neighbor : neighbors) {
                 double distance = Math
                         .sqrt(Math.pow(neighbor.row - point.row, 2) + Math.pow(neighbor.col - point.col, 2));
-                if (distance <= 2) {
+                if (distance <= 2 ) {
                     neighbor.co2Belastung = 60;
                 } else if (distance <= 5) {
                     if (neighbor.co2Belastung < 50) {
@@ -160,20 +160,22 @@ public class App extends Application {
                 neighbor.circle.setFill(neighbor.getColor());
             }
         } else {
-            point.co2Belastung = 0;
+            if (point.co2Belastung < 60) {
+                point.co2Belastung = 0;
+            }
             point.circle.setFill(point.getColor());
 
             List<Punkt> neighbors = getNeighbors(point);
             for (Punkt neighbor : neighbors) {
                 double distance = Math
                         .sqrt(Math.pow(neighbor.row - point.row, 2) + Math.pow(neighbor.col - point.col, 2));
-                if (distance <= 1) {
+                if (distance <= 1 && neighbor.co2Belastung < 60) {
                     neighbor.co2Belastung = 0;
-                } else if (distance <= 3) {
+                } else if (distance <= 3 && neighbor.co2Belastung < 60) {
                     if (neighbor.co2Belastung > 10) {
                         neighbor.co2Belastung = 10;
                     }
-                } else if (distance <= 5) {
+                } else if (distance <= 5 && neighbor.co2Belastung < 60) {
                     if (neighbor.co2Belastung > 20 && neighbor.co2Belastung != 60) {
                         neighbor.co2Belastung = 20;
                     }

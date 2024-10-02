@@ -1,4 +1,4 @@
-/*package ch.zhaw.ads;
+package ch.zhaw.ads;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,8 +23,14 @@ public class ADS1_3_test {
         test("(()]", false);
         test("((([([])])))", true);
         test("[(])", false);
-        test("[(3 +3)* 35 +3]* {3 +2}", true);
         test("[({3 +3)* 35} +3]* {3 +2}", false);
+        test("(", false);
+        test(")", false);
+        test("/*/* */", false);
+        test("/*", false);
+        test("/* hallo */", true);
+        test("<(<)>>", false);
+        test("<(<>)>", true);
+        test("[(3 +3)* 35 +3]* {3 +2}", true);
     }
 }
-*/

@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "ExBox",
+            "request": "launch",
+            "mainClass": "ch.zhaw.ads.ExBox",
+            "projectName": "ADS Praktikum 1-Praktikum 01 - Aufgabenstellung HS2425"
+        },
+        {
+            "type": "java",
+            "name": "BracketServer",
+            "request": "launch",
+            "mainClass": "ch.zhaw.ads.BracketServer",
+            "projectName": "ADS Praktikum 2-Praktikum 02 - Aufgabenstellung HS2425"
+        },
+        {
+            "type": "java",
+            "name": "ExBox(1)",
+            "request": "launch",
+            "mainClass": "ch.zhaw.ads.ExBox",
+            "projectName": "ADS Praktikum 2-Praktikum 02 - Aufgabenstellung HS2425"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "test.App",
+            "projectName": "app"
+        }
+    ]
+}
